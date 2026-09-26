@@ -267,12 +267,16 @@
         ? "nav-jai-kisan"
         : item.id === "bks-bengal"
           ? "nav-bks-bengal"
-          : external
-            ? "nav-external"
-            : "";
+          : item.id === "krl-media"
+            ? "nav-krl-media"
+            : external
+              ? "nav-external"
+              : "";
       const labelHtml = item.id === "jai-kisan"
         ? "<span class='nav-jai-kisan__label'>" + label + "</span><span class='nav-ext-mark' aria-hidden='true'>↗</span>"
-        : label;
+        : item.id === "krl-media"
+          ? label + "<span class='nav-ext-mark' aria-hidden='true'>↗</span>"
+          : label;
       const attrs = external
         ? " rel='noopener noreferrer'" + (promoClass ? " class='" + promoClass + "'" : "")
         : " data-nav-kind='" + kind + "'";
@@ -285,7 +289,7 @@
     if (drawerList) {
       const used = { home: true };
       let html = itemLink(byId.home || { id: "home", href: "#home", labelPath: ["nav", "home"] }, false);
-      ["bks-bengal", "jai-kisan"].forEach(function (id) {
+      ["bks-bengal", "jai-kisan", "krl-media"].forEach(function (id) {
         const item = byId[id];
         if (!item) return;
         used[id] = true;

@@ -89,6 +89,16 @@
       "kind": "external"
     },
     {
+      "id": "krl-media",
+      "href": "https://krl-media-connect-bengal-2026.vercel.app/",
+      "labelPath": [
+        "nav",
+        "krlMedia"
+      ],
+      "desktop": true,
+      "kind": "external"
+    },
+    {
       "id": "puja",
       "href": "#puja",
       "labelPath": [
