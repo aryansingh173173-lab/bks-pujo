@@ -177,8 +177,8 @@ html[data-sec="night"] .eco-kicker { color: #f3d9b4; }
 .hero-video { object-fit: cover; object-position: 50% 45%; }
 .hero-video-shade {
   background:
-    linear-gradient(95deg, rgba(16, 4, 6, 0.93) 0%, rgba(16, 4, 6, 0.72) 26%, rgba(16, 4, 6, 0.28) 50%, rgba(16, 4, 6, 0.1) 70%),
-    linear-gradient(0deg, rgba(16, 4, 6, 0.7), transparent 38%);
+    linear-gradient(95deg, rgba(16, 4, 6, 0.86) 0%, rgba(16, 4, 6, 0.55) 28%, rgba(16, 4, 6, 0.12) 52%, transparent 70%),
+    linear-gradient(0deg, rgba(16, 4, 6, 0.55), transparent 30%);
 }
 @media (max-width: 767px) {
   .hero-band--photo.has-video::before { display: none; }
