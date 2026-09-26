@@ -52,6 +52,10 @@
     ".glance",
     ".chapter-prose .layer",
     ".day-list li",
+    "#ifs-body .bks-ifs__block",
+    "#ifs-body .bks-ifs__card",
+    ".farm-wheel",
+    ".chapter-gallery",
     ".next-stop__copy",
     ".next-stop__visual"
   ].join(",");

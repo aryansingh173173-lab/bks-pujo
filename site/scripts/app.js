@@ -236,6 +236,31 @@
     if (sel) sel.addEventListener("change", () => setLang(sel.value));
   }
 
+  function bindNavDrop(scope) {
+    scope.querySelectorAll(".nav-drop").forEach((drop) => {
+      const btn = drop.querySelector(".nav-drop__btn");
+      const menu = drop.querySelector(".nav-drop__menu");
+      let closeTimer = 0;
+      const set = (open) => {
+        clearTimeout(closeTimer);
+        menu.hidden = !open;
+        btn.setAttribute("aria-expanded", String(open));
+        drop.classList.toggle("is-open", open);
+      };
+      btn.addEventListener("click", () => set(menu.hidden));
+      drop.addEventListener("pointerenter", (e) => { if (e.pointerType !== "touch") set(true); });
+      drop.addEventListener("pointerleave", (e) => {
+        if (e.pointerType === "touch") return;
+        const card = document.querySelector(".bksnet-card.is-on");
+        if (card && e.relatedTarget && card.contains(e.relatedTarget)) return;
+        closeTimer = setTimeout(() => set(false), 260);
+      });
+      drop.addEventListener("keydown", (e) => { if (e.key === "Escape") { set(false); btn.focus(); } });
+      drop.addEventListener("focusout", (e) => { if (!drop.contains(e.relatedTarget)) set(false); });
+      document.addEventListener("click", (e) => { if (!drop.contains(e.target)) set(false); });
+    });
+  }
+
   function renderNav() {
     const ui = state.ui[state.lang];
     const spec = state.navSpec;
@@ -267,14 +292,14 @@
         ? "nav-jai-kisan"
         : item.id === "bks-bengal"
           ? "nav-bks-bengal"
-          : item.id === "krl-media"
+          : item.id === "krl-media" || item.id === "krl-teams"
             ? "nav-krl-media"
             : external
               ? "nav-external"
               : "";
       const labelHtml = item.id === "jai-kisan"
         ? "<span class='nav-jai-kisan__label'>" + label + "</span><span class='nav-ext-mark' aria-hidden='true'>↗</span>"
-        : item.id === "krl-media"
+        : item.id === "krl-media" || item.id === "krl-teams"
           ? label + "<span class='nav-ext-mark' aria-hidden='true'>↗</span>"
           : label;
       const attrs = external
@@ -284,12 +309,29 @@
     }
 
     if (desktop) {
-      desktop.innerHTML = spec.items.filter((item) => item.desktop).map((item) => itemLink(item, false)).join("");
+      // The Krishi Ratna League sites share one dropdown so the header stays on one line.
+      const KRL_GROUP = ["jai-kisan", "krl-media", "krl-teams"];
+      const groupItems = KRL_GROUP.map((id) => byId[id]).filter((item) => item && item.desktop);
+      const groupLabel = (ui.nav && ui.nav.jaiKisan) || "Krishi Ratna League";
+      const dropHtml = groupItems.length
+        ? "<div class='nav-drop'>" +
+          "<button type='button' class='nav-drop__btn' aria-expanded='false' aria-controls='nav-drop-krl'>" +
+          "<span class='nav-jai-kisan__label'>" + groupLabel + "</span><span class='nav-drop__chev' aria-hidden='true'></span></button>" +
+          "<div class='nav-drop__menu' id='nav-drop-krl' hidden>" + groupItems.map((item) => itemLink(item, false)).join("") + "</div></div>"
+        : "";
+      let placed = false;
+      desktop.innerHTML = spec.items.filter((item) => item.desktop).map((item) => {
+        if (KRL_GROUP.indexOf(item.id) === -1) return itemLink(item, false);
+        if (placed) return "";
+        placed = true;
+        return dropHtml;
+      }).join("");
+      bindNavDrop(desktop);
     }
     if (drawerList) {
       const used = { home: true };
       let html = itemLink(byId.home || { id: "home", href: "#home", labelPath: ["nav", "home"] }, false);
-      ["bks-bengal", "jai-kisan", "krl-media"].forEach(function (id) {
+      ["bks-bengal", "jai-kisan", "krl-media", "krl-teams"].forEach(function (id) {
         const item = byId[id];
         if (!item) return;
         used[id] = true;

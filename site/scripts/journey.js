@@ -351,6 +351,115 @@
     });
   }
 
+
+  /* ---------- Integrated Farming: interactive farm wheel ---------- */
+  var LOOP_COPY = {
+    en: { hint: "Tap a part of the farm, or let the wheel turn.", feeds: "feeds", steps: [
+      "Crop residue and fodder feed the animals.",
+      "Animals give back dung and urine every day.",
+      "Dung and residue become compost that rebuilds the soil.",
+      "Healthy soil and bunds guide rain into the pond.",
+      "The pond raises fish.",
+      "Pond water and silt grow vegetables and fruit on the bunds.",
+      "Vegetables, fruit, fish and milk reach the kitchen and the market.",
+      "Income and kitchen leftovers go back into the next season’s crop."
+    ] },
+    bn: { hint: "খামারের যেকোনো অংশ ছুঁয়ে দেখুন, বা চাকাটা ঘুরতে দিন।", feeds: "থেকে", steps: [
+      "ফসলের অবশিষ্ট আর খড় পশুর খাবার হয়।",
+      "পশু রোজ গোবর আর মূত্র ফিরিয়ে দেয়।",
+      "গোবর আর অবশিষ্ট কম্পোস্ট হয়ে মাটিকে আবার উর্বর করে।",
+      "সুস্থ মাটি আর আল বৃষ্টির জল পুকুরে নিয়ে যায়।",
+      "পুকুরে মাছ বাড়ে।",
+      "পুকুরের জল আর পলিতে আলে সবজি আর ফল ফলে।",
+      "সবজি, ফল, মাছ আর দুধ যায় ঘরে আর বাজারে।",
+      "আয় আর রান্নাঘরের উচ্ছিষ্ট ফেরে পরের মরশুমের ফসলে।"
+    ] },
+    hi: { hint: "खेत के किसी भी हिस्से को छुएँ, या चक्र को घूमने दें।", feeds: "से", steps: [
+      "फसल के अवशेष और चारा पशुओं का भोजन बनते हैं।",
+      "पशु रोज़ गोबर और मूत्र लौटाते हैं।",
+      "गोबर और अवशेष कंपोस्ट बनकर मिट्टी को फिर उपजाऊ करते हैं।",
+      "स्वस्थ मिट्टी और मेड़ बारिश का पानी तालाब तक ले जाती हैं।",
+      "तालाब में मछली बढ़ती है।",
+      "तालाब के पानी और गाद से मेड़ पर सब्ज़ी और फल उगते हैं।",
+      "सब्ज़ी, फल, मछली और दूध घर और बाज़ार तक पहुँचते हैं।",
+      "आय और रसोई का बचा हुआ अगले मौसम की फसल में लौटता है।"
+    ] }
+  };
+  var LOOP_ICONS = ["🌾", "🐄", "♻️", "🟫", "💧", "🐟", "🥬", "🏠"];
+
+  function buildWheel(list) {
+    var l = lang();
+    var c = LOOP_COPY[l] || LOOP_COPY.en;
+    var labels = Array.prototype.map.call(list.querySelectorAll("li"), function (li) { return li.textContent.trim(); });
+    if (labels.length < 3) return null;
+    var n = labels.length;
+    var wrap = document.createElement("div");
+    wrap.className = "farm-wheel";
+    wrap.setAttribute("data-media", "ifs-wheel");
+    var R = 41; // % radius of the node ring
+    var nodes = labels.map(function (lab, i) {
+      var a = (i / n) * Math.PI * 2 - Math.PI / 2;
+      var x = 50 + R * Math.cos(a), y = 50 + R * Math.sin(a);
+      return "<button type='button' class='fw-node' data-i='" + i + "' style='left:" + x.toFixed(2) + "%;top:" + y.toFixed(2) + "%'>" +
+        "<span class='fw-node__icon' aria-hidden='true'>" + LOOP_ICONS[i % LOOP_ICONS.length] + "</span>" +
+        "<span class='fw-node__label'>" + esc(lab) + "</span></button>";
+    }).join("");
+    wrap.innerHTML =
+      "<div class='fw-stage'>" +
+      "<svg class='fw-ring' viewBox='0 0 100 100' aria-hidden='true'>" +
+      "<circle cx='50' cy='50' r='" + R + "' class='fw-track'/>" +
+      "<circle cx='50' cy='50' r='" + R + "' class='fw-dash'/>" +
+      "<path id='fw-path' d='M50," + (50 - R) + " a" + R + "," + R + " 0 1,1 0," + 2 * R + " a" + R + "," + R + " 0 1,1 0,-" + 2 * R + "' fill='none'/>" +
+      [0, 1, 2, 3].map(function (k) {
+        return "<circle r='1.1' class='fw-seed'><animateMotion dur='12s' repeatCount='indefinite' begin='-" + (k * 3) + "s'><mpath href='#fw-path'/></animateMotion></circle>";
+      }).join("") +
+      "</svg>" + nodes +
+      "<div class='fw-core' aria-live='polite'><p class='fw-core__flow'></p><p class='fw-core__text'></p></div>" +
+      "</div><p class='fw-hint'>" + esc(c.hint) + "</p>";
+
+    var idx = 0, timer = 0, idleTimer = 0;
+    var flow = wrap.querySelector(".fw-core__flow");
+    var text = wrap.querySelector(".fw-core__text");
+    var btns = wrap.querySelectorAll(".fw-node");
+    function select(i) {
+      idx = (i + n) % n;
+      Array.prototype.forEach.call(btns, function (b, k) {
+        b.classList.toggle("is-on", k === idx);
+        b.classList.toggle("is-next", k === (idx + 1) % n);
+        b.setAttribute("aria-pressed", String(k === idx));
+      });
+      flow.textContent = labels[idx] + "  →  " + labels[(idx + 1) % n];
+      text.textContent = c.steps[idx] || "";
+      wrap.style.setProperty("--turn", (idx / n * 360) + "deg");
+    }
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function play() { if (reduce) return; clearInterval(timer); timer = setInterval(function () { select(idx + 1); }, 3200); }
+    function pause() { clearInterval(timer); clearTimeout(idleTimer); idleTimer = setTimeout(play, 9000); }
+    Array.prototype.forEach.call(btns, function (b) {
+      b.addEventListener("click", function () { select(+b.getAttribute("data-i")); pause(); });
+      b.addEventListener("pointerenter", function (e) { if (e.pointerType !== "touch") { select(+b.getAttribute("data-i")); pause(); } });
+      b.addEventListener("focus", function () { select(+b.getAttribute("data-i")); pause(); });
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (e) { if (e[0].isIntersecting) play(); else clearInterval(timer); }, { threshold: 0.3 }).observe(wrap);
+    } else play();
+    select(0);
+    list.classList.add("fw-source");
+    return wrap;
+  }
+
+  function ensureWheel() {
+    var list = document.querySelector("#ifs-body .bks-ifs__loop");
+    if (!list) return;
+    var old = document.querySelector("[data-media='ifs-wheel']");
+    if (old && old.previousElementSibling === list && old.getAttribute("data-lang") === lang()) return;
+    if (old) old.remove();
+    var w = buildWheel(list);
+    if (!w) return;
+    w.setAttribute("data-lang", lang());
+    list.parentNode.insertBefore(w, list.nextSibling);
+  }
+
   var lastLang = "";
   function render() {
     var l = lang();
@@ -367,6 +476,7 @@
   function boot() {
     render();
     ensureMedia();
+    ensureWheel();
     new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
     // Page bodies are re-rendered on language change; put the photos back each time.
     var t = 0;
@@ -377,7 +487,7 @@
       });
       if (ours) return;
       clearTimeout(t);
-      t = setTimeout(ensureMedia, 80);
+      t = setTimeout(function () { ensureMedia(); ensureWheel(); }, 80);
     }).observe(document.getElementById("main") || document.body, { childList: true, subtree: true });
   }
 

@@ -102,6 +102,35 @@
           facts: ["पश्चिम बंगाल के माननीय कृषि मंत्री का संबोधन", "महिला शाखा का दायित्व ग्रहण: श्रीमती रिंकू मजूमदार घोष", "उस दिन की तस्वीरें, भाषण और वीडियो प्रशंसापत्र"]
         }
       }
+    },
+    {
+      id: "teams",
+      url: "https://krl-teams-apgto6nel-ram-badrinathans-projects.vercel.app/",
+      host: "KRL Teams · vercel.app",
+      img: "https://krl-teams-apgto6nel-ram-badrinathans-projects.vercel.app/images/editorial/farm-network.jpg",
+      copy: {
+        en: {
+          name: "KRL Teams",
+          title: "KRL Teams · Smart Farming Command Centre",
+          desc: "The team side of the League: named agri-entrepreneurs, their farms and 15 official teams across West Bengal.",
+          short: "15 official teams and the agri-entrepreneurs behind them.",
+          facts: ["15 official team crests, from Himalayan Giants to Sundarban Strikers", "23 districts · 294 assembly seats, mapped from state to farm", "Featured agri-entrepreneurs and their gardens"]
+        },
+        bn: {
+          name: "KRL টিমস",
+          title: "KRL টিমস · স্মার্ট ফার্মিং কমান্ড সেন্টার",
+          desc: "লিগের দলের দিক: নামী কৃষি-উদ্যোক্তা, তাঁদের খামার আর পশ্চিমবঙ্গ জুড়ে ১৫টি অফিশিয়াল দল।",
+          short: "১৫টি অফিশিয়াল দল ও তাদের কৃষি-উদ্যোক্তা।",
+          facts: ["হিমালয়ান জায়ান্টস থেকে সুন্দরবন স্ট্রাইকার্স: ১৫টি অফিশিয়াল দল", "২৩টি জেলা · ২৯৪টি বিধানসভা আসন, রাজ্য থেকে খামার পর্যন্ত", "নির্বাচিত কৃষি-উদ্যোক্তা ও তাঁদের বাগান"]
+        },
+        hi: {
+          name: "KRL टीम्स",
+          title: "KRL टीम्स · स्मार्ट फ़ार्मिंग कमांड सेंटर",
+          desc: "लीग का टीम पक्ष: नामित कृषि-उद्यमी, उनके खेत और पश्चिम बंगाल भर की 15 आधिकारिक टीमें।",
+          short: "15 आधिकारिक टीमें और उनके कृषि-उद्यमी।",
+          facts: ["हिमालयन जायंट्स से सुंदरबन स्ट्राइकर्स तक: 15 आधिकारिक टीमें", "23 ज़िले · 294 विधानसभा सीटें, राज्य से खेत तक", "चुने हुए कृषि-उद्यमी और उनके बगीचे"]
+        }
+      }
     }
   ];
 
@@ -117,6 +146,9 @@
     ".bksnet-card.is-above{transform:translateY(-6px)}.bksnet-card.is-above.is-on{transform:none}",
     ".bksnet-card::before{content:'';position:absolute;top:-7px;left:var(--ax,50%);width:12px;height:12px;background:#1c0a0e;border-left:1px solid rgba(243,217,180,.35);border-top:1px solid rgba(243,217,180,.35);transform:translateX(-50%) rotate(45deg)}",
     ".bksnet-card.is-above::before{top:auto;bottom:-7px;transform:translateX(-50%) rotate(225deg)}",
+    ".bksnet-card.is-side::before{top:var(--ay,30px);left:-7px;transform:translateY(-50%) rotate(-45deg)}",
+    ".bksnet-card.is-side-left::before{left:auto;right:-7px;transform:translateY(-50%) rotate(135deg)}",
+    ".bksnet-card.is-side,.bksnet-card.is-side.is-on{transform:none}",
     ".bksnet-card__img{display:block;width:100%;aspect-ratio:1200/560;object-fit:cover;background:#52131e;border-radius:13px 13px 0 0}",
     ".bksnet-card__body{padding:.85rem 1rem 1rem}",
     ".bksnet-card.is-compact .bksnet-card__img{display:none}.bksnet-card.is-compact::before{background:#1c0a0e}",
@@ -251,6 +283,25 @@
   function place(a) {
     var r = a.getBoundingClientRect();
     var gap = 12;
+    var menu = a.closest(".nav-drop__menu");
+    card.classList.remove("is-side", "is-side-left");
+    if (menu) {
+      // Beside the dropdown, so the other menu items stay visible.
+      var m = menu.getBoundingClientRect();
+      card.classList.remove("is-compact", "is-above");
+      var cw = card.offsetWidth || 336;
+      var ch = card.offsetHeight || 320;
+      if (ch > window.innerHeight - 24) { card.classList.add("is-compact"); ch = card.offsetHeight; }
+      var toRight = m.right + gap + cw <= window.innerWidth - 8;
+      var sx = toRight ? m.right + gap : m.left - gap - cw;
+      var sy = Math.max(12, Math.min(r.top - 18, window.innerHeight - ch - 12));
+      card.classList.add("is-side");
+      if (!toRight) card.classList.add("is-side-left");
+      card.style.left = Math.round(sx) + "px";
+      card.style.top = Math.round(sy) + "px";
+      card.style.setProperty("--ay", Math.round(r.top + r.height / 2 - sy) + "px");
+      return;
+    }
     // Drop the image when the full card cannot fit above or below the link.
     card.classList.remove("is-compact");
     var room = Math.max(window.innerHeight - r.bottom, r.top) - gap - 8;
@@ -286,6 +337,14 @@
   function hideNow() {
     clearTimeout(showTimer);
     if (card) card.classList.remove("is-on");
+    var drop = anchor && anchor.closest && anchor.closest(".nav-drop");
+    if (drop && !drop.matches(":hover") && !drop.contains(document.activeElement)) {
+      var menu = drop.querySelector(".nav-drop__menu");
+      var btn = drop.querySelector(".nav-drop__btn");
+      if (menu) menu.hidden = true;
+      if (btn) btn.setAttribute("aria-expanded", "false");
+      drop.classList.remove("is-open");
+    }
     anchor = null;
   }
 

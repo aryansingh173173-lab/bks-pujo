@@ -99,6 +99,16 @@
       "kind": "external"
     },
     {
+      "id": "krl-teams",
+      "href": "https://krl-teams-apgto6nel-ram-badrinathans-projects.vercel.app/#/",
+      "labelPath": [
+        "nav",
+        "krlTeams"
+      ],
+      "desktop": true,
+      "kind": "external"
+    },
+    {
       "id": "puja",
       "href": "#puja",
       "labelPath": [
