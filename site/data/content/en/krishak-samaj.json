@@ -5,7 +5,7 @@
   },
   "kicker": "About this gathering",
   "h1": "Bharatiya Krishak Samaj",
-  "lede": "The organisation behind this Pujo. The 2026 theme names the agricultural community — the farmer, the annadata. The Puja stays the cultural door. Integrated Farming is the livelihood story that follows.",
+  "lede": "The organisation behind this Pujo. The 2026 theme names the agricultural community, the farmer, the annadata. The Puja stays the cultural door. Integrated Farming is the livelihood story that follows.",
   "legend": "This page is people and purpose. The farm-as-system diagram lives on Integrated Farming. Funding arithmetic lives on The Mission.",
   "why": {
     "h2": "Why Bharatiya Krishak Samaj",
@@ -15,7 +15,7 @@
   "farmer": {
     "h2": "The farmer",
     "badge": "BKS POSITIONING",
-    "body": "The farmer — the annadata — must never feel like a secondary object here. This site speaks of farmers we want to support. It does not call people beneficiaries, and it does not promise that anyone has already received seed funding."
+    "body": "The farmer, the annadata, must never feel like a secondary object here. This site speaks of farmers we want to support. It does not call people beneficiaries, and it does not promise that anyone has already received seed funding."
   },
   "ecosystem": {
     "h2": "The living ecosystem",
@@ -25,11 +25,35 @@
     "href": "#ifs"
   },
   "themes": [
-    { "badge": "SOURCE FACT", "title": "Community", "body": "A public Puja is neighbourhood work. That is Bengal’s fact, not a BKS membership drive." },
-    { "badge": "SOURCE FACT", "title": "Seasonality", "body": "Sharadiya Puja sits in the harvest season. Nabapatrika binds the rite to nine plants." },
-    { "badge": "SOURCE FACT", "title": "Food", "body": "Bhog is a shared kitchen after offering. Whether BKS cooks is not decided here." },
-    { "badge": "SOURCE FACT", "title": "Bengal", "body": "Clay, dhak, homecoming. The Samaj is a guest in that culture." },
-    { "badge": "SOURCE FACT", "title": "Livelihoods and craft", "body": "Artisan labour is a seasonal economy. No unnamed kumor is exhibited here." },
-    { "badge": "PENDING", "title": "Knowledge on the main site", "body": "Deeper Integrated Farming reference copy is intended for the BKS West Bengal website. No URL is invented here." }
+    {
+      "badge": "SOURCE FACT",
+      "title": "Community",
+      "body": "A public Puja is neighbourhood work. That is Bengal’s fact, not a BKS membership drive."
+    },
+    {
+      "badge": "SOURCE FACT",
+      "title": "Seasonality",
+      "body": "Sharadiya Puja sits in the harvest season. Nabapatrika binds the rite to nine plants."
+    },
+    {
+      "badge": "SOURCE FACT",
+      "title": "Food",
+      "body": "Bhog is a shared kitchen after offering. Whether BKS cooks is not decided here."
+    },
+    {
+      "badge": "SOURCE FACT",
+      "title": "Bengal",
+      "body": "Clay, dhak, homecoming. The Samaj is a guest in that culture."
+    },
+    {
+      "badge": "SOURCE FACT",
+      "title": "Livelihoods and craft",
+      "body": "Artisan labour is a seasonal economy. No unnamed kumor is exhibited here."
+    },
+    {
+      "badge": "PENDING",
+      "title": "Knowledge on the main site",
+      "body": "Deeper Integrated Farming reference copy is intended for the BKS West Bengal website. No URL is invented here."
+    }
   ]
 }

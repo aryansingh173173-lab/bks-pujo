@@ -4,7 +4,7 @@
   },
   "kicker": "The 5,000-farm initiative",
   "h1": "The Mission",
-  "lede": "A mobilisation target of about 5,000 Non-Resident Bengali patrons alongside about 5,000 village integrated farms — launching from a live showcase at Durga Puja 2026. These figures are a goal, not a completed count, and ₹1 lakh is proposed seed-support, not money already collected.",
+  "lede": "A mobilisation target of about 5,000 Non-Resident Bengali patrons alongside about 5,000 village integrated farms, launching from a live showcase at Durga Puja 2026. These figures are a goal, not a completed count, and ₹1 lakh is proposed seed-support, not money already collected.",
   "notice": "One village farm. One NRB patron. ₹1 lakh proposed seed per farm. Not collected on this website.",
   "stats": [
     {
@@ -19,7 +19,7 @@
       "badge": "PATRONS",
       "value": "5,000",
       "label": "Non-Resident Bengali patrons (target)",
-      "body": "Anyone with a native village in Bengal — whether they live abroad or in Kolkata."
+      "body": "Anyone with a native village in Bengal, whether they live abroad or in Kolkata."
     },
     {
       "id": "seed",

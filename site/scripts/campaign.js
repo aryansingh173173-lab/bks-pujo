@@ -1,4 +1,4 @@
-/* Local campaign renderer — copy from live /puja, no production database. */
+/* Local campaign renderer, copy from live /puja, no production database. */
 (function (global) {
   const DISTRICTS = [
     "Alipurduar", "Bankura", "Birbhum", "Cooch Behar", "Dakshin Dinajpur",
@@ -138,9 +138,9 @@
       "<form class='campaign-form' id='nomination-form' novalidate>" +
       "<fieldset><legend>" + escapeHtml(d.fieldWhoFiling) + "</legend>" +
       "<label><input type='radio' name='nominator_type' value='self'> " + escapeHtml(d.typeSelf) +
-      " — " + escapeHtml(d.typeSelfNote) + "</label>" +
+      ": " + escapeHtml(d.typeSelfNote) + "</label>" +
       "<label><input type='radio' name='nominator_type' value='other'> " + escapeHtml(d.typeOther) +
-      " — " + escapeHtml(d.typeOtherNote) + "</label></fieldset>" +
+      ": " + escapeHtml(d.typeOtherNote) + "</label></fieldset>" +
       "<div class='form-grid'>" +
       "<label>" + escapeHtml(d.fieldCategory) + "<select name='category' required>" + catOptions + "</select></label>" +
       "<label>" + escapeHtml(d.fieldFarmerName) + "<input name='farmer_name' required maxlength='120'></label>" +
@@ -150,7 +150,7 @@
       "<label>" + escapeHtml(d.fieldFarmerVillage) + "<input name='farmer_village'></label>" +
       "</div>" +
       "<label>" + escapeHtml(d.fieldWhatGrow) + "<input name='what_they_grow'></label>" +
-      "<label>" + escapeHtml(d.fieldInnovation) + "<textarea name='innovation_summary' rows='4' required></textarea></label>" +
+      "<label>" + (d.fieldInnovation || "") + "<textarea name='innovation_summary' rows='4' required></textarea></label>" +
       "<label class='consent-row'><input type='checkbox' name='consent_contact' required> " +
       escapeHtml(d.nomConsent1) + "</label>" +
       "<label class='consent-row'><input type='checkbox' name='consent_data' required> " +
@@ -234,6 +234,8 @@
       escapeHtml(puja.venue && puja.venue.detail ? (puja.venue.detail[lang] || puja.venue.detail.en) : "") +
       " · " + escapeHtml(puja.ceremony ? (puja.ceremony[lang] || puja.ceremony.en) : "") + "</p>" +
       "<p><a class='maps-link' href='https://www.google.com/maps/search/?api=1&amp;query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal' target='_blank' rel='noopener noreferrer'>View on Google Maps</a></p>" +
+      "<div class='visit-map'><iframe title='Map: Munshir Bheri, Salt Lake Sector V, Kolkata 700091' loading='lazy' referrerpolicy='no-referrer-when-downgrade' " +
+      "src='https://maps.google.com/maps?q=Munshir%20Bheri%2C%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20Kolkata%20700091&amp;z=15&amp;output=embed'></iframe></div>" +
       "<div class='programme-list'><div><strong>" + escapeHtml(d.prog1) + "</strong><span> " +
       escapeHtml(d.prog1Text) + "</span></div><div><strong>" + escapeHtml(d.prog2) +
       "</strong><span> " + escapeHtml(d.prog2Text) + "</span></div><div><strong>" +

@@ -1,13 +1,13 @@
 {
   "meta": {
     "lang": "en",
-    "status": "ARCHIVAL EDITOR DUMP — not fetched by the prototype. Live UI is prototype/index.html plus heroes.json, events.json, stories.json. Hero fact row below is synced to H1. Nested page objects may lag; do not publish from them.",
+    "status": "ARCHIVAL EDITOR DUMP, not fetched by the prototype. Live UI is prototype/index.html plus heroes.json, events.json, stories.json. Hero fact row below is synced to H1. Nested page objects may lag; do not publish from them.",
     "governance": "Farmer-and-public strings. Do not mix VERIFIED / PROPOSED / PENDING in one unlabelled sentence."
   },
   "brand": {
     "parent": "Bharatiya Krishak Samaj",
     "chapter": "West Bengal",
-    "seasonal": "Durga Puja 2026 — seasonal gathering, not a second brand",
+    "seasonal": "Durga Puja 2026: seasonal gathering, not a second brand",
     "hierarchyNote": "BKS → seasonal Durga Puja campaign → community / culture → Krishak Samaj → integrated farming pathway"
   },
   "nav": {
@@ -32,19 +32,19 @@
     "why": "Neighbourhoods already gather. The Samaj will not invent a second religion, nor hide that it is a farmers’ samaj.",
     "next": "Read The Puja. Nothing here enrols you or takes money.",
     "kicker": "Bharatiya Krishak Samaj · West Bengal",
-    "seasonal": "Durga Puja 2026 — seasonal gathering, not a second brand",
-    "title": "This autumn, the Samaj sits with the Puja — it does not replace it.",
+    "seasonal": "Durga Puja 2026: seasonal gathering, not a second brand",
+    "title": "This autumn, the Samaj sits with the Puja, it does not replace it.",
     "lede": "Durga Puja in Bengal is neighbourhood, clay, dhak, food and homecoming. Bharatiya Krishak Samaj may keep a seasonal presence in that gathering. Until a venue and a committee are named, this page will not pretend those things exist.",
     "ctaPrimary": "Read The Puja",
     "ctaSecondary": "Participate",
     "imageStatus": "No verified BKS Puja photograph in this archive. Hero uses a replaceable slot.",
-    "slotLabel": "Photograph to come — making, neighbourhood, or the actual gathering"
+    "slotLabel": "Photograph to come: making, neighbourhood, or the actual gathering"
   },
-    "heroAlt": [
+  "heroAlt": [
     {
       "id": "H2",
       "selected": false,
-      "title": "Clay, dhak, and a neighbourhood — BKS is a guest, not a second festival.",
+      "title": "Clay, dhak, and a neighbourhood: BKS is a guest, not a second festival.",
       "lede": "The image is clay from the river and returns to water. People walk. Kitchens open. Bharatiya Krishak Samaj does not own that heritage. This site only says where the Samaj might sit beside it in 2026."
     },
     {
@@ -65,12 +65,42 @@
     "sequenceTitle": "The public days",
     "sequenceNote": "Meanings below are cultural. Gregorian dates for 2026 are not published as fact until the committee’s panjika is confirmed.",
     "days": [
-      { "id": "mahalaya", "name": "Mahalaya", "bn": "মহালয়া", "text": "Pitru Paksha ends and Devi Paksha begins. In Bengal this dawn is also cultural memory: the goddess is turned toward the living year." },
-      { "id": "shashthi", "name": "Shashthi", "bn": "ষষ্ঠী", "text": "Bodhon — the public awakening of the image. Amantran and Adhivas belong to this threshold." },
-      { "id": "saptami", "name": "Saptami", "bn": "সপ্তমী", "text": "Nabapatrika / Kolabou. Full public worship typically begins." },
-      { "id": "ashtami", "name": "Ashtami", "bn": "অষ্টমী", "text": "Pushpanjali, Kumari Puja, and Sandhi Puja at the join of Ashtami and Navami." },
-      { "id": "navami", "name": "Navami", "bn": "নবমী", "text": "Culminating worship in many committees." },
-      { "id": "dashami", "name": "Dashami", "bn": "দশমী", "text": "Sindoor Khela, Bijoya, and immersion — often on a civil day fixed with the police as well as the tithi." }
+      {
+        "id": "mahalaya",
+        "name": "Mahalaya",
+        "bn": "মহালয়া",
+        "text": "Pitru Paksha ends and Devi Paksha begins. In Bengal this dawn is also cultural memory: the goddess is turned toward the living year."
+      },
+      {
+        "id": "shashthi",
+        "name": "Shashthi",
+        "bn": "ষষ্ঠী",
+        "text": "Bodhon: the public awakening of the image. Amantran and Adhivas belong to this threshold."
+      },
+      {
+        "id": "saptami",
+        "name": "Saptami",
+        "bn": "সপ্তমী",
+        "text": "Nabapatrika / Kolabou. Full public worship typically begins."
+      },
+      {
+        "id": "ashtami",
+        "name": "Ashtami",
+        "bn": "অষ্টমী",
+        "text": "Pushpanjali, Kumari Puja, and Sandhi Puja at the join of Ashtami and Navami."
+      },
+      {
+        "id": "navami",
+        "name": "Navami",
+        "bn": "নবমী",
+        "text": "Culminating worship in many committees."
+      },
+      {
+        "id": "dashami",
+        "name": "Dashami",
+        "bn": "দশমী",
+        "text": "Sindoor Khela, Bijoya, and immersion, often on a civil day fixed with the police as well as the tithi."
+      }
     ]
   },
   "programme": {
@@ -87,19 +117,62 @@
   },
   "participate": {
     "kicker": "Participate",
-    "h2": "Six ways to walk in — none of them pretend to be open if they are not",
+    "h2": "Six ways to walk in: none of them pretend to be open if they are not",
     "paths": [
-      { "id": "visit", "intent": "I WANT TO VISIT", "title": "Visit", "body": "When a venue is published, this path will hold place, hours, and what to expect. It is empty of a pin today.", "cta": "Venue pending", "formStatus": "none" },
-      { "id": "volunteer", "intent": "I WANT TO VOLUNTEER", "title": "Volunteer", "body": "Community Puja already runs on volunteer labour. A BKS roster is not open on this page.", "cta": "Interest — coming soon", "formStatus": "coming-soon" },
-      { "id": "participate", "intent": "I WANT TO PARTICIPATE", "title": "Take part", "body": "Be present, help, follow the programme, or join the Samaj conversation. Participation is not enrolment.", "cta": "See paths", "formStatus": "none" },
-      { "id": "support", "intent": "I WANT TO SUPPORT", "title": "Support", "body": "A seed-funding idea was discussed for farmers. It is not approved and not collecting money here.", "cta": "Not collecting money", "formStatus": "none", "governance": "PENDING APPROVAL" },
-      { "id": "programme", "intent": "I WANT TO KNOW THE PROGRAMME", "title": "Programme", "body": "The timetable will be machine-readable when it is real.", "cta": "Open programme", "formStatus": "none" },
-      { "id": "contact", "intent": "I WANT TO CONTACT THE COMMITTEE", "title": "Contact", "body": "Names and numbers appear only when verified.", "cta": "Contact slots", "formStatus": "none" }
+      {
+        "id": "visit",
+        "intent": "I WANT TO VISIT",
+        "title": "Visit",
+        "body": "When a venue is published, this path will hold place, hours, and what to expect. It is empty of a pin today.",
+        "cta": "Venue pending",
+        "formStatus": "none"
+      },
+      {
+        "id": "volunteer",
+        "intent": "I WANT TO VOLUNTEER",
+        "title": "Volunteer",
+        "body": "Community Puja already runs on volunteer labour. A BKS roster is not open on this page.",
+        "cta": "Interest: coming soon",
+        "formStatus": "coming-soon"
+      },
+      {
+        "id": "participate",
+        "intent": "I WANT TO PARTICIPATE",
+        "title": "Take part",
+        "body": "Be present, help, follow the programme, or join the Samaj conversation. Participation is not enrolment.",
+        "cta": "See paths",
+        "formStatus": "none"
+      },
+      {
+        "id": "support",
+        "intent": "I WANT TO SUPPORT",
+        "title": "Support",
+        "body": "A seed-funding idea was discussed for farmers. It is not approved and not collecting money here.",
+        "cta": "Not collecting money",
+        "formStatus": "none",
+        "governance": "PENDING APPROVAL"
+      },
+      {
+        "id": "programme",
+        "intent": "I WANT TO KNOW THE PROGRAMME",
+        "title": "Programme",
+        "body": "The timetable will be machine-readable when it is real.",
+        "cta": "Open programme",
+        "formStatus": "none"
+      },
+      {
+        "id": "contact",
+        "intent": "I WANT TO CONTACT THE COMMITTEE",
+        "title": "Contact",
+        "body": "Names and numbers appear only when verified.",
+        "cta": "Contact slots",
+        "formStatus": "none"
+      }
     ]
   },
   "krishakSamaj": {
     "kicker": "Krishak Samaj · not inside the ritual copy",
-    "h2": "The farm is a neighbour of this season — not its costume",
+    "h2": "The farm is a neighbour of this season, not its costume",
     "lede": "Ram Sir named Krishak Samaj as the theme of Durga Puja this time. That is a meeting record. It is not yet a funded programme, and it must not rewrite the Puja as an agricultural advertisement.",
     "themeClass": "PENDING APPROVAL",
     "culturalTitle": "Cultural context",
@@ -124,7 +197,7 @@
       "Could explore: clay and natural colour, as WBPCB already asks organisers to undertake.",
       "Could explore: bins for flowers and nirmalya before any immersion.",
       "Recommended: no DJ on an immersion procession, in line with the state undertaking.",
-      "Proposed: a public note after the season on what was actually done — not a green badge in advance."
+      "Proposed: a public note after the season on what was actually done, not a green badge in advance."
     ]
   },
   "contact": {

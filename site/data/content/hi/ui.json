@@ -2,7 +2,7 @@
   "meta": {
     "lang": "hi",
     "status": "NEXT VERSION",
-    "hindiStatus": "DRAFT — NATIVE REVIEW REQUIRED",
+    "hindiStatus": "DRAFT: NATIVE REVIEW REQUIRED",
     "governance": "PROPOSED chrome. CONF-PUJA-001 open."
   },
   "brand": {
@@ -10,7 +10,7 @@
     "chapter": "पश्चिम बंगाल",
     "site": "भारतीय कृषक समाज पूजा",
     "brandSub": "KarmYog for the 21st Century द्वारा आयोजित",
-    "seasonal": "दुर्गा पूजा 2026 — भारतीय कृषक समाज पूजा",
+    "seasonal": "दुर्गा पूजा 2026: भारतीय कृषक समाज पूजा",
     "hierarchyNote": "बीकेएस → दुर्गा पूजा 2026 → कृषक समाज → समेकित कृषि → किसान संगठन"
   },
   "banner": "",
@@ -72,8 +72,8 @@
     "isolation": ""
   },
   "metaTags": {
-    "title": "बीकेएस दुर्गा पूजा 2026 — कृषक समाज | भारतीय कृषक समाज",
+    "title": "बीकेएस दुर्गा पूजा 2026: कृषक समाज | भारतीय कृषक समाज",
     "description": "भारतीय कृषक समाज, पश्चिम बंगाल की मौसमी दुर्गा पूजा। विषय कृषक समाज और समेकित कृषि। स्थान, कार्यक्रम और दान का दावा नहीं। पाँच हज़ार किसान एक संगठन का लक्ष्य है।"
   },
-  "draftNote": "हिन्दी मसौदा — मातृभाषा संपादन बाकी। DRAFT — NATIVE REVIEW REQUIRED."
+  "draftNote": "हिन्दी मसौदा, मातृभाषा संपादन बाकी। DRAFT, NATIVE REVIEW REQUIRED."
 }

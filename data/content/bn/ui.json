@@ -2,7 +2,7 @@
   "meta": {
     "lang": "bn",
     "status": "NEXT VERSION",
-    "bengaliStatus": "DRAFT — NATIVE REVIEW REQUIRED",
+    "bengaliStatus": "DRAFT: NATIVE REVIEW REQUIRED",
     "governance": "PROPOSED chrome. CONF-PUJA-001 open."
   },
   "brand": {
@@ -10,7 +10,7 @@
     "chapter": "পশ্চিমবঙ্গ",
     "site": "ভারতীয় কৃষক সমাজ পূজা",
     "brandSub": "KarmYog for the 21st Century আয়োজিত",
-    "seasonal": "দুর্গা পূজা ২০২৬ — ভারতীয় কৃষক সমাজ পূজা",
+    "seasonal": "দুর্গা পূজা ২০২৬: ভারতীয় কৃষক সমাজ পূজা",
     "hierarchyNote": "বি কে এস → দুর্গা পূজা ২০২৬ → কৃষক সমাজ → সমন্বিত চাষ → কৃষক সংগঠন"
   },
   "banner": "",
@@ -72,8 +72,8 @@
     "isolation": ""
   },
   "metaTags": {
-    "title": "বি কে এস দুর্গা পূজা ২০২৬ — কৃষক সমাজ | ভারতীয় কৃষক সমাজ",
+    "title": "বি কে এস দুর্গা পূজা ২০২৬: কৃষক সমাজ | ভারতীয় কৃষক সমাজ",
     "description": "ভারতীয় কৃষক সমাজ, পশ্চিমবঙ্গের মরশুমি দুর্গা পূজা। থিম কৃষক সমাজ ও সমন্বিত চাষ। স্থান, অনুষ্ঠান ও চাঁদার দাবি নেই। পাঁচ হাজার কৃষক একটি সংগঠনের লক্ষ্য।"
   },
-  "draftNote": "বাংলা খসড়া — মাতৃভাষার সম্পাদনা বাকি। DRAFT — NATIVE REVIEW REQUIRED."
+  "draftNote": "বাংলা খসড়া, মাতৃভাষার সম্পাদনা বাকি। DRAFT, NATIVE REVIEW REQUIRED."
 }

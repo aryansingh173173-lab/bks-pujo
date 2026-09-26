@@ -1,0 +1,171 @@
+/* Dark theme (locked). Primary: sand #f3d9b4 + maroon #52131e. Ground: ink #100406.
+   No #f3d9b4 anywhere: sand is the only light colour, used for type and highlights.
+   Keyed on <html data-sec="night">. */
+
+html[data-sec] body { transition: background-color 0.4s ease, color 0.4s ease; }
+
+/* ---------- D · Night: ink page, cream type, light cards float on top ---------- */
+html[data-sec="night"] {
+  --text: #f3d9b4;
+  --muted: #c9ad8e;
+  --color-text-primary: #f3d9b4;
+  --color-text-secondary: #c9ad8e;
+  --color-text-muted: #c9ad8e;
+  --line: rgba(243, 217, 180, 0.14);
+  --line-strong: rgba(243, 217, 180, 0.3);
+  --color-border-default: rgba(243, 217, 180, 0.14);
+}
+html[data-sec="night"] body { background: #100406; color: #f3d9b4; }
+html[data-sec="night"] a { color: var(--sun); }
+html[data-sec="night"] :is(h1, h2, h3, h4) { color: #f3d9b4; }
+html[data-sec="night"] :is(.lede, .muted, .legend, .story-bridge-inner p, .diff-strip p, .journey__head .lede, .campaign-section > p) { color: #c9ad8e; }
+html[data-sec="night"] .site-header { background: rgba(16, 4, 6, 0.9); border-bottom-color: rgba(243, 217, 180, 0.12); color: #f3d9b4; }
+html[data-sec="night"] .site-header::after { background: linear-gradient(90deg, var(--sun) 0 22%, transparent 22% 26%, var(--sun) 26% 30%, transparent 30%); }
+html[data-sec="night"] :is(.wordmark, .nav-desktop a, .nav-toggle) { color: #f3d9b4; }
+html[data-sec="night"] .brand-sub { color: var(--sun); }
+html[data-sec="night"] .nav-desktop { border-top-color: rgba(243, 217, 180, 0.12); }
+html[data-sec="night"] .nav-desktop a:hover { background: rgba(243, 217, 180, 0.12); }
+html[data-sec="night"] .nav-desktop a::after { background: var(--sun); }
+html[data-sec="night"] .nav-jai-kisan__label { background-image: linear-gradient(110deg, var(--sun) 0%, #f3d9b4 35%, var(--sun) 60%, #f3d9b4 85%, var(--sun) 100%); }
+html[data-sec="night"] :is(.lang-select, .nav-toggle) { background-color: transparent; color: #f3d9b4; border-color: rgba(243, 217, 180, 0.6); }
+html[data-sec="night"] .lang-select { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1.2 1.2L6 6l4.8-4.8' stroke='%23f3d9b4' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"); }
+html[data-sec="night"] .lang-select option { color: #100406; }
+html[data-sec="night"] .scroll-progress { background: var(--sun); }
+html[data-sec="night"] .story-bridge::before { background-image: url("../assets/alpana-sun.svg"); opacity: 0.14; }
+html[data-sec="night"] .story-bridge-inner p:not(.kicker) { border-left-color: var(--sun); }
+html[data-sec="night"] .differ .diff-strip { border-top-color: var(--sun); }
+html[data-sec="night"] .quote-band h2 { color: #f3d9b4; }
+html[data-sec="night"] .site-footer { background: var(--wine); }
+html[data-sec="night"] .crumbs a { color: var(--sun); }
+html[data-sec="night"] .crumbs [aria-current="page"] { color: #f3d9b4; }
+
+/* stories on ink */
+html[data-sec="night"] .stories__title,
+html[data-sec="night"] .watch__label,
+html[data-sec="night"] .bks-memories__kicker,
+html[data-sec="night"] .story-bubble.is-active .story-bubble__label { color: var(--sun); }
+html[data-sec="night"] .story-bubble__ring img { border-color: #100406; }
+html[data-sec="night"] .stories__hint { background: rgba(243, 217, 180, 0.07) !important; color: #f3d9b4; border-left-color: var(--sun) !important; }
+html[data-sec="night"] .story-viewer { box-shadow: 12px 12px 0 var(--wine); border-color: #3a1a20; }
+html[data-sec="night"] .watch__link { color: #f3d9b4; border-color: #f3d9b4; }
+html[data-sec="night"] .watch__link:hover { color: var(--wine); }
+html[data-sec="night"] .story-thumb.is-active { box-shadow: 0 0 0 3px var(--sun) !important; }
+
+/* chapter pages on ink */
+html[data-sec="night"] :is(.chapter .page-head, [data-league-head], #ifs-body .bks-ifs__wrap > header.bks-ifs__block:first-child) { border-bottom-color: var(--sun); }
+html[data-sec="night"] :is(.chapter .page-head, [data-league-head], #ifs-body .bks-ifs__wrap > header.bks-ifs__block:first-child)::after { background-image: url("../assets/alpana-sun.svg"); opacity: 0.3; }
+html[data-sec="night"] .journey-bar__item a { color: #c9ad8e; border-top-color: rgba(243, 217, 180, 0.18); }
+html[data-sec="night"] :is(.journey-bar__item.is-current a, .journey-bar__item.is-done a, .journey-bar__count b) { color: #f3d9b4; }
+html[data-sec="night"] .journey-bar__item.is-current a { border-top-color: var(--sun); }
+html[data-sec="night"] .journey-bar__item.is-done a { border-top-color: var(--sun); }
+html[data-sec="night"] .journey-bar__item.is-done .journey-bar__num { background: var(--sun); color: var(--wine); border-color: var(--sun); }
+html[data-sec="night"] .journey-bar__count { color: var(--sun); }
+html[data-sec="night"] :is(.facts dt, .award-index) { color: var(--sun); }
+html[data-sec="night"] .facts { border-top-color: var(--sun); }
+html[data-sec="night"] .day-list { border-left-color: rgba(243, 217, 180, 0.3); }
+html[data-sec="night"] :is(.record-stats, .leader-strip article, .record-startups article, .sponsor-why article, .source-list li, .nrb-steps li) { border-top-color: var(--sun); }
+html[data-sec="night"] :is(.stat-value, .record-stats strong) { color: var(--sun); }
+html[data-sec="night"] .nrb-faq summary::after { color: var(--wine); }
+html[data-sec="night"] .nrb-faq[open] summary { color: var(--sun); }
+html[data-sec="night"] .doors-grid .explore-card:hover { background: rgba(243, 217, 180, 0.06); }
+html[data-sec="night"] .explore-card .door-arrow { color: #f3d9b4; border-bottom-color: var(--sun); }
+html[data-sec="night"] .bks-ifs { --ifs-forest: var(--sun); }
+
+/* No white boxes on the ink page: every surface is a dark card with cream type.
+   Sand (primary) stays for journey cards, number tiles, ribbon, buttons, next stop. */
+html[data-sec="night"] {
+  --paper: #1c0a0e;
+  --sun-pale: #1c0a0e;
+  --ifs-paper: #1c0a0e;
+  --color-surface-card: #1c0a0e;
+  --color-surface-raised: #1c0a0e;
+}
+html[data-sec="night"] :is(.layer, .card, .theme-card, .campaign-form, .locator-form, .interest-form, .hint,
+  .award-card:not(:nth-child(1)), .tier-card:not(:last-child), .nrb-tier:not(:nth-child(4)), .ifs-need-card,
+  .nrb-who, .nrb-instalments, .programme-list div, .bks-ifs__card, .bks-ifs__loop li, .bks-ifs__frame figcaption,
+  .nrb-feed-frame, .reel-card, .empty-well, .event-card, .ifs-contrast-card:not(.ifs-contrast-card--ifs), .stat-card:not(.stat-card--featured)) {
+  background: #1c0a0e !important;
+  border-color: rgba(243, 217, 180, 0.2) !important;
+  color: #f3d9b4;
+}
+html[data-sec="night"] :is(.layer, .card, .theme-card, .campaign-form, .hint, .award-card, .tier-card:not(:last-child),
+  .nrb-tier:not(:nth-child(4)), .ifs-need-card, .nrb-who, .nrb-instalments, .bks-ifs__card, .reel-card, .empty-well, .event-card) :is(p, li, .muted, .legend, span) { color: #c9ad8e; }
+html[data-sec="night"] :is(.layer, .card, .theme-card, .campaign-form, .hint, .award-card, .tier-card:not(:last-child),
+  .nrb-tier:not(:nth-child(4)), .ifs-need-card, .nrb-who, .nrb-instalments, .bks-ifs__card, .reel-card, .programme-list div) :is(h2, h3, h4, label, legend, strong) { color: #f3d9b4; }
+html[data-sec="night"] :is(.award-index, .programme-list strong, .hint__label, .tier-card:not(:last-child) .stat-value, .nrb-tier:not(:nth-child(4)) .stat-value) { color: var(--sun) !important; }
+html[data-sec="night"] :is(.layer, .card, .theme-card, .campaign-form, .hint) a { color: var(--sun); }
+html[data-sec="night"] .hint { border-left-color: var(--sun); }
+html[data-sec="night"] .hint__text { color: #f3d9b4; }
+html[data-sec="night"] .hint__icon { background: var(--sun); color: var(--wine); }
+html[data-sec="night"] .hint__link { color: var(--sun) !important; border-bottom-color: var(--sun); }
+html[data-sec="night"] .programme-list div { border: 1px dashed rgba(243, 217, 180, 0.4) !important; }
+html[data-sec="night"] :is(.tier-card, .nrb-tier)::after { background: #100406; border-color: var(--sun); }
+html[data-sec="night"] .tier-card:last-child,
+html[data-sec="night"] .nrb-tier:nth-child(4) { color: #100406; }
+html[data-sec="night"] :is(.tier-card:last-child, .nrb-tier:nth-child(4)) :is(h3, p, li, .kicker, .stat-value, span) { color: #100406; }
+html[data-sec="night"] .layer--fact { border-left-color: var(--sun) !important; }
+html[data-sec="night"] .campaign-form,
+html[data-sec="night"] .locator-form,
+html[data-sec="night"] .interest-form { border-top-color: var(--sun) !important; }
+
+/* form controls */
+html[data-sec="night"] :is(input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input:not([type]), select, textarea) {
+  background: rgba(243, 217, 180, 0.06);
+  color: #f3d9b4;
+  border-color: rgba(243, 217, 180, 0.35);
+}
+html[data-sec="night"] :is(input, textarea)::placeholder { color: rgba(216, 191, 195, 0.7); }
+html[data-sec="night"] select option { background: #1c0a0e; color: #f3d9b4; }
+html[data-sec="night"] input:focus, html[data-sec="night"] select:focus, html[data-sec="night"] textarea:focus { border-color: var(--sun) !important; box-shadow: 3px 3px 0 var(--wine); }
+html[data-sec="night"] .role-chip { background: transparent; border-color: rgba(243, 217, 180, 0.35); color: #f3d9b4; }
+
+/* badges: outlined, not filled */
+html[data-sec="night"] .badge { background: transparent !important; color: var(--sun) !important; border-color: rgba(243, 217, 180, 0.5) !important; }
+
+
+
+html[data-sec="night"] { color-scheme: dark; accent-color: #f3d9b4; }
+html[data-sec="night"] fieldset { border-color: rgba(243, 217, 180, 0.3); }
+html[data-sec="night"] :is(input[type="radio"], input[type="checkbox"]) { accent-color: #f3d9b4; background: transparent; }
+
+/* Type hierarchy in sand only: headings full sand, body a step softer, notes muted */
+html[data-sec="night"] body { color: #e6cba6; }
+html[data-sec="night"] :is(h1, h2, h3, h4) { color: #f3d9b4; }
+html[data-sec="night"] :is(.lede, .muted, .legend) { color: #c9ad8e; }
+
+/* Map: dark tiles instead of a white block */
+html[data-sec="night"] .visit-map iframe { filter: invert(0.92) hue-rotate(180deg) saturate(0.55) sepia(0.3) brightness(0.95); }
+
+
+/* Ground colour tokens: page surfaces are ink, never sand */
+html[data-sec="night"] {
+  --color-surface-default: #100406;
+  --ifs-wash: transparent;
+  --mem-wash: transparent;
+}
+html[data-sec="night"] .bks-ifs { background: transparent; }
+
+/* The sand band (next stop) keeps dark type */
+html[data-sec="night"] .next-stop { color: #100406; }
+html[data-sec="night"] .next-stop :is(h2, .next-stop__title, .next-stop__body) { color: #100406; }
+html[data-sec="night"] .next-stop__kicker,
+html[data-sec="night"] .next-stop__jump span { color: #52131e; }
+html[data-sec="night"] .next-stop__jump a { color: #100406; }
+html[data-sec="night"] .next-stop__track a { color: #52131e; }
+html[data-sec="night"] .next-stop__track li.is-done a,
+html[data-sec="night"] .next-stop__track a:hover { color: #f3d9b4; }
+html[data-sec="night"] .next-stop__track li.is-next a { background: #100406; color: #f3d9b4; border-color: #100406; }
+html[data-sec="night"] .next-stop__cta { color: #f3d9b4; }
+
+/* Outline buttons, card labels and badges on the dark ground */
+html[data-sec="night"] .btn-secondary { color: #f3d9b4; border-color: #f3d9b4; }
+html[data-sec="night"] .btn-secondary:hover { background: #52131e; box-shadow: 4px 4px 0 #f3d9b4; }
+html[data-sec="night"] .kicker { color: #f3d9b4; }
+html[data-sec="night"] :is(.tier-card:last-child, .nrb-tier:nth-child(4)) .badge { color: #100406 !important; border-color: #100406 !important; }
+
+html[data-sec="night"] #ifs-body #ifs-title { color: #f3d9b4; }
+
+/* Door pages (/farmers, /public, /sponsors) */
+html[data-sec="night"] .eco-pending { background: #1c0a0e; color: #e6cba6; border-left-color: #f3d9b4; }
+html[data-sec="night"] .eco-stage .eco-kicker,
+html[data-sec="night"] .eco-kicker { color: #f3d9b4; }

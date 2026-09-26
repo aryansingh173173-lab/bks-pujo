@@ -1,11 +1,11 @@
 {
   "meta": {
     "lang": "hi",
-    "hindiStatus": "DRAFT — NATIVE REVIEW REQUIRED"
+    "hindiStatus": "DRAFT: NATIVE REVIEW REQUIRED"
   },
-  "slotLabel": "चित्र आएगा — यह आयोजन, अनुमति के साथ। मंडप का चित्र नहीं।",
+  "slotLabel": "चित्र आएगा: यह आयोजन, अनुमति के साथ। मंडप का चित्र नहीं।",
   "slotCaption": "चित्र स्थान · अधिकार EMPTY · स्वीकृत चित्र आने पर माटी, प्रकाश, पड़ोस।",
-  "heroStatus": "हीरो की भाषा समीक्षा का मसौदा है — बदली जा सकती है। स्थान का दावा नहीं।",
+  "heroStatus": "हीरो की भाषा समीक्षा का मसौदा है, बदली जा सकती है। स्थान का दावा नहीं।",
   "storyArc": {
     "h2": "एक कथा, क्रम से",
     "lede": "पूजा द्वार खोलती है। कृषक समाज किसान का नाम लेता है। समेकित कृषि आजीविका है। फिर जीवंत फार्म, फिर बीज।",
@@ -42,7 +42,7 @@
         "id": "fund",
         "kicker": "बीज",
         "title": "Learn how support works",
-        "body": "This Durga Puja is the public beginning of a mobilisation target: about 5,000 integrated farms. ₹1 lakh is the proposed seed for one village farm — or ₹20,000 every two months — with one NRB patron each, from Puja 2026 to Puja 2027. That is a goal, not money already collected.",
+        "body": "This Durga Puja is the public beginning of a mobilisation target: about 5,000 integrated farms. ₹1 lakh is the proposed seed for one village farm, or ₹20,000 every two months, with one NRB patron each, from Puja 2026 to Puja 2027. That is a goal, not money already collected.",
         "href": "#fund"
       },
       {

@@ -1,5 +1,9 @@
 {
-  "meta": { "lang": "bn", "bengaliStatus": "DRAFT — NATIVE REVIEW REQUIRED", "note": "লাইভ কপি prototype/index.html-এর data-bn।" },
+  "meta": {
+    "lang": "bn",
+    "bengaliStatus": "DRAFT: NATIVE REVIEW REQUIRED",
+    "note": "লাইভ কপি prototype/index.html-এর data-bn।"
+  },
   "h1": "পূজা",
   "lede": "আরাধনা, শিল্প, খাবার, সঙ্গীত আর পাড়া। উৎসবের তথ্য, আর বি কে এস সম্বন্ধে যা এখনও সত্যি নয়, তা আলাদা।",
   "unesco": {
@@ -7,7 +11,7 @@
     "class": "SOURCE FACT",
     "sourceId": "SRC-UNESCO-001",
     "title": "ইউনেস্কো কী স্বীকৃতি দিয়েছে",
-    "body": "২০২১-এর ডিসেম্বরে ‘কলকাতার দুর্গা পূজা’ ইউনেস্কোর তালিকায় ওঠে। স্বীকৃতি কলকাতার পূজার — এই পাতার নয়, নামহীন মণ্ডপেরও নয়।"
+    "body": "২০২১-এর ডিসেম্বরে ‘কলকাতার দুর্গা পূজা’ ইউনেস্কোর তালিকায় ওঠে। স্বীকৃতি কলকাতার পূজার, এই পাতার নয়, নামহীন মণ্ডপেরও নয়।"
   },
   "clay": {
     "governance": "VERIFIED",

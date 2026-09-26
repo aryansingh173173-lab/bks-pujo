@@ -1,4 +1,4 @@
-/* BKS digital tokens — copied from Brand System v1.2.0 as documented values.
+/* BKS digital tokens, copied from Brand System v1.2.0 as documented values.
    Logo pigments stay logo-only. Seasonal festival tints below are ADDITIONS
    for this Durga Puja microsite. They do not replace brand green or gold. */
 
@@ -6,26 +6,26 @@
   --bks-logo-green-text: #0e5306;
   --bks-logo-blue-annadata: #00168b;
 
-  --color-brand-primary: #163a26;
-  --color-brand-primary-soft: #1f5237;
-  --color-brand-primary-deep: #0f2818;
-  --color-brand-secondary: #c98a1f;
+  --color-brand-primary: #52131e;
+  --color-brand-primary-soft: #7a2a37;
+  --color-brand-primary-deep: #3a0d15;
+  --color-brand-secondary: #f3d9b4;
   /* Documented Phase-1 addition: tint of brand gold for draft/governance banners. */
-  --color-brand-secondary-tint: #fbeecb;
-  --color-brand-accent: #a6461f;
-  --color-surface-default: #f6f1e4;
-  --color-surface-card: #fffdf7;
-  --color-surface-raised: #ffffff;
-  --color-text-primary: #201a10;
-  --color-text-secondary: #3d3424;
-  --color-text-muted: #5a4e36;
-  --color-text-on-brand: #f3ecdb;
-  --color-border-default: #ddd0ab;
-  --color-action-primary: #c98a1f;
-  --color-action-primary-text: #201a10;
+  --color-brand-secondary-tint: #f3d9b4;
+  --color-brand-accent: #7a2a37;
+  --color-surface-default: #f3d9b4;
+  --color-surface-card: #1c0a0e;
+  --color-surface-raised: #1c0a0e;
+  --color-text-primary: #1f0b0f;
+  --color-text-secondary: #3a1a20;
+  --color-text-muted: #6d5054;
+  --color-text-on-brand: #f3d9b4;
+  --color-border-default: #ecd9cc;
+  --color-action-primary: #f3d9b4;
+  --color-action-primary-text: #1f0b0f;
 
-  --font-display: "Baloo Da 2", "Nirmala UI", "Noto Sans Bengali", system-ui, sans-serif;
-  --font-text: "Hind Siliguri", "Hind", "Nirmala UI", "Noto Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Outfit", "Baloo Da 2", "Hind", "Nirmala UI", "Noto Sans Bengali", system-ui, sans-serif;
+  --font-text: "DM Sans", "Hind Siliguri", "Hind", "Nirmala UI", "Noto Sans", "Segoe UI", system-ui, sans-serif;
   --font-promo: "Galada", var(--font-display), cursive;
 
   --size-body: 1.0625rem;
@@ -36,20 +36,20 @@
   --wrap-wide: min(72rem, 100%);
   --space-section: clamp(2.5rem, 5vw, 4.5rem);
   --radius-card: 14px;
-  --shadow-quiet: 0 1px 0 rgba(32, 26, 16, 0.04), 0 12px 32px rgba(15, 40, 24, 0.06);
+  --shadow-quiet: 0 1px 0 rgba(32, 26, 16, 0.04), 0 12px 32px rgba(82, 19, 30, 0.06);
 
-  /* Editorial slot materials — derived from BKS surfaces. */
+  /* Editorial slot materials, derived from BKS surfaces. */
   --slot-clay: #d8c4a0;
-  --slot-field: #1a3f2a;
-  --slot-lamp: #efe4c8;
+  --slot-field: #52131e;
+  --slot-lamp: #f3d9b4;
   --slot-weave: #cbb892;
 
   /* Seasonal Durga Puja microsite tints. Additive to BKS green/gold. */
-  --fest-sindoor: #8f2d1e;
-  --fest-sindoor-deep: #5c1c14;
-  --fest-marigold: #e0c27a;
-  --fest-turmeric: #d4a017;
-  --fest-terracotta: #c45c32;
+  --fest-sindoor: #52131e;
+  --fest-sindoor-deep: #3a0d15;
+  --fest-marigold: #f3d9b4;
+  --fest-turmeric: #f3d9b4;
+  --fest-terracotta: #7a2a37;
   --fest-pond: #143d4a;
   --fest-soil: #4a3424;
 }

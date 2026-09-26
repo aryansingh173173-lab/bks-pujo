@@ -1,13 +1,13 @@
-/* Shared 2025 Puja Memories — one visual family across all BKS Pujo doors. */
+/* Shared 2025 Puja Memories, one visual family across all BKS Pujo doors. */
 .bks-memories {
-  --mem-ink: var(--color-text-primary, #201a10);
-  --mem-muted: var(--color-text-muted, #5a4e36);
-  --mem-paper: var(--color-surface-card, #fffdf7);
-  --mem-wash: var(--color-surface-default, #f6f1e4);
-  --mem-gold: var(--color-brand-secondary, #c98a1f);
-  --mem-forest: var(--color-brand-primary, #163a26);
-  --mem-sindoor: var(--fest-sindoor, #8f2d1e);
-  --mem-line: var(--color-border-default, #ddd0ab);
+  --mem-ink: #e6cba6;
+  --mem-muted: #c9ad8e;
+  --mem-paper: #1c0a0e;
+  --mem-wash: transparent;
+  --mem-gold: var(--color-brand-secondary, #f3d9b4);
+  --mem-forest: #f3d9b4;
+  --mem-sindoor: #f3d9b4;
+  --mem-line: rgba(243, 217, 180, 0.2);
   --mem-display: var(--font-display, "Baloo Da 2", "Nirmala UI", Georgia, serif);
   --mem-text: var(--font-text, "Hind Siliguri", "Hind", "Nirmala UI", Georgia, serif);
   position: relative;
@@ -96,7 +96,7 @@
   padding: 0;
   border: 0;
   background: linear-gradient(180deg, rgba(18, 12, 8, 0.15), rgba(18, 12, 8, 0.55));
-  color: #fffdf7;
+  color: #f3d9b4;
   cursor: pointer;
   font-family: var(--mem-text);
 }
@@ -115,8 +115,8 @@
   width: 4.25rem;
   height: 4.25rem;
   border-radius: 999px;
-  background: rgba(246, 241, 228, 0.94);
-  color: #163a26;
+  background: #1c0a0e;
+  color: #e6cba6;
   font-size: 1.4rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
 }
@@ -219,7 +219,7 @@
   max-height: calc(100dvh - 2rem);
   overflow: auto;
   background: #0f0b08;
-  color: #f6f1e4;
+  color: #f3d9b4;
   border-radius: 12px;
 }
 
@@ -251,8 +251,8 @@
   min-height: 48px;
   border: 0;
   border-radius: 999px;
-  background: rgba(246, 241, 228, 0.92);
-  color: #163a26;
+  background: #1c0a0e;
+  color: #e6cba6;
   font: inherit;
   cursor: pointer;
 }

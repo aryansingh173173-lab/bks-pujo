@@ -1,31 +1,31 @@
 {
   "meta": {
     "lang": "bn",
-    "bengaliStatus": "DRAFT — NATIVE REVIEW REQUIRED",
+    "bengaliStatus": "DRAFT: NATIVE REVIEW REQUIRED",
     "source": "BKS Durga Puja website content architecture, 18 Aug 2026"
   },
   "photos": {
     "fundSrc": "assets/puja-2025/aarti-procession-2025.jpg",
     "fundAlt": "২০২৫ দুর্গাপূজা মহোৎসবে বাঁশের প্যাভিলিয়নে সন্ধ্যার আরতি, আইআইটি খড়গপুর রিসার্চ পার্ক",
-    "fundCap": "আরতি, দুর্গাপূজা মহোৎসব ২০২৫, আইআইটি খড়গপুর রিসার্চ পার্ক — কর্মযোগ ফর দ্য ২১স্ট সেঞ্চুরি ফাউন্ডেশন।",
+    "fundCap": "আরতি, দুর্গাপূজা মহোৎসব ২০২৫, আইআইটি খড়গপুর রিসার্চ পার্ক, কর্মযোগ ফর দ্য ২১স্ট সেঞ্চুরি ফাউন্ডেশন।",
     "whoSrc": "assets/puja-2025/conch-aarti-2025.jpg",
     "whoAlt": "২০২৫ দুর্গাপূজা মহোৎসবে সন্ধ্যার আরতিতে শঙ্খ",
     "whoCap": "শঙ্খ আরতি, দুর্গাপূজা মহোৎসব ২০২৫।",
     "demoSrc": "",
     "demoAlt": "২০২৫ দুর্গাপূজা মহোৎসবে মাটির প্রতিমা, আইআইটি খড়গপুর রিসার্চ পার্ক",
-    "demoCap": "দুর্গাপূজা মহোৎসব ২০২৫, আইআইটি খড়গপুর রিসার্চ পার্ক — এই বছরের লাইভ খামার প্যাভিলিয়ন এই উৎসবের ভাষা থেকেই গড়ে উঠছে।",
+    "demoCap": "দুর্গাপূজা মহোৎসব ২০২৫, আইআইটি খড়গপুর রিসার্চ পার্ক, এই বছরের লাইভ খামার প্যাভিলিয়ন এই উৎসবের ভাষা থেকেই গড়ে উঠছে।",
     "aboutSrc": "assets/mahacharya-sourabh-j-sarkar.jpg",
     "aboutAlt": "মহাচার্য সৌরভ জে. সরকার, রাজ্য সভাপতি, ভারতীয় কৃষক সমাজ, পশ্চিমবঙ্গ"
   },
   "who": {
     "eyebrow": "এনআরবি কে?",
-    "title": "নন-রেসিডেন্ট বাঙালি — ভূগোলের বাইরে।",
-    "lede": "নিউ ইয়র্ক, লন্ডন, বেঙ্গালুরু, এমনকি কলকাতার উঁচু বাড়িতে থাকুন, আপনার শিকড় সেই গ্রামে যেখানে বাবা-মা বা ঠাকুরদা-ঠাকুমা বড় হয়েছেন। সেই গভীর টান, পৈতৃক মাটিকে সমৃদ্ধ দেখার আকাঙ্ক্ষা — এটাই আমাদের এক করে। এই দুর্গাপূজায় নস্টালজিয়াকে করুন স্পর্শযোগ্য প্রভাব।"
+    "title": "নন-রেসিডেন্ট বাঙালি: ভূগোলের বাইরে।",
+    "lede": "নিউ ইয়র্ক, লন্ডন, বেঙ্গালুরু, এমনকি কলকাতার উঁচু বাড়িতে থাকুন, আপনার শিকড় সেই গ্রামে যেখানে বাবা-মা বা ঠাকুরদা-ঠাকুমা বড় হয়েছেন। সেই গভীর টান, পৈতৃক মাটিকে সমৃদ্ধ দেখার আকাঙ্ক্ষা, এটাই আমাদের এক করে। এই দুর্গাপূজায় নস্টালজিয়াকে করুন স্পর্শযোগ্য প্রভাব।"
   },
   "opportunity": {
     "eyebrow": "সম্ভাবনা",
     "title": "বাংলার কৃষি পুনরুত্থান।",
-    "lede": "বাংলা আজ অর্থনৈতিক ও কৃষি নবজাগরণের ঐতিহাসিক সন্ধিক্ষণে দাঁড়িয়ে। অভূতপূর্ব উন্নয়ন উদ্যোগ ও অর্থায়নের গতি চলছে — ঐতিহাসিক রূপান্তরের সম্ভাবনা এখানেই। বড় সম্ভাবনা তখনই ফলে যখন নাগরিকেরা সক্রিয়ভাবে দায় নেন। এই মুহূর্তকে যেতে দেওয়া যায় না। এনআরবিদের ক্ষমতা, দৃষ্টি ও সম্পদ আছে এই কৃষি পুনর্জন্মকে জীবন্ত বাস্তব করতে।"
+    "lede": "বাংলা আজ অর্থনৈতিক ও কৃষি নবজাগরণের ঐতিহাসিক সন্ধিক্ষণে দাঁড়িয়ে। অভূতপূর্ব উন্নয়ন উদ্যোগ ও অর্থায়নের গতি চলছে, ঐতিহাসিক রূপান্তরের সম্ভাবনা এখানেই। বড় সম্ভাবনা তখনই ফলে যখন নাগরিকেরা সক্রিয়ভাবে দায় নেন। এই মুহূর্তকে যেতে দেওয়া যায় না। এনআরবিদের ক্ষমতা, দৃষ্টি ও সম্পদ আছে এই কৃষি পুনর্জন্মকে জীবন্ত বাস্তব করতে।"
   },
   "about": {
     "eyebrow": "ভারতীয় কৃষক সমাজ",
@@ -36,15 +36,15 @@
   "model": {
     "eyebrow": "৫,০০০ সমন্বিত খামার উদ্যোগ",
     "title": "এক গ্রামের খামার। এক এনআরবি পৃষ্ঠপোষক।",
-    "lede": "A mobilisation target of about 5,000 village locations paired with about 5,000 dedicated NRB patrons. Identified local teams of 2 to 3 progressive farmers or FPOs are intended to contribute land, labour, and working capital. The proposed seed is ₹1,00,000 per farm — or ₹20,000 every two months. A later digital portal may let patrons follow planting cycles. None of that is payment on this page, and none of it is already completed.",
+    "lede": "A mobilisation target of about 5,000 village locations paired with about 5,000 dedicated NRB patrons. Identified local teams of 2 to 3 progressive farmers or FPOs are intended to contribute land, labour, and working capital. The proposed seed is ₹1,00,000 per farm, or ₹20,000 every two months. A later digital portal may let patrons follow planting cycles. None of that is payment on this page, and none of it is already completed.",
     "points": [
       {
         "title": "The target",
-        "body": "About 5,000 village locations paired with about 5,000 dedicated NRB patrons — a goal, not a completed count."
+        "body": "About 5,000 village locations paired with about 5,000 dedicated NRB patrons, a goal, not a completed count."
       },
       {
         "title": "On the ground",
-        "body": "Local teams of 2–3 progressive farmers / FPOs — land, labour and working capital."
+        "body": "Local teams of 2–3 progressive farmers / FPOs, land, labour and working capital."
       },
       {
         "title": "The contribution",
@@ -71,7 +71,7 @@
     "items": [
       {
         "q": "What is an FPO here?",
-        "a": "A Farmer Producer Organisation — the local vehicle for each village farm. Identified teams of two to three progressive farmers or FPOs put in land, sweat equity and working capital. Your ₹1 lakh is the seed that sits beside that."
+        "a": "A Farmer Producer Organisation: the local vehicle for each village farm. Identified teams of two to three progressive farmers or FPOs put in land, sweat equity and working capital. Your ₹1 lakh is the seed that sits beside that."
       },
       {
         "q": "How is ₹1 lakh used?",
@@ -93,8 +93,8 @@
   },
   "demo": {
     "eyebrow": "দুর্গাপূজা ২০২৬ · লাইভ সমন্বিত খামার প্যান্ডেল",
-    "title": "ইস্ট কলকাতা ওয়েটল্যান্ডস — সেক্টর ফাইভ থেকে ৫০০ মিটার",
-    "lede": "A live integrated-farm demonstration is being built in the East Kolkata Wetlands, 500 metres from Sector V — intended as the 2026 pavilion, not only a festive facade. Whether that plot is also the dump-yard transformation story is pending confirmation. The 5,000-village pairing is a mobilisation target, not a completed replication.",
+    "title": "ইস্ট কলকাতা ওয়েটল্যান্ডস: সেক্টর ফাইভ থেকে ৫০০ মিটার",
+    "lede": "A live integrated-farm demonstration is being built in the East Kolkata Wetlands, 500 metres from Sector V, intended as the 2026 pavilion, not only a festive facade. Whether that plot is also the dump-yard transformation story is pending confirmation. The 5,000-village pairing is a mobilisation target, not a completed replication.",
     "statusBadge": "নির্মাণাধীন",
     "statusNote": "কৃষক সমাজ পূজা ২০২৬-এর কেন্দ্রীয় প্যাভিলিয়ন হিসেবে এখানে প্রথম লাইভ আইএফএস ডেমো খামার গড়ে উঠছে।",
     "facts": [
@@ -122,9 +122,9 @@
   "fund": {
     "eyebrow": "খামারে বীজ",
     "title": "Express interest in a village farm.",
-    "lede": "₹1 lakh is the proposed seed for one integrated model farm — in full, or ₹20,000 every two months. Name your native village. This page does not take payment. Bharatiya Krishak Samaj may later pair interested patrons with a local farmer team.",
+    "lede": "₹1 lakh is the proposed seed for one integrated model farm, in full, or ₹20,000 every two months. Name your native village. This page does not take payment. Bharatiya Krishak Samaj may later pair interested patrons with a local farmer team.",
     "whoLabel": "কার জন্য",
-    "whoBody": "নন-রেসিডেন্ট বাঙালি — বাংলার গ্রামের সঙ্গে যুক্ত যে কেউ, বিদেশে থাকুন বা কলকাতার উঁচু বাড়িতে — যাঁরা একটি নামসহ খামার অনুসরণ করতে চান।",
+    "whoBody": "নন-রেসিডেন্ট বাঙালি, বাংলার গ্রামের সঙ্গে যুক্ত যে কেউ, বিদেশে থাকুন বা কলকাতার উঁচু বাড়িতে, যাঁরা একটি নামসহ খামার অনুসরণ করতে চান।",
     "modelEyebrow": "নমনীয় অবদান",
     "modelTitle": "১ লক্ষ = পাঁচ কিস্তি, প্রতিটি ২০,০০০ টাকা",
     "modelNote": "A proposed staggered pattern. This page does not take payment. Any later contribution would be completed off this website.",
@@ -142,15 +142,15 @@
     "fieldVillage": "নিজ গ্রাম / পাড়া",
     "fieldLocation": "এখন কোথায় থাকেন",
     "fieldType": "পৃষ্ঠপোষকের ধরন",
-    "typeIndividual": "এক খামারের পৃষ্ঠপোষক — ১ লক্ষ টাকা",
-    "typeBulk": "বাল্ক / পূজার পৃষ্ঠপোষক — নিচের স্তর",
+    "typeIndividual": "এক খামারের পৃষ্ঠপোষক: ১ লক্ষ টাকা",
+    "typeBulk": "বাল্ক / পূজার পৃষ্ঠপোষক: নিচের স্তর",
     "consent": "This website does not submit your details to BKS. The information is downloaded as a file to your device. If you choose to send that file to BKS, subsequent handling is outside this website.",
     "submit": "Express interest",
     "status": "The information has been downloaded as a file to your device. It has not been uploaded. Nothing here takes money."
   },
   "bulk": {
     "eyebrow": "পূজার পৃষ্ঠপোষকতা",
-    "title": "স্তরভিত্তিক স্পনসরশিপ — খামার ও উৎসব একসঙ্গে।",
+    "title": "স্তরভিত্তিক স্পনসরশিপ: খামার ও উৎসব একসঙ্গে।",
     "lede": "Organisations may register interest in supporting farms and the festival together. Allocation, if any, is by Bharatiya Krishak Samaj. This is not an online booking and not a payment.",
     "tiers": [
       {

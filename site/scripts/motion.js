@@ -1,0 +1,221 @@
+(function () {
+  "use strict";
+
+  /* Motion layer for the Sunflare theme: scroll reveal,
+     number count-up, Puja countdown, compact header, scroll progress.
+     Everything is decorative, the page reads the same without it. */
+
+  var reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  var root = document.documentElement;
+
+  var PUJA_START = new Date("2026-10-16T00:00:00+05:30").getTime();
+  var PUJA_END = new Date("2026-10-21T00:00:00+05:30").getTime();
+
+  var COUNT_COPY = {
+    en: { label: "Countdown to Sharadiya 2026 · 16 October", d: "Days", h: "Hrs", m: "Min", s: "Sec", live: "The Puja is on: 16 to 20 October", done: "Thank you for Sharadiya 2026" },
+    bn: { label: "শারদীয়া ২০২৬-এর অপেক্ষা · ১৬ অক্টোবর", d: "দিন", h: "ঘণ্টা", m: "মিনিট", s: "সেকেন্ড", live: "পুজো চলছে: ১৬ থেকে ২০ অক্টোবর", done: "শারদীয়া ২০২৬-এর জন্য ধন্যবাদ" },
+    hi: { label: "शारदीया 2026 की उलटी गिनती · 16 अक्टूबर", d: "दिन", h: "घंटे", m: "मिनट", s: "सेकंड", live: "पूजा जारी है: 16 से 20 अक्टूबर", done: "शारदीया 2026 के लिए धन्यवाद" }
+  };
+
+  var REVEAL = [
+    ".story-bridge-inner",
+    ".differ .kicker",
+    ".differ h2",
+    ".diff-strip article",
+    ".journey__head",
+    ".journey-stop",
+    ".nom-card",
+    ".campaign-section > .kicker",
+    ".campaign-section > h2",
+    ".campaign-section > p",
+    ".award-card",
+    ".nrb-tier",
+    ".tier-card",
+    ".facts > div",
+    ".record-stats > div",
+    ".record-startups article",
+    ".sponsor-why article",
+    ".source-list li",
+    ".leader-strip article",
+    ".nrb-steps li",
+    ".nrb-photo",
+    ".prep-photo",
+    ".record-figure",
+    ".visit-map",
+    ".quote-band",
+    ".bks-memories__cred",
+    ".stories__stage",
+    ".watch__row",
+    ".watch__links",
+    ".doors-grid .explore-card",
+    ".hint",
+    ".glance",
+    ".chapter-prose .layer",
+    ".day-list li",
+    ".next-stop__copy",
+    ".next-stop__visual"
+  ].join(",");
+
+
+  function lang() {
+    var l = (root.lang || "en").slice(0, 2);
+    return COUNT_COPY[l] ? l : "en";
+  }
+
+  /* ---------- Scroll progress + compact header ---------- */
+  function setupScroll() {
+    var bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    var header = document.querySelector(".site-header");
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      bar.style.setProperty("--p", p.toFixed(4));
+      if (header) header.classList.toggle("is-compact", window.scrollY > 40);
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }, { passive: true });
+    update();
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  var io = null;
+  function tagReveals(scope) {
+    if (!io) return;
+    var nodes = (scope || document).querySelectorAll(REVEAL);
+    Array.prototype.forEach.call(nodes, function (el) {
+      if (el.classList.contains("rv")) return;
+      if (el.closest(".stories.is-full, .site-header, .nav-drawer")) return;
+      var rect = el.getBoundingClientRect();
+      // Content already on screen at load stays put, no flash.
+      if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0 && document.readyState !== "loading" && !scope) {
+        el.classList.add("rv", "is-visible");
+        return;
+      }
+      el.classList.add("rv");
+      if (el.matches(".award-card, .nrb-tier, .tier-card")) el.classList.add("rv--scale");
+      var sibs = el.parentNode ? Array.prototype.filter.call(el.parentNode.children, function (c) { return c.matches(REVEAL); }) : [];
+      var idx = sibs.indexOf(el);
+      if (idx > 0) el.style.setProperty("--rv-delay", Math.min(idx, 6) * 0.08 + "s");
+      io.observe(el);
+    });
+  }
+
+  function setupReveal() {
+    if (reduce || !("IntersectionObserver" in window)) return;
+    io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+          countUp(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    root.classList.add("motion-ok");
+    tagReveals();
+    var pending = 0;
+    var mo = new MutationObserver(function () {
+      clearTimeout(pending);
+      pending = setTimeout(function () {
+        tagReveals(document.getElementById("main"));
+        countUpVisible();
+      }, 60);
+    });
+    var main = document.getElementById("main");
+    if (main) mo.observe(main, { childList: true, subtree: true });
+  }
+
+  /* ---------- Count-up numbers ---------- */
+  var NUM_SEL = ".nom-card strong, .record-stats strong, .stat-value";
+  function countUp(scope) {
+    if (reduce || !scope || !scope.querySelectorAll) return;
+    var list = scope.matches && scope.matches(NUM_SEL) ? [scope] : Array.prototype.slice.call(scope.querySelectorAll(NUM_SEL));
+    list.forEach(function (el) {
+      if (el.getAttribute("data-counted") === el.textContent) return;
+      var m = /^(\D*?)(\d[\d,]*)(.*)$/.exec(el.textContent.trim());
+      if (!m || el.children.length) return;
+      var target = parseInt(m[2].replace(/,/g, ""), 10);
+      if (!isFinite(target) || target < 2) return;
+      var final = el.textContent;
+      var useComma = m[2].indexOf(",") !== -1;
+      var start = performance.now();
+      var dur = 1400;
+      el.setAttribute("data-counted", final);
+      function frame(now) {
+        var k = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - k, 3);
+        var val = Math.round(target * eased);
+        el.textContent = m[1] + (useComma ? val.toLocaleString("en-IN") : String(val)) + m[3];
+        if (k < 1) requestAnimationFrame(frame);
+        else el.textContent = final;
+      }
+      requestAnimationFrame(frame);
+    });
+  }
+  function countUpVisible() {
+    Array.prototype.forEach.call(document.querySelectorAll(".rv.is-visible"), function (el) {
+      if (el.querySelector && el.querySelector(NUM_SEL + ":not([data-counted])")) countUp(el);
+    });
+  }
+
+  /* ---------- Countdown ---------- */
+  function setupCountdown() {
+    var box = document.getElementById("hero-countdown");
+    if (!box) return;
+    var lastLang = "";
+    function pad(n) { return n < 10 ? "0" + n : String(n); }
+    function tick() {
+      var c = COUNT_COPY[lang()];
+      var now = Date.now();
+      if (now >= PUJA_END) {
+        box.innerHTML = "<span class='hero-countdown__live'>" + c.done + "</span>";
+        box.hidden = false;
+        return;
+      }
+      if (now >= PUJA_START) {
+        box.innerHTML = "<span class='hero-countdown__live'>" + c.live + "</span>";
+        box.hidden = false;
+        return;
+      }
+      var diff = Math.floor((PUJA_START - now) / 1000);
+      var d = Math.floor(diff / 86400);
+      var h = Math.floor((diff % 86400) / 3600);
+      var m = Math.floor((diff % 3600) / 60);
+      var s = diff % 60;
+      if (lastLang !== lang() || !box.querySelector("[data-cd='d']")) {
+        lastLang = lang();
+        box.innerHTML =
+          "<span class='hero-countdown__label'>" + c.label + "</span>" +
+          ["d", "h", "m", "s"].map(function (k) {
+            return "<span class='hero-countdown__cell'><b data-cd='" + k + "'></b><small>" + c[k] + "</small></span>";
+          }).join("");
+      }
+      box.querySelector("[data-cd='d']").textContent = String(d);
+      box.querySelector("[data-cd='h']").textContent = pad(h);
+      box.querySelector("[data-cd='m']").textContent = pad(m);
+      box.querySelector("[data-cd='s']").textContent = pad(s);
+      box.hidden = false;
+      setTimeout(tick, 1000 - (Date.now() % 1000));
+    }
+    box.setAttribute("aria-live", "off");
+    tick();
+  }
+
+  function boot() {
+    setupScroll();
+    setupReveal();
+    setupCountdown();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();

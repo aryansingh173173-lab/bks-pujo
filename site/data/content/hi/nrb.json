@@ -1,31 +1,31 @@
 {
   "meta": {
     "lang": "hi",
-    "hindiStatus": "DRAFT — NATIVE REVIEW REQUIRED",
+    "hindiStatus": "DRAFT: NATIVE REVIEW REQUIRED",
     "source": "BKS Durga Puja website content architecture, 18 Aug 2026"
   },
   "photos": {
     "fundSrc": "assets/puja-2025/aarti-procession-2025.jpg",
     "fundAlt": "2025 दुर्गा पूजा महोत्सव में बाँस मंडप में संध्या आरती, आईआईटी खड़गपुर रिसर्च पार्क",
-    "fundCap": "आरती, दुर्गा पूजा महोत्सव 2025, आईआईटी खड़गपुर रिसर्च पार्क — कर्मयोग फॉर द 21st सेंचुरी फाउंडेशन।",
+    "fundCap": "आरती, दुर्गा पूजा महोत्सव 2025, आईआईटी खड़गपुर रिसर्च पार्क, कर्मयोग फॉर द 21st सेंचुरी फाउंडेशन।",
     "whoSrc": "assets/puja-2025/conch-aarti-2025.jpg",
     "whoAlt": "2025 दुर्गा पूजा महोत्सव में संध्या आरती पर शंख",
     "whoCap": "शंख आरती, दुर्गा पूजा महोत्सव 2025।",
     "demoSrc": "",
     "demoAlt": "2025 दुर्गा पूजा महोत्सव में माटी की प्रतिमा, आईआईटी खड़गपुर रिसर्च पार्क",
-    "demoCap": "दुर्गा पूजा महोत्सव 2025, आईआईटी खड़गपुर रिसर्च पार्क — इसी उत्सव की भाषा से इस वर्ष का जीवंत फार्म पवेलियन उठ रहा है।",
+    "demoCap": "दुर्गा पूजा महोत्सव 2025, आईआईटी खड़गपुर रिसर्च पार्क, इसी उत्सव की भाषा से इस वर्ष का जीवंत फार्म पवेलियन उठ रहा है।",
     "aboutSrc": "assets/mahacharya-sourabh-j-sarkar.jpg",
     "aboutAlt": "महाचार्य सौरभ जे. सरकार, राज्य अध्यक्ष, भारतीय कृषक समाज, पश्चिम बंगाल"
   },
   "who": {
     "eyebrow": "एनआरबी कौन?",
-    "title": "नॉन-रेजिडेंट बंगाली — भूगोल से परे।",
+    "title": "नॉन-रेजिडेंट बंगाली: भूगोल से परे।",
     "lede": "न्यूयॉर्क, लंदन, बेंगलुरु, या कोलकाता की ऊँची इमारत में रहें, आपकी जड़ें उस गाँव में हैं जहाँ माता-पिता या दादा-दादी पले। वही गहरा नाता और पैतृक मिट्टी को समृद्ध देखने की चाह हमें जोड़ती है। इस दुर्गा पूजा में नॉस्टैल्जिया को ठोस प्रभाव बनाइए।"
   },
   "opportunity": {
     "eyebrow": "संभावना",
     "title": "बंगाल का कृषि पुनरुत्थान।",
-    "lede": "बंगाल आर्थिक और कृषि पुनर्जागरण की ऐतिहासिक दहलीज़ पर खड़ा है। अभूतपूर्व विकास पहल और वित्त की गति चल रही है — ऐतिहासिक रूपांतरण की संभावना यहीं है। बड़ी संभावना तब फलती है जब नागरिक सक्रिय स्वामित्व लें। इस क्षण को जाने नहीं दिया जा सकता। एनआरबी के पास शक्ति, दृष्टि और संसाधन हैं इस कृषि पुनर्जन्म को जीवित वास्तविकता बनाने के लिए।"
+    "lede": "बंगाल आर्थिक और कृषि पुनर्जागरण की ऐतिहासिक दहलीज़ पर खड़ा है। अभूतपूर्व विकास पहल और वित्त की गति चल रही है, ऐतिहासिक रूपांतरण की संभावना यहीं है। बड़ी संभावना तब फलती है जब नागरिक सक्रिय स्वामित्व लें। इस क्षण को जाने नहीं दिया जा सकता। एनआरबी के पास शक्ति, दृष्टि और संसाधन हैं इस कृषि पुनर्जन्म को जीवित वास्तविकता बनाने के लिए।"
   },
   "about": {
     "eyebrow": "भारतीय कृषक समाज",
@@ -36,15 +36,15 @@
   "model": {
     "eyebrow": "5,000 समेकित फार्म पहल",
     "title": "एक गाँव फार्म। एक एनआरबी संरक्षक।",
-    "lede": "A mobilisation target of about 5,000 village locations paired with about 5,000 dedicated NRB patrons. Identified local teams of 2 to 3 progressive farmers or FPOs are intended to contribute land, labour, and working capital. The proposed seed is ₹1,00,000 per farm — or ₹20,000 every two months. A later digital portal may let patrons follow planting cycles. None of that is payment on this page, and none of it is already completed.",
+    "lede": "A mobilisation target of about 5,000 village locations paired with about 5,000 dedicated NRB patrons. Identified local teams of 2 to 3 progressive farmers or FPOs are intended to contribute land, labour, and working capital. The proposed seed is ₹1,00,000 per farm, or ₹20,000 every two months. A later digital portal may let patrons follow planting cycles. None of that is payment on this page, and none of it is already completed.",
     "points": [
       {
         "title": "The target",
-        "body": "About 5,000 village locations paired with about 5,000 dedicated NRB patrons — a goal, not a completed count."
+        "body": "About 5,000 village locations paired with about 5,000 dedicated NRB patrons, a goal, not a completed count."
       },
       {
         "title": "On the ground",
-        "body": "Local teams of 2–3 progressive farmers / FPOs — land, labour and working capital."
+        "body": "Local teams of 2–3 progressive farmers / FPOs, land, labour and working capital."
       },
       {
         "title": "The contribution",
@@ -71,7 +71,7 @@
     "items": [
       {
         "q": "What is an FPO here?",
-        "a": "A Farmer Producer Organisation — the local vehicle for each village farm. Identified teams of two to three progressive farmers or FPOs put in land, sweat equity and working capital. Your ₹1 lakh is the seed that sits beside that."
+        "a": "A Farmer Producer Organisation: the local vehicle for each village farm. Identified teams of two to three progressive farmers or FPOs put in land, sweat equity and working capital. Your ₹1 lakh is the seed that sits beside that."
       },
       {
         "q": "How is ₹1 lakh used?",
@@ -93,8 +93,8 @@
   },
   "demo": {
     "eyebrow": "दुर्गा पूजा 2026 · जीवंत समेकित फार्म पंडाल",
-    "title": "ईस्ट कोलकाता वेटलैंड्स — सेक्टर V से 500 मीटर",
-    "lede": "A live integrated-farm demonstration is being built in the East Kolkata Wetlands, 500 metres from Sector V — intended as the 2026 pavilion, not only a festive facade. Whether that plot is also the dump-yard transformation story is pending confirmation. The 5,000-village pairing is a mobilisation target, not a completed replication.",
+    "title": "ईस्ट कोलकाता वेटलैंड्स: सेक्टर V से 500 मीटर",
+    "lede": "A live integrated-farm demonstration is being built in the East Kolkata Wetlands, 500 metres from Sector V, intended as the 2026 pavilion, not only a festive facade. Whether that plot is also the dump-yard transformation story is pending confirmation. The 5,000-village pairing is a mobilisation target, not a completed replication.",
     "statusBadge": "निर्माणाधीन",
     "statusNote": "कृषक समाज पूजा 2026 के केंद्रीय पवेलियन के रूप में यहाँ पहला जीवंत आईएफएस डेमो फार्म बन रहा है।",
     "facts": [
@@ -122,9 +122,9 @@
   "fund": {
     "eyebrow": "फार्म का बीज",
     "title": "Express interest in a village farm.",
-    "lede": "₹1 lakh is the proposed seed for one integrated model farm — in full, or ₹20,000 every two months. Name your native village. This page does not take payment. Bharatiya Krishak Samaj may later pair interested patrons with a local farmer team.",
+    "lede": "₹1 lakh is the proposed seed for one integrated model farm, in full, or ₹20,000 every two months. Name your native village. This page does not take payment. Bharatiya Krishak Samaj may later pair interested patrons with a local farmer team.",
     "whoLabel": "किसके लिए",
-    "whoBody": "नॉन-रेजिडेंट बंगाली — बंगाल के गाँव से जुड़े कोई भी, विदेश में हों या कोलकाता की ऊँची इमारत में — जो एक नामित फार्म देखना चाहते हैं।",
+    "whoBody": "नॉन-रेजिडेंट बंगाली, बंगाल के गाँव से जुड़े कोई भी, विदेश में हों या कोलकाता की ऊँची इमारत में, जो एक नामित फार्म देखना चाहते हैं।",
     "modelEyebrow": "लचीला योगदान",
     "modelTitle": "₹1 लाख = पाँच किस्तें, प्रत्येक ₹20,000",
     "modelNote": "A proposed staggered pattern. This page does not take payment. Any later contribution would be completed off this website.",
@@ -142,15 +142,15 @@
     "fieldVillage": "मूल गाँव / पाड़ा",
     "fieldLocation": "अभी कहाँ रहते हैं",
     "fieldType": "संरक्षक प्रकार",
-    "typeIndividual": "एकल फार्म संरक्षक — ₹1 लाख",
-    "typeBulk": "बल्क / पूजा संरक्षक — नीचे के स्तर",
+    "typeIndividual": "एकल फार्म संरक्षक: ₹1 लाख",
+    "typeBulk": "बल्क / पूजा संरक्षक: नीचे के स्तर",
     "consent": "This website does not submit your details to BKS. The information is downloaded as a file to your device. If you choose to send that file to BKS, subsequent handling is outside this website.",
     "submit": "Express interest",
     "status": "The information has been downloaded as a file to your device. It has not been uploaded. Nothing here takes money."
   },
   "bulk": {
     "eyebrow": "पूजा संरक्षण",
-    "title": "स्तरीय प्रायोजन — फार्म और उत्सव साथ।",
+    "title": "स्तरीय प्रायोजन: फार्म और उत्सव साथ।",
     "lede": "Organisations may register interest in supporting farms and the festival together. Allocation, if any, is by Bharatiya Krishak Samaj. This is not an online booking and not a payment.",
     "tiers": [
       {

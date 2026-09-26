@@ -1,4 +1,4 @@
-/* Offline static site — no framework. Progressive enhancement. */
+/* Offline static site, no framework. Progressive enhancement. */
 (function () {
   const LANGS = ["en", "bn", "hi"];
   const DATA_BASE = "data/";
@@ -17,6 +17,39 @@
     "Purba Medinipur", "Purulia", "South 24 Parganas", "Uttar Dinajpur"
   ];
   const HOME_SECTIONS = ["nrb", "sambhavana", "about", "demo", "model", "fund", "sponsor", "village", "faq", "theme", "awards", "record", "memories", "nominate", "visit", "press", "ifs-tease", "prep", "story-arc", "story-bridge", "initiative", "doors"];
+  /* The campaign and NRB renderers write every section into #staging. Each one is
+     then moved into a [data-slot] on the page it belongs to, so the homepage stays
+     short and each chapter page carries its own depth. Order inside a slot follows
+     this list. */
+  const RELOCATE = [
+    ["#memories", "home-memories"],
+    ["#visit", "home-visit"],
+    [".quote-band", "home-quote"],
+    ["#about", "krishak-a"],
+    ["#banner-bks", "krishak-a"],
+    ["#sambhavana", "krishak-b"],
+    ["#awards", "league-a"],
+    ["#nominate", "league-b"],
+    ["#theme", "puja-a"],
+    ["#prep", "puja-a"],
+    ["#record", "puja-b"],
+    ["#press", "puja-c"],
+    ["#demo", "ifs-a"],
+    ["#model", "ifs-a"],
+    ["#nrb", "participate-a"],
+    ["#fund", "participate-a"],
+    ["#sponsor", "participate-b"],
+    ["#sponsor-puja", "participate-b"],
+    ["#village", "participate-c"],
+    ["#faq", "participate-c"]
+  ];
+  const SECTION_VIEW = { doors: "participate", "ifs-tease": "ifs" };
+  RELOCATE.forEach(([sel, slot]) => {
+    if (sel.charAt(0) === "#") SECTION_VIEW[sel.slice(1)] = slot.split("-")[0];
+  });
+  const PAGE_LABELS = {
+    league: { en: "Krishi Ratna League", bn: "কৃষিরত্ন লিগ", hi: "कृषि रत्न लीग" }
+  };
   const state = {
     lang: "en",
     heroId: "H1",
@@ -40,6 +73,33 @@
   function pageFromHash() {
     const hash = (location.hash || "#home").replace("#", "");
     return hash.split("/")[0] || "home";
+  }
+
+  /* Which view a hash belongs to: a view of that name, else the view that holds
+     a section with that id. */
+  function viewFor(page) {
+    if (document.querySelector("[data-view='" + page + "']")) return page;
+    if (SECTION_VIEW[page]) return SECTION_VIEW[page];
+    const el = document.getElementById(page);
+    const view = el && el.closest("[data-view]");
+    if (view) return view.dataset.view;
+    return HOME_SECTIONS.indexOf(page) !== -1 ? "home" : page;
+  }
+
+  function clearRelocated() {
+    document.querySelectorAll("[data-slot] > [data-relocated]").forEach((el) => el.remove());
+  }
+
+  function relocateSections() {
+    const staging = document.getElementById("staging");
+    if (!staging) return;
+    RELOCATE.forEach(([sel, slotName]) => {
+      const el = staging.querySelector(sel);
+      const slot = document.querySelector("[data-slot='" + slotName + "']");
+      if (!el || !slot) return;
+      el.setAttribute("data-relocated", "1");
+      slot.appendChild(el);
+    });
   }
 
   function t(obj, lang) {
@@ -83,8 +143,10 @@
     renderStories();
     applyUi();
     renderNav();
+    clearRelocated();
     renderCampaign();
     renderNrb();
+    relocateSections();
     updateMeta();
     setUrlLang(lang);
     document.querySelectorAll('a[href^="https://bks-pujo-"]').forEach((a) => {
@@ -277,8 +339,8 @@
     const ui = state.ui[state.lang];
     const spec = state.navSpec;
     if (!el) return;
-    const homeSection = HOME_SECTIONS.indexOf(page) !== -1;
-    if (!ui || !spec || page === "home" || homeSection) {
+    page = viewFor(page);
+    if (!ui || !spec || page === "home") {
       el.hidden = true;
       el.innerHTML = "";
       return;
@@ -299,7 +361,8 @@
         parts.push("<span>" + gLabel + "</span>");
       }
     }
-    const label = item ? (getByPath(ui, item.labelPath) || page) : page;
+    const local = PAGE_LABELS[page];
+    const label = item ? (getByPath(ui, item.labelPath) || page) : local ? (local[state.lang] || local.en) : page;
     parts.push("<span aria-current='page'>" + label + "</span>");
     el.hidden = false;
     el.innerHTML = parts.join(sep);
@@ -544,15 +607,15 @@
       "<h3>" + escapeHtml(demo.feedTitle) + "</h3>" +
       "<div class='nrb-feed-frame'>" +
       "<svg class='nrb-feed-schematic' viewBox='0 0 320 120' aria-hidden='true' focusable='false'>" +
-      "<rect x='8' y='18' width='304' height='84' rx='6' fill='#eef4ea' stroke='#163a26' stroke-width='1.4'/>" +
+      "<rect x='8' y='18' width='304' height='84' rx='6' fill='#1c0a0e' stroke='#f3d9b4' stroke-width='1.4'/>" +
       "<ellipse cx='108' cy='62' rx='58' ry='28' fill='#143d4a'/>" +
       "<ellipse cx='108' cy='62' rx='40' ry='16' fill='#1f6a6a' opacity='0.55'/>" +
       "<path d='M54 42 C70 28 146 28 162 42' fill='none' stroke='#4a3424' stroke-width='3'/>" +
-      "<path d='M168 38 l8 -16 m0 16 l8 -14 m0 14 l6 -12' stroke='#163a26' stroke-width='2' fill='none'/>" +
-      "<path d='M196 70 h96' stroke='#c45c32' stroke-width='2'/>" +
-      "<path d='M208 70 v-18 m24 18 v-22 m24 22 v-14 m24 14 v-20' stroke='#163a26' stroke-width='2'/>" +
-      "<circle cx='52' cy='86' r='4' fill='#8f2d1e'/>" +
-      "<circle cx='268' cy='38' r='4' fill='#c98a1f'/>" +
+      "<path d='M168 38 l8 -16 m0 16 l8 -14 m0 14 l6 -12' stroke='#f3d9b4' stroke-width='2' fill='none'/>" +
+      "<path d='M196 70 h96' stroke='#7a2a37' stroke-width='2'/>" +
+      "<path d='M208 70 v-18 m24 18 v-22 m24 22 v-14 m24 14 v-20' stroke='#f3d9b4' stroke-width='2'/>" +
+      "<circle cx='52' cy='86' r='4' fill='#f3d9b4'/>" +
+      "<circle cx='268' cy='38' r='4' fill='#f3d9b4'/>" +
       "</svg>" +
       "<p class='nrb-feed-empty'>" + escapeHtml(demo.feedEmpty) + "</p></div></div>" +
       "<div class='nrb-operator'><p class='kicker'>" + escapeHtml(operator.eyebrow) + "</p>" +
@@ -629,14 +692,14 @@
   }
 
   function show(page) {
-    const homeSection = HOME_SECTIONS.indexOf(page) !== -1;
-    const viewPage = homeSection ? "home" : page;
+    const viewPage = viewFor(page);
+    const homeSection = viewPage !== page;
     views.forEach((view) => {
       const on = view.dataset.view === viewPage;
       view.classList.toggle("is-active", on);
       view.hidden = !on;
     });
-    markCurrent(page);
+    markCurrent(homeSection && viewPage !== "home" ? viewPage : page);
     renderCrumbs(page);
     updateMeta();
     closeMenu();
@@ -727,7 +790,12 @@
   function renderHome() {
     const home = state.home[state.lang] || state.home.en;
     const arc = document.getElementById("story-arc");
-    if (!home || !arc || !home.storyArc) return;
+    if (!home) return;
+    if (arc && home.storyArc) renderStoryArc(arc, home);
+    renderBridge(home);
+  }
+
+  function renderStoryArc(arc, home) {
     const heading = home.storyArc.h2;
     const lede = home.storyArc.lede;
     const steps = home.storyArc.steps.map((step, i) =>
@@ -742,6 +810,9 @@
       "<h2>" + heading + "</h2>" +
       "<p class='muted'>" + lede + "</p>" +
       "<ol class='story-path'>" + steps + "</ol></div>";
+  }
+
+  function renderBridge(home) {
     const bridge = document.getElementById("story-bridge");
     if (bridge && home.bridge) {
       bridge.innerHTML =
@@ -927,11 +998,11 @@
       "<h2 id='participate-doors'>Specialised doors in this ecosystem</h2>" +
       "<p class='muted'>If you already know who you are, use the matching door. The form below remains a general interest note. It downloads a file to your device and does not take money.</p>" +
       "<div class='explore-grid doors-grid'>" +
-                    "<a class='explore-card' href='https://bks-pujo-sponsor.vercel.app/'><p class='kicker'>Organisations</p><h3>Sponsors</h3><p>Express sponsor interest. No payment.</p></a>" +
-      "<a class='explore-card' href='https://bks-pujo-government.vercel.app/'><p class='kicker'>Institutions</p><h3>Government &amp; Influencers</h3><p>Request a briefing. No endorsement claimed.</p></a>" +
-      "<a class='explore-card' href='https://bks-pujo-farmtech-agritech.vercel.app/'><p class='kicker'>Livelihood</p><h3>Farmers / FarmTech + AgriTech</h3><p>Express farmer interest. Not enrolment.</p></a>" +
-      "<a class='explore-card' href='https://bks-pujo-public.vercel.app/'><p class='kicker'>Gathering</p><h3>Public / Puja</h3><p>Explore the Puja. Venue still TBA.</p></a>" +
-      "<a class='explore-card' href='https://bks-pujo-nrb.vercel.app/'><p class='kicker'>Diaspora</p><h3>NRB / Supporters</h3><p>Express supporter interest. No UPI or 80G here.</p></a>" +
+                    "<a class='explore-card' href='https://bks-pujo-sponsor.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='9' r='6'/><path d='M8.5 14 7 22l5-3 5 3-1.5-8'/></svg></span><p class='kicker'>Organisations</p><h3>Sponsors</h3><p>Express sponsor interest. No payment.</p><span class='door-arrow'>Open this door</span></a>" +
+      "<a class='explore-card' href='https://bks-pujo-government.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3 3 8h18z'/><path d='M4 10h16M3 21h18M6 10v8M10 10v8M14 10v8M18 10v8'/></svg></span><p class='kicker'>Institutions</p><h3>Government &amp; Influencers</h3><p>Request a briefing. No endorsement claimed.</p><span class='door-arrow'>Open this door</span></a>" +
+      "<a class='explore-card' href='https://bks-pujo-farmtech-agritech.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 21v-9'/><path d='M12 12C12 7 8.5 5 4 5c0 5 3.5 7 8 7z'/><path d='M12 14c0-4 3-6 8-6 0 4-3 6-8 6z'/></svg></span><p class='kicker'>Livelihood</p><h3>Farmers / FarmTech + AgriTech</h3><p>Express farmer interest. Not enrolment.</p><span class='door-arrow'>Open this door</span></a>" +
+      "<a class='explore-card' href='https://bks-pujo-public.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3c2 3 3 4.5 3 6.5a3 3 0 0 1-6 0C9 7.5 10 6 12 3z'/><path d='M4 15h16c-1 3-4 5-8 5s-7-2-8-5z'/></svg></span><p class='kicker'>Gathering</p><h3>Public / Puja</h3><p>Explore the Puja. Venue still TBA.</p><span class='door-arrow'>Open this door</span></a>" +
+      "<a class='explore-card' href='https://bks-pujo-nrb.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18'/></svg></span><p class='kicker'>Diaspora</p><h3>NRB / Supporters</h3><p>Express supporter interest. No UPI or 80G here.</p><span class='door-arrow'>Open this door</span></a>" +
       "</div></section>" +
       "<div class='grid cols-2'>" + paths + "</div>" +
       "<form id='interest-form' class='interest-form' novalidate>" +
@@ -1070,7 +1141,7 @@
 
   function formatCivicDate(iso, lang) {
     const parts = (iso || "").split("-");
-    if (parts.length !== 3) return { day: "—", mon: "TBA" };
+    if (parts.length !== 3) return { day: "•", mon: "TBA" };
     const month = Number(parts[1]);
     const day = String(Number(parts[2]));
     const en = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -1095,7 +1166,7 @@
       const timeLabel = lang === "bn" ? "সময়: TBA" : lang === "hi" ? "समय: TBA" : "Time: TBA";
       const placeLabel = lang === "bn" ? "স্থান: TBA" : lang === "hi" ? "स्थान: TBA" : "Place: TBA";
       const shareLabel = lang === "bn" ? "শেয়ারের খসড়া" : lang === "hi" ? "साझा मसौदा" : "Share draft text";
-      const civic = lang === "bn" ? "নাগরিক ছুটি — বি কে এস অনুষ্ঠান নয়" : lang === "hi" ? "नागरिक छुट्टी — बीकेएस कार्यक्रम नहीं" : "Civic holiday — not a BKS event";
+      const civic = lang === "bn" ? "নাগরিক ছুটি: বি কে এস অনুষ্ঠান নয়" : lang === "hi" ? "नागरिक छुट्टी: बीकेएस कार्यक्रम नहीं" : "Civic holiday, not a BKS event";
       const d = formatCivicDate(ev.date, lang);
       li.innerHTML =
         "<div class='event-date'><span class='day'>" + d.day + "</span><span class='mon'>" + d.mon + "</span></div>" +
@@ -1161,6 +1232,7 @@
     const pageTitles = {
       home: null,
       puja: "The Puja",
+      league: "Krishi Ratna League",
       ifs: "Integrated Farming",
       participate: "Participate",
       krishak: "Bharatiya Krishak Samaj",
@@ -1233,7 +1305,7 @@
   window.addEventListener("hashchange", () => {
     const page = pageFromHash();
     show(page);
-    if (HOME_SECTIONS.indexOf(page) !== -1) {
+    if (viewFor(page) !== page) {
       const heading = document.querySelector("#" + page + " h2");
       if (heading) {
         heading.setAttribute("tabindex", "-1");

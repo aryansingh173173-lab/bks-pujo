@@ -1,7 +1,7 @@
 {
   "meta": {
     "lang": "bn",
-    "bengaliStatus": "DRAFT — NATIVE REVIEW REQUIRED"
+    "bengaliStatus": "DRAFT: NATIVE REVIEW REQUIRED"
   },
   "kicker": "অভিযানের পথ",
   "h1": "যোগদান",
@@ -86,7 +86,7 @@
     "errors": {
       "name": "নাম লিখুন।",
       "locality": "এলাকা, গ্রাম বা পাড়া লিখুন।",
-      "consent": "সার্ভারে রাখা হয় না — এটা নিশ্চিত করুন।",
+      "consent": "সার্ভারে রাখা হয় না: এটা নিশ্চিত করুন।",
       "role": "কীভাবে যোগ দিতে চান, বেছে নিন।"
     },
     "success": "The information has been downloaded as a file to your device. It has not been uploaded. No farmer has been funded."

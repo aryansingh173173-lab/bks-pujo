@@ -54,11 +54,11 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "Durga Puja is the week Bengal is outdoors together. Bharatiya Krishak Samaj Pujo is a Durga Puja in Kolkata that keeps worship at the centre, then puts the annadata — the person who grows the food — in public view."
+          "text": "Durga Puja is the week Bengal is outdoors together. Bharatiya Krishak Samaj Pujo is a Durga Puja in Kolkata that keeps worship at the centre, then puts the annadata, the person who grows the food, in public view."
         },
         {
           "type": "p",
-          "text": "It is not asking you merely to support four nights of lights. The deeper invitation is to understand, and where appropriate to support, a vision in which about 5,000 farms, farming households and agricultural units can progressively move toward Integrated Farming — a living system in which crop, horticulture, livestock, poultry, fishery, water, soil, compost and allied work can support one another."
+          "text": "It is not asking you merely to support four nights of lights. The deeper invitation is to understand, and where appropriate to support, a vision in which about 5,000 farms, farming households and agricultural units can progressively move toward Integrated Farming, a living system in which crop, horticulture, livestock, poultry, fishery, water, soil, compost and allied work can support one another."
         },
         {
           "type": "p",
@@ -80,7 +80,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Durga Puja in Kolkata is on the UNESCO list of Intangible Cultural Heritage — a description of a living civic gathering. Those are words about the city’s Puja. They are not a credential of this committee."
+          "text": "Durga Puja in Kolkata is on the UNESCO list of Intangible Cultural Heritage, a description of a living civic gathering. Those are words about the city’s Puja. They are not a credential of this committee."
         },
         {
           "type": "p",
@@ -88,7 +88,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "That is why a public leader might come. Not because a department is being asked to adopt a festival. Because the state’s most open week is a place where culture, food and rural livelihood can be seen together — without turning the Puja into a seminar, and without converting a visit into a government programme."
+          "text": "That is why a public leader might come. Not because a department is being asked to adopt a festival. Because the state’s most open week is a place where culture, food and rural livelihood can be seen together, without turning the Puja into a seminar, and without converting a visit into a government programme."
         }
       ]
     },
@@ -128,7 +128,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Why agriculture? Because a small holding that depends on one standing crop — often paddy — can carry the whole year’s risk. Market, weather, flood, delayed rain and bought inputs can hit that one crop at once. Between harvests, cash can run thin. That is how many small farms actually live."
+          "text": "Why agriculture? Because a small holding that depends on one standing crop, often paddy, can carry the whole year’s risk. Market, weather, flood, delayed rain and bought inputs can hit that one crop at once. Between harvests, cash can run thin. That is how many small farms actually live."
         },
         {
           "type": "p",
@@ -136,7 +136,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Why should a public institution care? Because culture, the annadata, living land, careful tools and public participation can sit in one inspectable place — without anyone being asked to rubber-stamp a programme."
+          "text": "Why should a public institution care? Because culture, the annadata, living land, careful tools and public participation can sit in one inspectable place, without anyone being asked to rubber-stamp a programme."
         },
         {
           "type": "p",
@@ -196,9 +196,9 @@ window.BKS_I18N = {
         {
           "type": "lines",
           "items": [
-            "The Puja itself — darshan, craft, food, music, neighbourhood.",
+            "The Puja itself: darshan, craft, food, music, neighbourhood.",
             "The annadata named and recognised.",
-            "A living landscape — water, soil, plants, animals.",
+            "A living landscape: water, soil, plants, animals.",
             "Integrated Farming walked, not only described.",
             "FarmTech + AgriTech as careful tools where they help observation and husbandry.",
             "A public week among living things.",
@@ -221,7 +221,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "The longer vision is that about 5,000 farms, farming households and agricultural units can progressively move toward Integrated Farming — so more families can work with a system in which soil, water, crop, livestock, fishery and allied activities are connected."
+          "text": "The longer vision is that about 5,000 farms, farming households and agricultural units can progressively move toward Integrated Farming, so more families can work with a system in which soil, water, crop, livestock, fishery and allied activities are connected."
         },
         {
           "type": "p",
@@ -284,7 +284,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "FarmTech + AgriTech, here, means careful tools inside Integrated Farming: soil moisture monitoring and drip irrigation, solar-powered pond aeration, crop-health diagnostics, yield tracking — where they help a small holding work with more attention."
+          "text": "FarmTech + AgriTech, here, means careful tools inside Integrated Farming: soil moisture monitoring and drip irrigation, solar-powered pond aeration, crop-health diagnostics, yield tracking, where they help a small holding work with more attention."
         },
         {
           "type": "p",
@@ -320,7 +320,7 @@ window.BKS_I18N = {
     },
     "bio": {
       "label": "Living Bengal",
-      "headline": "People, water, soil, plants, food, farmer, craft, community — in one public week.",
+      "headline": "People, water, soil, plants, food, farmer, craft, community, in one public week.",
       "blocks": [
         {
           "type": "p",
@@ -336,7 +336,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "This is more than a green banner on a pandal. It is an urban public returning, for a few days, to living Bengal — natural cycles made visible, not as a lecture, but as a place you can walk."
+          "text": "This is more than a green banner on a pandal. It is an urban public returning, for a few days, to living Bengal, natural cycles made visible, not as a lecture, but as a place you can walk."
         },
         {
           "type": "p",
@@ -354,7 +354,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "The Foundation’s work in this initiative is to hold culture, agriculture, community and careful technology in one public experience — so a Durga Puja can remain a Puja, and still make the farmer and the living farm visible."
+          "text": "The Foundation’s work in this initiative is to hold culture, agriculture, community and careful technology in one public experience, so a Durga Puja can remain a Puja, and still make the farmer and the living farm visible."
         },
         {
           "type": "p",
@@ -376,7 +376,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Krishak Samaj — the community of those who farm — is why the Puja has the shape it has. The gathering is named for the farmer because the farmer is the purpose of the public story that follows worship: Annadata, Integrated Farming, a live farm, a longer vision of about 5,000 households moving toward that living system."
+          "text": "Krishak Samaj, the community of those who farm, is why the Puja has the shape it has. The gathering is named for the farmer because the farmer is the purpose of the public story that follows worship: Annadata, Integrated Farming, a live farm, a longer vision of about 5,000 households moving toward that living system."
         },
         {
           "type": "p",
@@ -395,7 +395,7 @@ window.BKS_I18N = {
             "Munshir Bheri Management / Fishermen's Committee",
             "Near Sukantanagar / Salt Lake Sector V",
             "(East Kolkata Wetlands)",
-            "Kolkata – 700091, West Bengal"
+            "Kolkata: 700091, West Bengal"
           ]
         },
         {
@@ -415,7 +415,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "The public week introduces the idea. The work is meant to continue as more farms learn a system rather than a single crop: soil, water, plants, animals, household, market — leftover as input — with careful tools where they help, and with the farmer still first."
+          "text": "The public week introduces the idea. The work is meant to continue as more farms learn a system rather than a single crop: soil, water, plants, animals, household, market, leftover as input, with careful tools where they help, and with the farmer still first."
         },
         {
           "type": "p",
@@ -434,7 +434,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "If this public week is worth understanding from an institutional seat — what you are being invited to support, what Integrated Farming is, what about 5,000 means, what support is intended to enable — ask for the conversation."
+          "text": "If this public week is worth understanding from an institutional seat, what you are being invited to support, what Integrated Farming is, what about 5,000 means, what support is intended to enable, ask for the conversation."
         },
         {
           "type": "p",
@@ -450,7 +450,7 @@ window.BKS_I18N = {
       "items": [
         {
           "q": "What exactly are we supporting?",
-          "a": "Bharatiya Krishak Samaj Pujo — worship at the centre — the Annadata in public view, Integrated Farming as a living system that can be walked, and a longer vision of about 5,000 farms moving toward that model. For government and institutions, support here means understanding that work and, where appropriate, connecting people, organisations and communities. It does not mean sponsoring the Puja."
+          "a": "Bharatiya Krishak Samaj Pujo, worship at the centre, the Annadata in public view, Integrated Farming as a living system that can be walked, and a longer vision of about 5,000 farms moving toward that model. For government and institutions, support here means understanding that work and, where appropriate, connecting people, organisations and communities. It does not mean sponsoring the Puja."
         },
         {
           "q": "What is an Integrated Farming System?",
@@ -474,7 +474,7 @@ window.BKS_I18N = {
         },
         {
           "q": "What is ₹1 lakh?",
-          "a": "Proposed seed for one village integrated farm — in full, or ₹20,000 every two months. A proposed concept. Not collected here. Not a government grant announced here. Not what government or institutions are being asked to contribute on this page."
+          "a": "Proposed seed for one village integrated farm, in full, or ₹20,000 every two months. A proposed concept. Not collected here. Not a government grant announced here. Not what government or institutions are being asked to contribute on this page."
         },
         {
           "q": "Is this a Government scheme?",
@@ -486,7 +486,7 @@ window.BKS_I18N = {
         },
         {
           "q": "Who is KarmYog for the 21st Century Foundation?",
-          "a": "The organising family of this Pujo. KarmYog for the 21st Century organises Bharatiya Krishak Samaj Pujo. The Foundation organised Durga Puja Mahotsav 2025 at the IIT Kharagpur Research Park — a record on craft and gathering, not the 2026 pandal."
+          "a": "The organising family of this Pujo. KarmYog for the 21st Century organises Bharatiya Krishak Samaj Pujo. The Foundation organised Durga Puja Mahotsav 2025 at the IIT Kharagpur Research Park, a record on craft and gathering, not the 2026 pandal."
         },
         {
           "q": "What is Bharatiya Krishak Samaj’s role?",
@@ -494,7 +494,7 @@ window.BKS_I18N = {
         },
         {
           "q": "Why is the Puja described as biophilic?",
-          "a": "Because it sits among living things — people, soil, water, plants, food, farmer, community — on wetlands ground, with a live farm beside the pandal. It is an experience, not a certification."
+          "a": "Because it sits among living things, people, soil, water, plants, food, farmer, community, on wetlands ground, with a live farm beside the pandal. It is an experience, not a certification."
         },
         {
           "q": "Where does AI fit?",
@@ -502,11 +502,11 @@ window.BKS_I18N = {
         },
         {
           "q": "What does FarmTech + AgriTech mean here?",
-          "a": "Careful tools inside the farm — moisture, drip, pond aeration, crop health, yield tracking — where they help. Not a vendor list."
+          "a": "Careful tools inside the farm, moisture, drip, pond aeration, crop health, yield tracking, where they help. Not a vendor list."
         },
         {
           "q": "Where is the Puja?",
-          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata – 700091, West Bengal."
+          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata, 700091, West Bengal."
         },
         {
           "q": "When is it?",
@@ -603,11 +603,11 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "দুর্গাপূজা সেই সপ্তাহ, যখন বাংলা একসঙ্গে বাইরে থাকে। Bharatiya Krishak Samaj Pujo — ভারতীয় কৃষক সমাজ পূজা — কলকাতার দুর্গাপূজা, পূজা কেন্দ্রে, তারপর অন্নদাতা — যিনি খাবার ফলান — জনসমক্ষে।"
+          "text": "দুর্গাপূজা সেই সপ্তাহ, যখন বাংলা একসঙ্গে বাইরে থাকে। Bharatiya Krishak Samaj Pujo, ভারতীয় কৃষক সমাজ পূজা, কলকাতার দুর্গাপূজা, পূজা কেন্দ্রে, তারপর অন্নদাতা, যিনি খাবার ফলান, জনসমক্ষে।"
         },
         {
           "type": "p",
-          "text": "চার রাতের আলোয় সাপোর্ট চাওয়াই একমাত্র কথা নয়। গভীরতর আমন্ত্রণ: বোঝা, এবং যেখানে মানায় সাপোর্ট করা, একটি দৃষ্টি — যেখানে প্রায় ৫,০০০ খামার, কৃষক পরিবার ও কৃষি-একক ধীরে ধীরে সমন্বিত চাষের দিকে যেতে পারে। ফসল, উদ্যান, পশু, হাঁস-মুরগি, মৎস্য, জল, মাটি, কম্পোস্ট ও সহযোগী কাজ একে অপরকে সাহায্য করতে পারে।"
+          "text": "চার রাতের আলোয় সাপোর্ট চাওয়াই একমাত্র কথা নয়। গভীরতর আমন্ত্রণ: বোঝা, এবং যেখানে মানায় সাপোর্ট করা, একটি দৃষ্টি, যেখানে প্রায় ৫,০০০ খামার, কৃষক পরিবার ও কৃষি-একক ধীরে ধীরে সমন্বিত চাষের দিকে যেতে পারে। ফসল, উদ্যান, পশু, হাঁস-মুরগি, মৎস্য, জল, মাটি, কম্পোস্ট ও সহযোগী কাজ একে অপরকে সাহায্য করতে পারে।"
         },
         {
           "type": "p",
@@ -629,15 +629,15 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "কলকাতার দুর্গাপূজা UNESCO-র Intangible Cultural Heritage তালিকায় — জীবন্ত নাগরিক জমায়েতের বর্ণনা। শহরের পূজা নিয়ে সেই ভাষা। এই কমিটির সনদ নয়।"
+          "text": "কলকাতার দুর্গাপূজা UNESCO-র Intangible Cultural Heritage তালিকায়, জীবন্ত নাগরিক জমায়েতের বর্ণনা। শহরের পূজা নিয়ে সেই ভাষা। এই কমিটির সনদ নয়।"
         },
         {
           "type": "p",
-          "text": "নাগরিক সপ্তাহে পাড়ার মনোযোগ ইতিমধ্যে ভাগাভাগি। এই পূজো সেই সপ্তাহকে সৎভাবে ব্যবহার করে। দর্শনের পর কৃষকের নাম। তারপর সমন্বিত চাষ — ফাইলে নয়, হেঁটে দেখা যায়। তারপর প্রতিষ্ঠানকে দেখতে, বুঝতে, কৃষক সম্প্রদায়ের দীর্ঘতর দৃষ্টি নিয়ে কথা শুরু করতে বলে।"
+          "text": "নাগরিক সপ্তাহে পাড়ার মনোযোগ ইতিমধ্যে ভাগাভাগি। এই পূজো সেই সপ্তাহকে সৎভাবে ব্যবহার করে। দর্শনের পর কৃষকের নাম। তারপর সমন্বিত চাষ, ফাইলে নয়, হেঁটে দেখা যায়। তারপর প্রতিষ্ঠানকে দেখতে, বুঝতে, কৃষক সম্প্রদায়ের দীর্ঘতর দৃষ্টি নিয়ে কথা শুরু করতে বলে।"
         },
         {
           "type": "p",
-          "text": "জননেতা তাই আসতে পারেন। দপ্তরকে উৎসব গ্রহণ করতে বলা হয় বলে নয়। রাজ্যের খোলা সপ্তাহে সংস্কৃতি, খাবার ও গ্রামীণ জীবিকা একসঙ্গে দেখা যায় বলে — পূজাকে সেমিনার না বানিয়ে, দেখাকে সরকারি কর্মসূচি না বানিয়ে।"
+          "text": "জননেতা তাই আসতে পারেন। দপ্তরকে উৎসব গ্রহণ করতে বলা হয় বলে নয়। রাজ্যের খোলা সপ্তাহে সংস্কৃতি, খাবার ও গ্রামীণ জীবিকা একসঙ্গে দেখা যায় বলে, পূজাকে সেমিনার না বানিয়ে, দেখাকে সরকারি কর্মসূচি না বানিয়ে।"
         }
       ]
     },
@@ -677,15 +677,15 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "কেন কৃষি? কারণ যে ছোট জোত এক ফসলের ওপর দাঁড়ায় — প্রায়ই ধান — সারা বছরের ঝুঁকি সেই এক ফসলই বইতে পারে। দাম, আবহাওয়া, বন্যা, দেরিতে বৃষ্টি, কেনা উপকরণ একসঙ্গে আঘাত করতে পারে। ফসলের ফাঁকে নগদ পাতলা। অনেক ছোট খামার এমনই চলে।"
+          "text": "কেন কৃষি? কারণ যে ছোট জোত এক ফসলের ওপর দাঁড়ায়, প্রায়ই ধান, সারা বছরের ঝুঁকি সেই এক ফসলই বইতে পারে। দাম, আবহাওয়া, বন্যা, দেরিতে বৃষ্টি, কেনা উপকরণ একসঙ্গে আঘাত করতে পারে। ফসলের ফাঁকে নগদ পাতলা। অনেক ছোট খামার এমনই চলে।"
         },
         {
           "type": "p",
-          "text": "দুর্গাপূজায় কেন? কারণ শহর যে সপ্তাহে ইতিমধ্যে হাঁটে, সেই সপ্তাহে জীবিকা-মডেল দেখা যায় — শুধু ঘরে বর্ণনা নয়।"
+          "text": "দুর্গাপূজায় কেন? কারণ শহর যে সপ্তাহে ইতিমধ্যে হাঁটে, সেই সপ্তাহে জীবিকা-মডেল দেখা যায়, শুধু ঘরে বর্ণনা নয়।"
         },
         {
           "type": "p",
-          "text": "প্রতিষ্ঠান কেন তাকাবে? কারণ সংস্কৃতি, অন্নদাতা, জীবন্ত মাটি, সতর্ক সরঞ্জাম ও জনঅংশগ্রহণ এক দেখা যায় এমন জায়গায় বসতে পারে — কাউকে কর্মসূচিতে সিলমোহর দিতে না বলে।"
+          "text": "প্রতিষ্ঠান কেন তাকাবে? কারণ সংস্কৃতি, অন্নদাতা, জীবন্ত মাটি, সতর্ক সরঞ্জাম ও জনঅংশগ্রহণ এক দেখা যায় এমন জায়গায় বসতে পারে, কাউকে কর্মসূচিতে সিলমোহর দিতে না বলে।"
         },
         {
           "type": "p",
@@ -736,7 +736,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "প্যান্ডেলের একই মাটিতে আমরা একটি লাইভ সমন্বিত খামার গড়ছি: ফসল, পুকুর, পশু ও বাজার — ছোট বাঙালি পরিবার যেমন চাষ করে।"
+          "text": "প্যান্ডেলের একই মাটিতে আমরা একটি লাইভ সমন্বিত খামার গড়ছি: ফসল, পুকুর, পশু ও বাজার, ছোট বাঙালি পরিবার যেমন চাষ করে।"
         },
         {
           "type": "p",
@@ -745,9 +745,9 @@ window.BKS_I18N = {
         {
           "type": "lines",
           "items": [
-            "পূজা — দর্শন, কারুকাজ, খাবার, সঙ্গীত, পাড়া।",
+            "পূজা: দর্শন, কারুকাজ, খাবার, সঙ্গীত, পাড়া।",
             "অন্নদাতার নাম ও সম্মান।",
-            "জীবন্ত ভূগোল — জল, মাটি, গাছ, প্রাণী।",
+            "জীবন্ত ভূগোল: জল, মাটি, গাছ, প্রাণী।",
             "সমন্বিত চাষ হেঁটে দেখা, শুধু বর্ণনা নয়।",
             "যেখানে সাহায্য করে, FarmTech + AgriTech সতর্ক সরঞ্জাম।",
             "জীবন্ত জিনিসের মাঝে জনসপ্তাহ।",
@@ -770,7 +770,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "দীর্ঘতর দৃষ্টি: প্রায় ৫,০০০ খামার, কৃষক পরিবার ও কৃষি-একক ধীরে ধীরে সমন্বিত চাষের দিকে যেতে পারে — যাতে আরও পরিবার এমন ব্যবস্থায় কাজ করতে পারে, যেখানে মাটি, জল, ফসল, পশু, মৎস্য ও সহযোগী কাজ যুক্ত।"
+          "text": "দীর্ঘতর দৃষ্টি: প্রায় ৫,০০০ খামার, কৃষক পরিবার ও কৃষি-একক ধীরে ধীরে সমন্বিত চাষের দিকে যেতে পারে, যাতে আরও পরিবার এমন ব্যবস্থায় কাজ করতে পারে, যেখানে মাটি, জল, ফসল, পশু, মৎস্য ও সহযোগী কাজ যুক্ত।"
         },
         {
           "type": "p",
@@ -778,7 +778,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "কাজের ভাষায় উচ্চাকাঙ্ক্ষা: মডেল দেখা যায়, বোঝা যায়, মানিয়ে নেওয়া যায় — হেঁটে দেখার প্রদর্শনী; কৃষক বাড়ি নিয়ে যেতে পারেন এমন জ্ঞান; জীবন্ত ব্যবস্থার অংশ, স্লোগান নয়; যেখানে সাহায্য করে সতর্ক সরঞ্জাম; নিমজ্জনের পরেও চলা জনআলোচনা।"
+          "text": "কাজের ভাষায় উচ্চাকাঙ্ক্ষা: মডেল দেখা যায়, বোঝা যায়, মানিয়ে নেওয়া যায়, হেঁটে দেখার প্রদর্শনী; কৃষক বাড়ি নিয়ে যেতে পারেন এমন জ্ঞান; জীবন্ত ব্যবস্থার অংশ, স্লোগান নয়; যেখানে সাহায্য করে সতর্ক সরঞ্জাম; নিমজ্জনের পরেও চলা জনআলোচনা।"
         },
         {
           "type": "p",
@@ -796,7 +796,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "সাপোর্ট চাওয়া হচ্ছে সেই কাজের, যা এই পূজা দেখায়। Bharatiya Krishak Samaj Pujo পূজাকে কেন্দ্রে রাখে। অন্নদাতাকে জনসমক্ষে আনে। সমন্বিত চাষকে জীবন্ত খামার-ব্যবস্থা হিসেবে দেখায় — যা হেঁটে দেখা ও বোঝা যায়। একটি মডেল দেয়, যা সম্ভাব্যভাবে মানিয়ে নেওয়া ও পুনরাবৃত্তি করা যায়। আর একটি দীর্ঘতর দৃষ্টি ধরে রাখে: প্রায় ৫,০০০ খামার, কৃষক পরিবার ও কৃষি-একক ধীরে ধীরে সেই ব্যবস্থার দিকে যেতে পারে। পাঁচ হাজার চলার দিক। পৌঁছানো হিসাব নয়।"
+          "text": "সাপোর্ট চাওয়া হচ্ছে সেই কাজের, যা এই পূজা দেখায়। Bharatiya Krishak Samaj Pujo পূজাকে কেন্দ্রে রাখে। অন্নদাতাকে জনসমক্ষে আনে। সমন্বিত চাষকে জীবন্ত খামার-ব্যবস্থা হিসেবে দেখায়, যা হেঁটে দেখা ও বোঝা যায়। একটি মডেল দেয়, যা সম্ভাব্যভাবে মানিয়ে নেওয়া ও পুনরাবৃত্তি করা যায়। আর একটি দীর্ঘতর দৃষ্টি ধরে রাখে: প্রায় ৫,০০০ খামার, কৃষক পরিবার ও কৃষি-একক ধীরে ধীরে সেই ব্যবস্থার দিকে যেতে পারে। পাঁচ হাজার চলার দিক। পৌঁছানো হিসাব নয়।"
         },
         {
           "type": "p",
@@ -833,7 +833,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "এখানে FarmTech + AgriTech মানে সমন্বিত চাষের ভিতরের সতর্ক সরঞ্জাম: মাটির আর্দ্রতা ও ড্রিপ, সৌর পুকুর-বায়ু, ফসলের স্বাস্থ্য নির্ণয়, ফলনের হিসাব — যেখানে ছোট জোতকে সাহায্য করে।"
+          "text": "এখানে FarmTech + AgriTech মানে সমন্বিত চাষের ভিতরের সতর্ক সরঞ্জাম: মাটির আর্দ্রতা ও ড্রিপ, সৌর পুকুর-বায়ু, ফসলের স্বাস্থ্য নির্ণয়, ফলনের হিসাব, যেখানে ছোট জোতকে সাহায্য করে।"
         },
         {
           "type": "p",
@@ -869,7 +869,7 @@ window.BKS_I18N = {
     },
     "bio": {
       "label": "জীবন্ত বাংলা",
-      "headline": "মানুষ, জল, মাটি, গাছ, খাবার, কৃষক, কারুকাজ, সম্প্রদায় — এক জনসপ্তাহে।",
+      "headline": "মানুষ, জল, মাটি, গাছ, খাবার, কৃষক, কারুকাজ, সম্প্রদায়, এক জনসপ্তাহে।",
       "blocks": [
         {
           "type": "p",
@@ -885,11 +885,11 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "প্যান্ডেলের সবুজ ব্যানারের চেয়ে বেশি। কয়েক দিনের জন্য শহরের জনতা জীবন্ত বাংলার কাছে ফেরে — প্রকৃতির চক্র লেকচার নয়, হেঁটে দেখার জায়গা।"
+          "text": "প্যান্ডেলের সবুজ ব্যানারের চেয়ে বেশি। কয়েক দিনের জন্য শহরের জনতা জীবন্ত বাংলার কাছে ফেরে, প্রকৃতির চক্র লেকচার নয়, হেঁটে দেখার জায়গা।"
         },
         {
           "type": "p",
-          "text": "স্থায়িত্বের সনদ নয়। কার্বন-নিউট্রাল উপাধি নয়। ব্র্যান্ডেড প্রকৃতির প্যাভিলিয়ন নয়। জীবন্ত মাটিতে সাংস্কৃতিক সপ্তাহ — একটি দৃষ্টিভঙ্গি ও অভিজ্ঞতা হিসেবে।"
+          "text": "স্থায়িত্বের সনদ নয়। কার্বন-নিউট্রাল উপাধি নয়। ব্র্যান্ডেড প্রকৃতির প্যাভিলিয়ন নয়। জীবন্ত মাটিতে সাংস্কৃতিক সপ্তাহ, একটি দৃষ্টিভঙ্গি ও অভিজ্ঞতা হিসেবে।"
         }
       ]
     },
@@ -903,7 +903,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "এই উদ্যোগে ফাউন্ডেশনের কাজ: সংস্কৃতি, কৃষি, সম্প্রদায় ও সতর্ক প্রযুক্তিকে এক জনঅভিজ্ঞতায় ধরে রাখা — যাতে দুর্গাপূজা পূজাই থাকে, আরও কৃষক ও জীবন্ত খামার দৃশ্যমান হয়।"
+          "text": "এই উদ্যোগে ফাউন্ডেশনের কাজ: সংস্কৃতি, কৃষি, সম্প্রদায় ও সতর্ক প্রযুক্তিকে এক জনঅভিজ্ঞতায় ধরে রাখা, যাতে দুর্গাপূজা পূজাই থাকে, আরও কৃষক ও জীবন্ত খামার দৃশ্যমান হয়।"
         },
         {
           "type": "p",
@@ -921,11 +921,11 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj — ভারতীয় কৃষক সমাজ — এই পূজোর আয়োজক অংশীদার। টাইটেল অবস্থান তাঁদের নয়। সরকারি সংস্থা নন। সরকার-অনুমোদিত প্রতিষ্ঠান নন।"
+          "text": "Bharatiya Krishak Samaj, ভারতীয় কৃষক সমাজ, এই পূজোর আয়োজক অংশীদার। টাইটেল অবস্থান তাঁদের নয়। সরকারি সংস্থা নন। সরকার-অনুমোদিত প্রতিষ্ঠান নন।"
         },
         {
           "type": "p",
-          "text": "কৃষক সমাজ — যাঁরা চাষ করেন তাঁদের সমাজ — তাই এই পূজার আকার এমন। জমায়েতের নাম কৃষকের, কারণ পূজার পরের জনগল্পের উদ্দেশ্য কৃষক: অন্নদাতা, সমন্বিত চাষ, লাইভ খামার, প্রায় ৫,০০০ পরিবার সেই জীবন্ত ব্যবস্থার দিকে।"
+          "text": "কৃষক সমাজ, যাঁরা চাষ করেন তাঁদের সমাজ, তাই এই পূজার আকার এমন। জমায়েতের নাম কৃষকের, কারণ পূজার পরের জনগল্পের উদ্দেশ্য কৃষক: অন্নদাতা, সমন্বিত চাষ, লাইভ খামার, প্রায় ৫,০০০ পরিবার সেই জীবন্ত ব্যবস্থার দিকে।"
         },
         {
           "type": "p",
@@ -944,7 +944,7 @@ window.BKS_I18N = {
             "Munshir Bheri Management / Fishermen's Committee",
             "Near Sukantanagar / Salt Lake Sector V",
             "(East Kolkata Wetlands)",
-            "Kolkata – 700091, West Bengal"
+            "Kolkata: 700091, West Bengal"
           ]
         },
         {
@@ -964,7 +964,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "জনসপ্তাহ ধারণা খুলে দেয়। কাজ চলার কথা আরও খামার এক ফসল নয়, একটি ব্যবস্থা শেখে: মাটি, জল, গাছ, প্রাণী, ঘর, বাজার — বাঁচতি ইনপুট — যেখানে সাহায্য করে সতর্ক সরঞ্জাম, কৃষক আগে।"
+          "text": "জনসপ্তাহ ধারণা খুলে দেয়। কাজ চলার কথা আরও খামার এক ফসল নয়, একটি ব্যবস্থা শেখে: মাটি, জল, গাছ, প্রাণী, ঘর, বাজার, বাঁচতি ইনপুট, যেখানে সাহায্য করে সতর্ক সরঞ্জাম, কৃষক আগে।"
         },
         {
           "type": "p",
@@ -983,7 +983,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "এই জনসপ্তাহ যদি প্রাতিষ্ঠানিক আসন থেকে বোঝার মতো হয় — কী সাপোর্ট করতে বলা হচ্ছে, সমন্বিত চাষ কী, প্রায় ৫,০০০ কী, সাপোর্ট কী সক্ষম করতে চায় — কথোপকথন চান।"
+          "text": "এই জনসপ্তাহ যদি প্রাতিষ্ঠানিক আসন থেকে বোঝার মতো হয়, কী সাপোর্ট করতে বলা হচ্ছে, সমন্বিত চাষ কী, প্রায় ৫,০০০ কী, সাপোর্ট কী সক্ষম করতে চায়, কথোপকথন চান।"
         },
         {
           "type": "p",
@@ -999,7 +999,7 @@ window.BKS_I18N = {
       "items": [
         {
           "q": "আমরা ঠিক কী সাপোর্ট করছি?",
-          "a": "Bharatiya Krishak Samaj Pujo — পূজা কেন্দ্রে — অন্নদাতা জনসমক্ষে, সমন্বিত চাষ হেঁটে দেখা যায় এমন জীবন্ত ব্যবস্থা, আর প্রায় ৫,০০০ খামার সেই মডেলের দিকে যাওয়ার দীর্ঘতর দৃষ্টি। সরকার ও প্রতিষ্ঠানের জন্য এখানে সাপোর্ট মানে সেই কাজ বোঝা, এবং যেখানে মানায় মানুষ, সংস্থা ও সম্প্রদায়কে যুক্ত করা। পূজার স্পনসরশিপ নয়।"
+          "a": "Bharatiya Krishak Samaj Pujo, পূজা কেন্দ্রে, অন্নদাতা জনসমক্ষে, সমন্বিত চাষ হেঁটে দেখা যায় এমন জীবন্ত ব্যবস্থা, আর প্রায় ৫,০০০ খামার সেই মডেলের দিকে যাওয়ার দীর্ঘতর দৃষ্টি। সরকার ও প্রতিষ্ঠানের জন্য এখানে সাপোর্ট মানে সেই কাজ বোঝা, এবং যেখানে মানায় মানুষ, সংস্থা ও সম্প্রদায়কে যুক্ত করা। পূজার স্পনসরশিপ নয়।"
         },
         {
           "q": "সমন্বিত চাষ কী?",
@@ -1023,7 +1023,7 @@ window.BKS_I18N = {
         },
         {
           "q": "₹1 lakh কী?",
-          "a": "একটি গ্রামীণ সমন্বিত খামারের প্রস্তাবিত বীজ — একবারে, অথবা দুই মাস অন্তর ₹20,000। প্রস্তাবিত ধারণা। এখানে নেওয়া হয় না। এখানে ঘোষিত সরকারি অনুদান নয়। সরকার বা প্রতিষ্ঠানকে এই পাতায় সেই টাকা দিতে বলা হচ্ছে না।"
+          "a": "একটি গ্রামীণ সমন্বিত খামারের প্রস্তাবিত বীজ: একবারে, অথবা দুই মাস অন্তর ₹20,000। প্রস্তাবিত ধারণা। এখানে নেওয়া হয় না। এখানে ঘোষিত সরকারি অনুদান নয়। সরকার বা প্রতিষ্ঠানকে এই পাতায় সেই টাকা দিতে বলা হচ্ছে না।"
         },
         {
           "q": "এটি কি সরকারি স্কিম?",
@@ -1035,7 +1035,7 @@ window.BKS_I18N = {
         },
         {
           "q": "KarmYog for the 21st Century Foundation কারা?",
-          "a": "এই পূজোর আয়োজক পরিবার। KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo আয়োজন করে। ফাউন্ডেশন IIT Kharagpur Research Park-এ ২০২৫-এর Mahotsav আয়োজন করেছিল — কারুকাজ ও জমায়েতের রেকর্ড, ২০২৬-এর প্যান্ডেল নয়।"
+          "a": "এই পূজোর আয়োজক পরিবার। KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo আয়োজন করে। ফাউন্ডেশন IIT Kharagpur Research Park-এ ২০২৫-এর Mahotsav আয়োজন করেছিল, কারুকাজ ও জমায়েতের রেকর্ড, ২০২৬-এর প্যান্ডেল নয়।"
         },
         {
           "q": "Bharatiya Krishak Samaj-এর ভূমিকা?",
@@ -1043,7 +1043,7 @@ window.BKS_I18N = {
         },
         {
           "q": "পূজাকে বায়োফিলিক বলা হয় কেন?",
-          "a": "জীবন্ত জিনিসের মাঝে — মানুষ, মাটি, জল, গাছ, খাবার, কৃষক, সম্প্রদায় — জলাভূমির মাটিতে, প্যান্ডেলের পাশে লাইভ খামার। অভিজ্ঞতা, সনদ নয়।"
+          "a": "জীবন্ত জিনিসের মাঝে, মানুষ, মাটি, জল, গাছ, খাবার, কৃষক, সম্প্রদায়, জলাভূমির মাটিতে, প্যান্ডেলের পাশে লাইভ খামার। অভিজ্ঞতা, সনদ নয়।"
         },
         {
           "q": "AI কোথায়?",
@@ -1051,11 +1051,11 @@ window.BKS_I18N = {
         },
         {
           "q": "এখানে FarmTech + AgriTech কী?",
-          "a": "খামারের সতর্ক সরঞ্জাম — আর্দ্রতা, ড্রিপ, পুকুরের বায়ু, ফসলের স্বাস্থ্য, ফলন — যেখানে সাহায্য করে। ভেন্ডর তালিকা নয়।"
+          "a": "খামারের সতর্ক সরঞ্জাম, আর্দ্রতা, ড্রিপ, পুকুরের বায়ু, ফসলের স্বাস্থ্য, ফলন, যেখানে সাহায্য করে। ভেন্ডর তালিকা নয়।"
         },
         {
           "q": "পূজা কোথায়?",
-          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata – 700091, West Bengal।"
+          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata, 700091, West Bengal।"
         },
         {
           "q": "কখন?",
@@ -1152,11 +1152,11 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "दुर्गा पूजा वह सप्ताह है जब बंगाल बाहर एक साथ होता है। Bharatiya Krishak Samaj Pujo — भारतीय कृषक समाज पूजा — कोलकाता की दुर्गा पूजा है, पूजा केंद्र में, फिर अन्नदाता — जो भोजन उगाता है — सार्वजनिक दृष्टि में।"
+          "text": "दुर्गा पूजा वह सप्ताह है जब बंगाल बाहर एक साथ होता है। Bharatiya Krishak Samaj Pujo, भारतीय कृषक समाज पूजा, कोलकाता की दुर्गा पूजा है, पूजा केंद्र में, फिर अन्नदाता, जो भोजन उगाता है, सार्वजनिक दृष्टि में।"
         },
         {
           "type": "p",
-          "text": "केवल चार रात की रोशनी का सहयोग माँगना पर्याप्त नहीं। गहरी बात यह समझना, और जहाँ उचित हो सहयोग देना, एक दृष्टि की है — जिसमें लगभग 5,000 फार्म, किसान परिवार और कृषि-इकाइयाँ धीरे-धीरे समेकित कृषि की ओर बढ़ सकें। फसल, बागवानी, पशु, कुक्कुट, मत्स्य, जल, मिट्टी, कंपोस्ट और सहायक काम एक-दूसरे की मदद कर सकें।"
+          "text": "केवल चार रात की रोशनी का सहयोग माँगना पर्याप्त नहीं। गहरी बात यह समझना, और जहाँ उचित हो सहयोग देना, एक दृष्टि की है, जिसमें लगभग 5,000 फार्म, किसान परिवार और कृषि-इकाइयाँ धीरे-धीरे समेकित कृषि की ओर बढ़ सकें। फसल, बागवानी, पशु, कुक्कुट, मत्स्य, जल, मिट्टी, कंपोस्ट और सहायक काम एक-दूसरे की मदद कर सकें।"
         },
         {
           "type": "p",
@@ -1178,15 +1178,15 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "कोलकाता की दुर्गा पूजा UNESCO की Intangible Cultural Heritage सूची में है — जीवित नागरिक जमावड़े का वर्णन। शहर की पूजा पर वे शब्द हैं। इस समिति का प्रमाणपत्र नहीं।"
+          "text": "कोलकाता की दुर्गा पूजा UNESCO की Intangible Cultural Heritage सूची में है, जीवित नागरिक जमावड़े का वर्णन। शहर की पूजा पर वे शब्द हैं। इस समिति का प्रमाणपत्र नहीं।"
         },
         {
           "type": "p",
-          "text": "नागरिक सप्ताह में मोहल्ले का ध्यान पहले से साझा होता है। यह पूजो उस सप्ताह का ईमानदार उपयोग करता है। दर्शन के बाद किसान का नाम। फिर समेकित कृषि — फ़ाइल में नहीं, चलकर देखने योग्य। फिर संस्थाओं को देखने, समझने, किसान समुदायों की लंबी दृष्टि पर बात शुरू करने का निमंत्रण।"
+          "text": "नागरिक सप्ताह में मोहल्ले का ध्यान पहले से साझा होता है। यह पूजो उस सप्ताह का ईमानदार उपयोग करता है। दर्शन के बाद किसान का नाम। फिर समेकित कृषि, फ़ाइल में नहीं, चलकर देखने योग्य। फिर संस्थाओं को देखने, समझने, किसान समुदायों की लंबी दृष्टि पर बात शुरू करने का निमंत्रण।"
         },
         {
           "type": "p",
-          "text": "सार्वजनिक नेता इसलिए आ सकते हैं। इसलिए नहीं कि विभाग से उत्सव अपनाने को कहा जा रहा है। इसलिए कि राज्य के खुले सप्ताह में संस्कृति, भोजन और ग्रामीण आजीविका एक साथ दिखाई दे सकती है — पूजा को सेमिनार बनाए बिना, देखने को सरकारी कार्यक्रम बनाए बिना।"
+          "text": "सार्वजनिक नेता इसलिए आ सकते हैं। इसलिए नहीं कि विभाग से उत्सव अपनाने को कहा जा रहा है। इसलिए कि राज्य के खुले सप्ताह में संस्कृति, भोजन और ग्रामीण आजीविका एक साथ दिखाई दे सकती है, पूजा को सेमिनार बनाए बिना, देखने को सरकारी कार्यक्रम बनाए बिना।"
         }
       ]
     },
@@ -1226,15 +1226,15 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "क्यों कृषि? क्योंकि छोटी जोत जो एक फसल पर टिकी हो — अक्सर धान — पूरे वर्ष का जोखिम उसी एक फसल पर डाल सकती है। भाव, मौसम, बाढ़, देर से बारिश, खरीदे साधन एक साथ चोट कर सकते हैं। फसलों के बीच नकदी पतली। कई छोटी फ़ार्में ऐसे ही चलती हैं।"
+          "text": "क्यों कृषि? क्योंकि छोटी जोत जो एक फसल पर टिकी हो, अक्सर धान, पूरे वर्ष का जोखिम उसी एक फसल पर डाल सकती है। भाव, मौसम, बाढ़, देर से बारिश, खरीदे साधन एक साथ चोट कर सकते हैं। फसलों के बीच नकदी पतली। कई छोटी फ़ार्में ऐसे ही चलती हैं।"
         },
         {
           "type": "p",
-          "text": "दुर्गा पूजा में क्यों? क्योंकि जिस सप्ताह शहर पहले से चल रहा हो, उसी सप्ताह आजीविका-मॉडल दिखाई दे सकता है — केवल कमरे में वर्णन नहीं।"
+          "text": "दुर्गा पूजा में क्यों? क्योंकि जिस सप्ताह शहर पहले से चल रहा हो, उसी सप्ताह आजीविका-मॉडल दिखाई दे सकता है, केवल कमरे में वर्णन नहीं।"
         },
         {
           "type": "p",
-          "text": "संस्था क्यों देखे? क्योंकि संस्कृति, अन्नदाता, जीवित भूमि, सावधान औज़ार और सार्वजनिक भागीदारी एक देखने योग्य जगह पर बैठ सकते हैं — किसी से कार्यक्रम पर मुहर लगाने को कहे बिना।"
+          "text": "संस्था क्यों देखे? क्योंकि संस्कृति, अन्नदाता, जीवित भूमि, सावधान औज़ार और सार्वजनिक भागीदारी एक देखने योग्य जगह पर बैठ सकते हैं, किसी से कार्यक्रम पर मुहर लगाने को कहे बिना।"
         },
         {
           "type": "p",
@@ -1285,7 +1285,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "पंडाल की उसी ज़मीन पर हम एक लाइव समेकित फार्म बना रहे हैं: फसल, तालाब, पशु और बाज़ार — जैसा एक छोटा पश्चिम बंगाल का परिवार वास्तव में खेती करता है।"
+          "text": "पंडाल की उसी ज़मीन पर हम एक लाइव समेकित फार्म बना रहे हैं: फसल, तालाब, पशु और बाज़ार, जैसा एक छोटा पश्चिम बंगाल का परिवार वास्तव में खेती करता है।"
         },
         {
           "type": "p",
@@ -1294,9 +1294,9 @@ window.BKS_I18N = {
         {
           "type": "lines",
           "items": [
-            "पूजा — दर्शन, शिल्प, भोजन, संगीत, मोहल्ला।",
+            "पूजा: दर्शन, शिल्प, भोजन, संगीत, मोहल्ला।",
             "अन्नदाता का नाम और सम्मान।",
-            "जीवित भूगोल — जल, मिट्टी, पौधे, पशु।",
+            "जीवित भूगोल: जल, मिट्टी, पौधे, पशु।",
             "समेकित कृषि चलकर, केवल वर्णन नहीं।",
             "जहाँ मदद करे, FarmTech + AgriTech सावधान औज़ार।",
             "जीवित चीज़ों के बीच सार्वजनिक सप्ताह।",
@@ -1319,7 +1319,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "लंबी दृष्टि यह है कि लगभग 5,000 फार्म, किसान परिवार और कृषि-इकाइयाँ धीरे-धीरे समेकित कृषि की ओर बढ़ सकें — ताकि अधिक परिवार ऐसी व्यवस्था में काम कर सकें जिसमें मिट्टी, जल, फसल, पशु, मत्स्य और सहायक काम जुड़े हों।"
+          "text": "लंबी दृष्टि यह है कि लगभग 5,000 फार्म, किसान परिवार और कृषि-इकाइयाँ धीरे-धीरे समेकित कृषि की ओर बढ़ सकें, ताकि अधिक परिवार ऐसी व्यवस्था में काम कर सकें जिसमें मिट्टी, जल, फसल, पशु, मत्स्य और सहायक काम जुड़े हों।"
         },
         {
           "type": "p",
@@ -1327,7 +1327,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "व्यावहारिक महत्वाकांक्षा: मॉडल दिखे, समझ में आए, अपनाया जा सके — चलकर देखने योग्य प्रदर्शन; ज्ञान जो किसान घर ले जा सके; जीवित व्यवस्था के अंग, नारा नहीं; जहाँ मदद करे सावधान औज़ार; निमज्जन के बाद भी चलती सार्वजनिक बात।"
+          "text": "व्यावहारिक महत्वाकांक्षा: मॉडल दिखे, समझ में आए, अपनाया जा सके, चलकर देखने योग्य प्रदर्शन; ज्ञान जो किसान घर ले जा सके; जीवित व्यवस्था के अंग, नारा नहीं; जहाँ मदद करे सावधान औज़ार; निमज्जन के बाद भी चलती सार्वजनिक बात।"
         },
         {
           "type": "p",
@@ -1345,7 +1345,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "जिस काम का सहयोग माँगा जा रहा है, वही है जिसे यह पूजा दिखाई देती है। Bharatiya Krishak Samaj Pujo पूजा को केंद्र में रखता है। अन्नदाता को सार्वजनिक दृष्टि में लाता है। समेकित कृषि को जीवित फार्म-व्यवस्था के रूप में दिखाता है — जिसे चलकर देखा और समझा जा सके। एक मॉडल देता है, जिसे संभावित रूप से अपनाया और दोहराया जा सके। और एक लंबी दृष्टि थामता है: लगभग 5,000 फार्म, किसान परिवार और कृषि-इकाइयाँ धीरे-धीरे उस व्यवस्था की ओर बढ़ सकें। पाँच हज़ार चलने की दिशा है। पहुँचा आँकड़ा नहीं।"
+          "text": "जिस काम का सहयोग माँगा जा रहा है, वही है जिसे यह पूजा दिखाई देती है। Bharatiya Krishak Samaj Pujo पूजा को केंद्र में रखता है। अन्नदाता को सार्वजनिक दृष्टि में लाता है। समेकित कृषि को जीवित फार्म-व्यवस्था के रूप में दिखाता है, जिसे चलकर देखा और समझा जा सके। एक मॉडल देता है, जिसे संभावित रूप से अपनाया और दोहराया जा सके। और एक लंबी दृष्टि थामता है: लगभग 5,000 फार्म, किसान परिवार और कृषि-इकाइयाँ धीरे-धीरे उस व्यवस्था की ओर बढ़ सकें। पाँच हज़ार चलने की दिशा है। पहुँचा आँकड़ा नहीं।"
         },
         {
           "type": "p",
@@ -1382,7 +1382,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "यहाँ FarmTech + AgriTech का अर्थ समेकित कृषि के भीतर सावधान औज़ार है: मिट्टी की नमी और ड्रिप, सौर तालाब-वायु, फसल-स्वास्थ्य जाँच, उपज का हिसाब — जहाँ छोटी जोत की मदद हो।"
+          "text": "यहाँ FarmTech + AgriTech का अर्थ समेकित कृषि के भीतर सावधान औज़ार है: मिट्टी की नमी और ड्रिप, सौर तालाब-वायु, फसल-स्वास्थ्य जाँच, उपज का हिसाब, जहाँ छोटी जोत की मदद हो।"
         },
         {
           "type": "p",
@@ -1418,7 +1418,7 @@ window.BKS_I18N = {
     },
     "bio": {
       "label": "जीवित बंगाल",
-      "headline": "लोग, जल, मिट्टी, पौधे, भोजन, किसान, शिल्प, समुदाय — एक सार्वजनिक सप्ताह में।",
+      "headline": "लोग, जल, मिट्टी, पौधे, भोजन, किसान, शिल्प, समुदाय, एक सार्वजनिक सप्ताह में।",
       "blocks": [
         {
           "type": "p",
@@ -1434,11 +1434,11 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "पंडाल के हरे बैनर से अधिक। कुछ दिनों के लिए शहरी जनता जीवित बंगाल के पास लौटती है — प्राकृतिक चक्र व्याख्यान नहीं, चलकर देखने की जगह।"
+          "text": "पंडाल के हरे बैनर से अधिक। कुछ दिनों के लिए शहरी जनता जीवित बंगाल के पास लौटती है, प्राकृतिक चक्र व्याख्यान नहीं, चलकर देखने की जगह।"
         },
         {
           "type": "p",
-          "text": "स्थिरता का प्रमाणपत्र नहीं। कार्बन-न्यूट्रल उपाधि नहीं। ब्रांडेड प्रकृति का पवेलियन नहीं। जीवित ज़मीन पर सांस्कृतिक सप्ताह — एक दृष्टिकोण और अनुभव के रूप में।"
+          "text": "स्थिरता का प्रमाणपत्र नहीं। कार्बन-न्यूट्रल उपाधि नहीं। ब्रांडेड प्रकृति का पवेलियन नहीं। जीवित ज़मीन पर सांस्कृतिक सप्ताह, एक दृष्टिकोण और अनुभव के रूप में।"
         }
       ]
     },
@@ -1452,7 +1452,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "इस पहल में फाउंडेशन का काम संस्कृति, कृषि, समुदाय और सावधान तकनीक को एक सार्वजनिक अनुभव में थामना है — ताकि दुर्गा पूजा पूजा रहे, और किसान तथा जीवित फार्म दिखाई दें।"
+          "text": "इस पहल में फाउंडेशन का काम संस्कृति, कृषि, समुदाय और सावधान तकनीक को एक सार्वजनिक अनुभव में थामना है, ताकि दुर्गा पूजा पूजा रहे, और किसान तथा जीवित फार्म दिखाई दें।"
         },
         {
           "type": "p",
@@ -1470,11 +1470,11 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj — भारतीय कृषक समाज — इस पूजो का आयोजक साझेदार है। टाइटल स्थान उसका नहीं। सरकारी निकाय नहीं। सरकार-समर्थित संस्था नहीं।"
+          "text": "Bharatiya Krishak Samaj, भारतीय कृषक समाज, इस पूजो का आयोजक साझेदार है। टाइटल स्थान उसका नहीं। सरकारी निकाय नहीं। सरकार-समर्थित संस्था नहीं।"
         },
         {
           "type": "p",
-          "text": "कृषक समाज — जो खेती करते हैं उनका समाज — इसलिए पूजा का आकार ऐसा है। जमावड़े का नाम किसान के कारण है, क्योंकि पूजा के बाद की सार्वजनिक कहानी का उद्देश्य किसान है: अन्नदाता, समेकित कृषि, लाइव फार्म, लगभग 5,000 परिवार उस जीवित व्यवस्था की ओर।"
+          "text": "कृषक समाज, जो खेती करते हैं उनका समाज, इसलिए पूजा का आकार ऐसा है। जमावड़े का नाम किसान के कारण है, क्योंकि पूजा के बाद की सार्वजनिक कहानी का उद्देश्य किसान है: अन्नदाता, समेकित कृषि, लाइव फार्म, लगभग 5,000 परिवार उस जीवित व्यवस्था की ओर।"
         },
         {
           "type": "p",
@@ -1493,7 +1493,7 @@ window.BKS_I18N = {
             "Munshir Bheri Management / Fishermen's Committee",
             "Near Sukantanagar / Salt Lake Sector V",
             "(East Kolkata Wetlands)",
-            "Kolkata – 700091, West Bengal"
+            "Kolkata: 700091, West Bengal"
           ]
         },
         {
@@ -1513,7 +1513,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "सार्वजनिक सप्ताह विचार खोलता है। काम चलना चाहिए जैसे और फार्म एक फसल नहीं, एक व्यवस्था सीखें: मिट्टी, जल, पौधे, पशु, घर, बाज़ार — बचा इनपुट — जहाँ मदद करे सावधान औज़ार, किसान पहले।"
+          "text": "सार्वजनिक सप्ताह विचार खोलता है। काम चलना चाहिए जैसे और फार्म एक फसल नहीं, एक व्यवस्था सीखें: मिट्टी, जल, पौधे, पशु, घर, बाज़ार, बचा इनपुट, जहाँ मदद करे सावधान औज़ार, किसान पहले।"
         },
         {
           "type": "p",
@@ -1532,7 +1532,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "यदि यह सार्वजनिक सप्ताह संस्थागत आसन से समझने योग्य है — आपको किस सहयोग के लिए आमंत्रित किया जा रहा है, समेकित कृषि क्या है, लगभग 5,000 का अर्थ, सहयोग क्या संभव बनाना चाहता है — बातचीत माँगिए।"
+          "text": "यदि यह सार्वजनिक सप्ताह संस्थागत आसन से समझने योग्य है, आपको किस सहयोग के लिए आमंत्रित किया जा रहा है, समेकित कृषि क्या है, लगभग 5,000 का अर्थ, सहयोग क्या संभव बनाना चाहता है, बातचीत माँगिए।"
         },
         {
           "type": "p",
@@ -1548,7 +1548,7 @@ window.BKS_I18N = {
       "items": [
         {
           "q": "हम ठीक किसका सहयोग कर रहे हैं?",
-          "a": "Bharatiya Krishak Samaj Pujo — पूजा केंद्र में — अन्नदाता सार्वजनिक दृष्टि में, समेकित कृषि एक जीवित व्यवस्था जिसे चलकर देखा जा सके, और लगभग 5,000 फार्म उस मॉडल की ओर बढ़ने की लंबी दृष्टि। सरकार और संस्थानों के लिए यहाँ सहयोग का अर्थ उस काम को समझना, और जहाँ उचित हो लोगों, संगठनों और समुदायों को जोड़ना है। पूजा का प्रायोजन नहीं।"
+          "a": "Bharatiya Krishak Samaj Pujo, पूजा केंद्र में, अन्नदाता सार्वजनिक दृष्टि में, समेकित कृषि एक जीवित व्यवस्था जिसे चलकर देखा जा सके, और लगभग 5,000 फार्म उस मॉडल की ओर बढ़ने की लंबी दृष्टि। सरकार और संस्थानों के लिए यहाँ सहयोग का अर्थ उस काम को समझना, और जहाँ उचित हो लोगों, संगठनों और समुदायों को जोड़ना है। पूजा का प्रायोजन नहीं।"
         },
         {
           "q": "समेकित कृषि प्रणाली क्या है?",
@@ -1572,7 +1572,7 @@ window.BKS_I18N = {
         },
         {
           "q": "₹1 lakh क्या है?",
-          "a": "एक ग्राम समेकित फार्म का प्रस्तावित बीज — एकमुश्त, या हर दो महीने ₹20,000। प्रस्तावित धारणा। यहाँ नहीं लिया जाता। यहाँ घोषित सरकारी अनुदान नहीं। सरकार या संस्थानों से इस पृष्ठ पर वह धन नहीं माँगा जा रहा।"
+          "a": "एक ग्राम समेकित फार्म का प्रस्तावित बीज, एकमुश्त, या हर दो महीने ₹20,000। प्रस्तावित धारणा। यहाँ नहीं लिया जाता। यहाँ घोषित सरकारी अनुदान नहीं। सरकार या संस्थानों से इस पृष्ठ पर वह धन नहीं माँगा जा रहा।"
         },
         {
           "q": "क्या यह सरकारी योजना है?",
@@ -1584,7 +1584,7 @@ window.BKS_I18N = {
         },
         {
           "q": "KarmYog for the 21st Century Foundation कौन है?",
-          "a": "इस पूजो का आयोजक परिवार। KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo का आयोजन करता है। फाउंडेशन ने IIT Kharagpur Research Park पर 2025 का Mahotsav आयोजित किया — कारीगरी और जमावड़े का रिकॉर्ड, 2026 का पंडाल नहीं।"
+          "a": "इस पूजो का आयोजक परिवार। KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo का आयोजन करता है। फाउंडेशन ने IIT Kharagpur Research Park पर 2025 का Mahotsav आयोजित किया, कारीगरी और जमावड़े का रिकॉर्ड, 2026 का पंडाल नहीं।"
         },
         {
           "q": "Bharatiya Krishak Samaj की भूमिका?",
@@ -1592,7 +1592,7 @@ window.BKS_I18N = {
         },
         {
           "q": "पूजा को बायोफिलिक क्यों कहा गया?",
-          "a": "जीवित चीज़ों के बीच — लोग, मिट्टी, जल, पौधे, भोजन, किसान, समुदाय — आर्द्रभूमि की ज़मीन पर, पंडाल के पास लाइव फार्म। अनुभव, प्रमाणपत्र नहीं।"
+          "a": "जीवित चीज़ों के बीच, लोग, मिट्टी, जल, पौधे, भोजन, किसान, समुदाय, आर्द्रभूमि की ज़मीन पर, पंडाल के पास लाइव फार्म। अनुभव, प्रमाणपत्र नहीं।"
         },
         {
           "q": "AI कहाँ है?",
@@ -1600,11 +1600,11 @@ window.BKS_I18N = {
         },
         {
           "q": "यहाँ FarmTech + AgriTech क्या है?",
-          "a": "फार्म के सावधान औज़ार — नमी, ड्रिप, तालाब की वायु, फसल-स्वास्थ्य, उपज — जहाँ मदद करे। विक्रेता सूची नहीं।"
+          "a": "फार्म के सावधान औज़ार, नमी, ड्रिप, तालाब की वायु, फसल-स्वास्थ्य, उपज, जहाँ मदद करे। विक्रेता सूची नहीं।"
         },
         {
           "q": "पूजा कहाँ है?",
-          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata – 700091, West Bengal।"
+          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata, 700091, West Bengal।"
         },
         {
           "q": "कब है?",

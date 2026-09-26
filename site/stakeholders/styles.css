@@ -125,7 +125,7 @@
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: var(--fest-sindoor);
+  color: var(--fest-marigold);
 }
 
 .section--editorial {
@@ -186,7 +186,7 @@
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--fest-sindoor);
+  color: var(--fest-marigold);
   line-height: 1.2;
   min-width: 1.8rem;
 }
@@ -252,7 +252,7 @@
   font-size: clamp(3.2rem, 10vw, 6.4rem);
   line-height: 0.9;
   letter-spacing: -0.04em;
-  color: var(--fest-sindoor);
+  color: var(--fest-marigold);
 }
 
 .section--stat {
@@ -295,7 +295,7 @@
 .section--bio h2,
 .section--bio p,
 .section--bio .section-label {
-  color: #fffdf7;
+  color: #f3d9b4;
 }
 
 .section--bio .section-label { color: var(--fest-marigold); }
@@ -373,7 +373,7 @@
   content: "+";
   font-size: 1.25rem;
   line-height: 1;
-  color: var(--fest-sindoor);
+  color: var(--fest-marigold);
   flex: 0 0 auto;
 }
 

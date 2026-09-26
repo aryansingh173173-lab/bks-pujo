@@ -2,7 +2,7 @@
   "name": "locality-lookup",
   "method": "POST",
   "path": "/api/locality-lookup",
-  "status": "DOCUMENTED — not implemented on this prototype",
+  "status": "DOCUMENTED, not implemented on this prototype",
   "isolation": "Must not call Purulia voice-agent production, Supabase, or any live booth table.",
   "purpose": "Map a user-known locality/area name through administrative hierarchy without requiring constituency or booth knowledge.",
   "request": {

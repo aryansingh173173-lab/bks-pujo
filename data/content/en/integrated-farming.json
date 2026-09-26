@@ -5,11 +5,11 @@
   },
   "kicker": "Rural resurgence · dedicated page",
   "h1": "What is an Integrated Farming System (IFS)?",
-  "lede": "An Integrated Farming System (IFS) is a holistic, circular agricultural model where multiple agricultural enterprises—such as crop cultivation, horticulture, dairy, poultry, aquaculture, agroforestry, and beekeeping—are combined on a single piece of land. In a traditional monoculture setup, a farmer relies on one single crop (like paddy) and bears huge market, weather, and input risks. In an Integrated Farming System, the waste or by-product of one component becomes the direct, free input for another. This closed-loop system slashes external input costs, maximizes soil vitality, optimizes water use, and generates multiple, steady streams of daily, monthly, and seasonal income.",
-  "photoCap": "Durga Puja Mahotsav 2025, IIT Kharagpur Research Park — KarmYog for the 21st Century Foundation.",
+  "lede": "An Integrated Farming System (IFS) is a holistic, circular agricultural model where multiple agricultural enterprises, such as crop cultivation, horticulture, dairy, poultry, aquaculture, agroforestry, and beekeeping, are combined on a single piece of land. In a traditional monoculture setup, a farmer relies on one single crop (like paddy) and bears huge market, weather, and input risks. In an Integrated Farming System, the waste or by-product of one component becomes the direct, free input for another. This closed-loop system slashes external input costs, maximizes soil vitality, optimizes water use, and generates multiple, steady streams of daily, monthly, and seasonal income.",
+  "photoCap": "Durga Puja Mahotsav 2025, IIT Kharagpur Research Park, KarmYog for the 21st Century Foundation.",
   "what": {
     "h2": "Monoculture versus a closed loop",
-    "body": "One standing crop carries the whole year’s risk. An integrated farm turns leftover into input — so work, water and cash move through the year.",
+    "body": "One standing crop carries the whole year’s risk. An integrated farm turns leftover into input, so work, water and cash move through the year.",
     "contrast": [
       {
         "id": "mono",

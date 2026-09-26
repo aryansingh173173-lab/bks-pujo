@@ -209,8 +209,8 @@
 
 .eco-hero--sponsors {
   background:
-    linear-gradient(180deg, rgba(15, 40, 24, 0.35) 0%, rgba(15, 40, 24, 0.82) 55%, #0f2818 100%),
-    #0f2818 url("../assets/puja-2025/aarti-procession-2025.jpg") center 40% / cover no-repeat;
+    linear-gradient(180deg, rgba(82, 19, 30, 0.35) 0%, rgba(82, 19, 30, 0.82) 55%, #3a0d15 100%),
+    #3a0d15 url("../assets/puja-2025/aarti-procession-2025.jpg") center 40% / cover no-repeat;
   color: var(--color-text-on-brand);
 }
 .eco-hero--sponsors .lede,
@@ -247,8 +247,8 @@
 
 .eco-hero--nrb {
   background:
-    linear-gradient(180deg, rgba(32, 26, 16, 0.25) 0%, rgba(32, 26, 16, 0.78) 70%, #201a10 100%),
-    #201a10 url("../assets/puja-2026/photo_2026-08-19_11-15-12.jpg") center 45% / cover no-repeat;
+    linear-gradient(180deg, rgba(32, 26, 16, 0.25) 0%, rgba(32, 26, 16, 0.78) 70%, #1f0b0f 100%),
+    #1f0b0f url("../assets/puja-2026/photo_2026-08-19_11-15-12.jpg") center 45% / cover no-repeat;
   color: var(--color-text-on-brand);
 }
 .eco-hero--nrb .lede,

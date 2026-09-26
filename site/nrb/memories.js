@@ -17,7 +17,7 @@
       groups: {
         worship: {
           title: "Worship",
-          intro: "The idol, the dhak, and the aarti — the Puja remains a Puja."
+          intro: "The idol, the dhak, and the aarti, the Puja remains a Puja."
         },
         atmosphere: {
           title: "Night and light",
@@ -25,7 +25,7 @@
         },
         craft: {
           title: "Craft and living green",
-          intro: "Earth paths, plants and handmade structure — the biophilic language of that week."
+          intro: "Earth paths, plants and handmade structure: the biophilic language of that week."
         },
         people: {
           title: "People in the gathering",
@@ -33,7 +33,7 @@
         }
       },
       caps: {
-        aerial: "The 2025 pavilion from above — a night structure of light, not the 2026 pandal.",
+        aerial: "The 2025 pavilion from above: a night structure of light, not the 2026 pandal.",
         gate: "Entrance into the Mahotsav after dark.",
         pyramid: "The stepped night pavilion at Durga Puja Mahotsav 2025.",
         leaf: "A leaf-shaped garden bed on the 2025 ground.",
@@ -41,7 +41,7 @@
         bricks: "Brick path, grass strips and hanging lamps inside the pavilion.",
         idol: "The Durga image in the 2025 pavilion. Historical reference.",
         family: "The goddess with her children, set among plants and warm light.",
-        dhak: "Dhakis before the image — worship as a public gathering.",
+        dhak: "Dhakis before the image: worship as a public gathering.",
         lanterns: "Rows of hanging lamps over a planted walk.",
         stall: "A produce stall on the Mahotsav ground. Not a 2026 vendor list.",
         tech: "A tools conversation at a 2025 stall. Not a named 2026 catalogue.",
@@ -61,13 +61,13 @@
       prev: "আগের ছবি",
       next: "পরের ছবি",
       groups: {
-        worship: { title: "আরাধনা", intro: "প্রতিমা, ঢাক, আরতি — পুজো পুজোই থাকে।" },
+        worship: { title: "আরাধনা", intro: "প্রতিমা, ঢাক, আরতি: পুজো পুজোই থাকে।" },
         atmosphere: { title: "রাত ও আলো", intro: "বাঁশ, লণ্ঠন, হেঁটে চলার প্যভিলিয়ন।" },
-        craft: { title: "কারুকাজ ও সবুজ", intro: "মাটির পথ, গাছ, হাতে-তৈরি কাঠামো — সেই সপ্তাহের ভাষা।" },
-        people: { title: "জমায়েতের মানুষ", intro: "প্রতিবেশী, স্টল, খোলা অনুষ্ঠান — একই উৎসবের মাটিতে।" }
+        craft: { title: "কারুকাজ ও সবুজ", intro: "মাটির পথ, গাছ, হাতে-তৈরি কাঠামো: সেই সপ্তাহের ভাষা।" },
+        people: { title: "জমায়েতের মানুষ", intro: "প্রতিবেশী, স্টল, খোলা অনুষ্ঠান: একই উৎসবের মাটিতে।" }
       },
       caps: {
-        aerial: "ওপর থেকে ২০২৫-এর প্যভিলিয়ন — আলোর রাতের কাঠামো। ২০২৬-এর প্যান্ডেল নয়।",
+        aerial: "ওপর থেকে ২০২৫-এর প্যভিলিয়ন: আলোর রাতের কাঠামো। ২০২৬-এর প্যান্ডেল নয়।",
         gate: "মহোৎসবে ঢোকার দরজা, রাতের বেলা।",
         pyramid: "২০২৫ মহোৎসবের স্তরীকৃত রাতের প্যভিলিয়ন।",
         leaf: "২০২৫-এর মাঠে পাতার আকৃতির বাগান।",
@@ -75,7 +75,7 @@
         bricks: "ইটের পথ, ঘাসের সারি, ঝুলন্ত বাতি।",
         idol: "২০২৫-এর প্যভিলিয়নে দুর্গামূর্তি। ঐতিহাসিক রেফারেন্স।",
         family: "দেবী ও সন্তানেরা, গাছ ও উষ্ণ আলোর মাঝে।",
-        dhak: "প্রতিমার সামনে ঢাকি — আরাধনা, খোলা জমায়েত।",
+        dhak: "প্রতিমার সামনে ঢাকি: আরাধনা, খোলা জমায়েত।",
         lanterns: "রোপণ করা পথের উপর সারি সারি বাতি।",
         stall: "মহোৎসবের মাঠে ফসলের স্টল। ২০২৬-এর বিক্রেতা তালিকা নয়।",
         tech: "২০২৫-এর স্টলে সরঞ্জাম নিয়ে কথা। নাম করা ২০২৬ ক্যাটালগ নয়।",
@@ -95,13 +95,13 @@
       prev: "पिछली तस्वीर",
       next: "अगली तस्वीर",
       groups: {
-        worship: { title: "आराधना", intro: "प्रतिमा, ढाक और आरती — पूजा पूजा ही रहती है।" },
+        worship: { title: "आराधना", intro: "प्रतिमा, ढाक और आरती: पूजा पूजा ही रहती है।" },
         atmosphere: { title: "रात और प्रकाश", intro: "बाँस, लालटेन, चलकर देखने योग्य पवेलियन।" },
-        craft: { title: "शिल्प और हरियाली", intro: "मिट्टी के पथ, पौधे, हाथ से बना ढाँचा — उस सप्ताह की भाषा।" },
-        people: { title: "जमावड़े के लोग", intro: "पड़ोसी, स्टॉल, खुले कार्यक्रम — उसी उत्सव की ज़मीन पर।" }
+        craft: { title: "शिल्प और हरियाली", intro: "मिट्टी के पथ, पौधे, हाथ से बना ढाँचा, उस सप्ताह की भाषा।" },
+        people: { title: "जमावड़े के लोग", intro: "पड़ोसी, स्टॉल, खुले कार्यक्रम: उसी उत्सव की ज़मीन पर।" }
       },
       caps: {
-        aerial: "ऊपर से 2025 का पवेलियन — प्रकाश की रात की संरचना। 2026 का पंडाल नहीं।",
+        aerial: "ऊपर से 2025 का पवेलियन: प्रकाश की रात की संरचना। 2026 का पंडाल नहीं।",
         gate: "महोत्सव का प्रवेश, रात में।",
         pyramid: "2025 महोत्सव का स्तरीय रात्रि पवेलियन।",
         leaf: "2025 के मैदान पर पत्ते के आकार का उद्यान।",
@@ -109,7 +109,7 @@
         bricks: "ईंट का पथ, घास की पट्टियाँ, लटकते दीये।",
         idol: "2025 के पवेलियन में दुर्गा प्रतिमा। ऐतिहासिक संदर्भ।",
         family: "देवी और उनके बच्चे, पौधों और गुनगुमानी रोशनी के बीच।",
-        dhak: "प्रतिमा के सामने ढाकी — आराधना, खुला जमावड़ा।",
+        dhak: "प्रतिमा के सामने ढाकी: आराधना, खुला जमावड़ा।",
         lanterns: "रोपे गए पथ के ऊपर दीयों की कतार।",
         stall: "महोत्सव के मैदान पर उपज का स्टॉल। 2026 की विक्रेता सूची नहीं।",
         tech: "2025 के स्टॉल पर औज़ारों की बात। नामित 2026 कैटलॉग नहीं।",

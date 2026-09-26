@@ -1,7 +1,7 @@
 {
   "meta": {
     "lang": "hi",
-    "hindiStatus": "DRAFT — NATIVE REVIEW REQUIRED"
+    "hindiStatus": "DRAFT: NATIVE REVIEW REQUIRED"
   },
   "kicker": "अभियान के मार्ग",
   "h1": "सहभागिता",
@@ -86,7 +86,7 @@
     "errors": {
       "name": "कृपया नाम लिखें।",
       "locality": "कृपया इलाका, गाँव या क्षेत्र लिखें।",
-      "consent": "सर्वर पर नहीं रखा जाता — यह पुष्टि करें।",
+      "consent": "सर्वर पर नहीं रखा जाता: यह पुष्टि करें।",
       "role": "कृपया चुनें आप कैसे शामिल होना चाहते हैं।"
     },
     "success": "The information has been downloaded as a file to your device. It has not been uploaded. No farmer has been funded."

@@ -1,5 +1,8 @@
 {
-  "meta": { "lang": "en", "note": "Mirrors prototype/index.html The Puja view. Live strings are data-en on that page." },
+  "meta": {
+    "lang": "en",
+    "note": "Mirrors prototype/index.html The Puja view. Live strings are data-en on that page."
+  },
   "h1": "The Puja",
   "lede": "Worship, craft, food, music and neighbourhood. Festival facts are separated from what is not yet true of a BKS gathering.",
   "unesco": {
@@ -7,7 +10,7 @@
     "class": "SOURCE FACT",
     "sourceId": "SRC-UNESCO-001",
     "title": "What UNESCO inscribed",
-    "body": "In December 2021, ‘Durga Puja in Kolkata’ was inscribed on UNESCO’s Representative List of the Intangible Cultural Heritage of Humanity. The inscribed element is Kolkata’s Puja — not this page, and not an unnamed venue."
+    "body": "In December 2021, ‘Durga Puja in Kolkata’ was inscribed on UNESCO’s Representative List of the Intangible Cultural Heritage of Humanity. The inscribed element is Kolkata’s Puja, not this page, and not an unnamed venue."
   },
   "clay": {
     "governance": "VERIFIED",

@@ -281,7 +281,7 @@
       "<section class='eco-section' id='enquire'>" +
       "<p class='eco-kicker'>Conversion</p>" +
       "<h2>Express Sponsor Interest</h2>" +
-      "<p>The committee will use this file only if you send it. No payment is taken here. Existing indicative packages from the current campaign remain marked assumed, below the form — they are not new commercial claims.</p>" +
+      "<p>The committee will use this file only if you send it. No payment is taken here. Existing indicative packages from the current campaign remain marked assumed, below the form, they are not new commercial claims.</p>" +
       "<form class='campaign-form' id='eco-sponsor-form' novalidate>" +
       "<div class='form-grid'>" +
       "<label>Organisation name <input name='organisation_name' required autocomplete='organization'></label>" +
@@ -434,7 +434,7 @@
     if (id === "public") {
       return "<section class='eco-section' id='holding'><p class='eco-kicker'>The Puja</p>" +
         "<h2>Programme, theme, awards and visit notes live on the main Puja pages.</h2>" +
-        "<p>Details that are not yet confirmed — venue, committee, ritual clocks — remain to be announced. This page does not invent them.</p>" +
+        "<p>Details that are not yet confirmed, venue, committee, ritual clocks, remain to be announced. This page does not invent them.</p>" +
         "<p><a href='../index.html#puja'>The Puja</a> · <a href='../index.html#visit'>Visit</a> · <a href='../index.html#awards'>Awards</a> · <a href='../index.html#programme'>Programme</a></p></section>" +
         renderFaq(exp, s);
     }
