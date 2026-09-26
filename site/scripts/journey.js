@@ -301,6 +301,56 @@
       "<p class='lede'>" + esc(c.league.lede) + "</p>";
   }
 
+
+  /* ---------- Photos on the chapter pages (collage + moving strip) ---------- */
+  var M = "assets/stories/museum-2025/";
+  var S = "assets/stories/2026/";
+  var MEM = "assets/memories-2025/";
+  var MEDIA = [
+    { key: "puja-gallery", kind: "gallery", after: "[data-view='puja'] > .page-head",
+      imgs: [M + "pavilion-exterior.jpg", "assets/puja-2025/aarti-procession-2025.jpg", "assets/puja-2025/conch-aarti-2025.jpg"] },
+    { key: "puja-strip", kind: "strip", before: "[data-view='puja'] > .glance",
+      imgs: [M + "grand-courtyard.jpg", MEM + "mem-09.jpg", M + "bamboo-gateway.jpg", MEM + "mem-10.jpg", M + "red-lit-interior.jpg", MEM + "mem-11.jpg", M + "carved-bamboo-face.jpg", MEM + "mem-26.jpg", M + "museum-sign.jpg"] },
+    { key: "ifs-gallery", kind: "gallery", after: "#ifs-body .bks-ifs__wrap > header",
+      imgs: [S + "site-before-3.jpg", M + "museum-04.jpg", S + "invitation-page-2.jpg"] },
+    { key: "ifs-strip", kind: "strip", after: "#ifs-body .bks-ifs__wrap > .bks-ifs__block:nth-of-type(3)",
+      imgs: [M + "museum-01.jpg", S + "site-work-bamboo.jpg", M + "museum-02.jpg", M + "museum-06.jpg", S + "khuti-puja-2.jpg", M + "museum-09.jpg", M + "grand-courtyard.jpg", M + "museum-12.jpg"] },
+    { key: "ifs-strip-2", kind: "strip", before: "[data-view='ifs'] > [data-hint='ifs-demo']",
+      imgs: [S + "site-before-1.jpg", M + "museum-07.jpg", S + "site-before-2.jpg", M + "museum-10.jpg", S + "site-work-bamboo.jpg", M + "museum-05.jpg"] },
+    { key: "participate-gallery", kind: "gallery", after: "#participate-body > .page-head",
+      imgs: [S + "khuti-puja-1.jpg", S + "khuti-puja-4.jpg", S + "environment-day-2026.jpg"] },
+    { key: "participate-strip", kind: "strip", before: "[data-view='participate'] > [data-slot='participate-b']",
+      imgs: [S + "khuti-puja-2.jpg", "assets/puja-2026/photo_2026-08-19_11-15-12.jpg", S + "khuti-puja-3.jpg", MEM + "mem-13.jpg", "assets/puja-2026/photo_2026-08-19_11-15-15.jpg", MEM + "mem-06.jpg", S + "protyabortan-banner.jpg", S + "site-work-bamboo.jpg"] }
+  ];
+
+  function mediaHtml(spec) {
+    var img = function (src, cls) { return "<img" + (cls ? " class='" + cls + "'" : "") + " src='" + src + "' alt='' loading='lazy' decoding='async'>"; };
+    if (spec.kind === "gallery") {
+      return "<span class='cg-tile cg-tile--a'>" + img(spec.imgs[0]) + "</span>" +
+        "<span class='cg-tile cg-tile--b'>" + img(spec.imgs[1]) + "</span>" +
+        "<span class='cg-tile cg-tile--c'>" + img(spec.imgs[2]) + "</span>";
+    }
+    var row = spec.imgs.map(function (src, i) { return "<span class='ps-item ps-item--" + (i % 3) + "'>" + img(src) + "</span>"; }).join("");
+    return "<div class='ps-track'>" + row + row + "</div>";
+  }
+
+  function ensureMedia() {
+    MEDIA.forEach(function (spec) {
+      var ref = document.querySelector(spec.after || spec.before);
+      if (!ref) return;
+      var el = document.querySelector("[data-media='" + spec.key + "']");
+      var sib = spec.after ? ref.nextElementSibling : ref.previousElementSibling;
+      if (el && el === sib) return;
+      if (el) el.remove();
+      el = document.createElement("div");
+      el.className = spec.kind === "gallery" ? "chapter-gallery" : "photo-strip";
+      el.setAttribute("data-media", spec.key);
+      el.setAttribute("aria-hidden", "true");
+      el.innerHTML = mediaHtml(spec);
+      ref.parentNode.insertBefore(el, spec.after ? ref.nextSibling : ref);
+    });
+  }
+
   var lastLang = "";
   function render() {
     var l = lang();
@@ -316,7 +366,19 @@
 
   function boot() {
     render();
+    ensureMedia();
     new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+    // Page bodies are re-rendered on language change; put the photos back each time.
+    var t = 0;
+    new MutationObserver(function (list) {
+      var ours = list.every(function (m) {
+        return Array.prototype.every.call(m.addedNodes, function (n) { return n.nodeType === 1 && n.hasAttribute("data-media"); }) &&
+          Array.prototype.every.call(m.removedNodes, function (n) { return n.nodeType === 1 && n.hasAttribute && n.hasAttribute("data-media"); });
+      });
+      if (ours) return;
+      clearTimeout(t);
+      t = setTimeout(ensureMedia, 80);
+    }).observe(document.getElementById("main") || document.body, { childList: true, subtree: true });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

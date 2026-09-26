@@ -193,3 +193,110 @@ html[data-sec="night"] .eco-kicker { color: #f3d9b4; }
       url("../assets/puja-2025/idol-durga-2025.jpg") 52% 38% / cover;
   }
 }
+
+/* ===== Header: one line. BKS seal · menu · KarmYog mark + language. Glassy maroon. ===== */
+html[data-sec="night"] .site-header {
+  background: rgba(58, 12, 20, 0.55);
+  -webkit-backdrop-filter: saturate(1.3) blur(14px);
+  backdrop-filter: saturate(1.3) blur(14px);
+  border-bottom: 1px solid rgba(243, 217, 180, 0.14);
+  padding: 0;
+}
+html[data-sec="night"] .site-header::after { display: none; }
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 64px;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.site-header .brand-row { display: contents; }
+.site-header .brand-lockup--bks { order: 0; flex: 0 0 auto; }
+.site-header .nav-desktop { order: 1; flex: 1 1 auto; min-width: 0; margin: 0; border: 0; justify-content: center; }
+.site-header .brand-lockup--karmyog { order: 2; flex: 0 0 auto; }
+.site-header .header-tools { order: 3; flex: 0 0 auto; margin-left: 0; }
+.site-header .brand-divider { display: none; }
+.site-header .wordmark,
+.site-header .brand-sub {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.site-header .seal, .site-header .seal img { width: 46px; height: 46px; }
+.site-header .karmyog-mark { width: 40px; height: 40px; }
+.site-header .nav-desktop a { min-height: 40px; padding: 0 0.62rem; font-size: 0.84rem; }
+.site-header .nav-desktop a::after { left: 0.62rem; right: 0.62rem; }
+.site-header .lang-select { min-height: 40px; min-width: 6.5rem; }
+.site-header .nav-toggle { min-height: 40px; min-width: 40px; }
+@media (max-width: 1099px) {
+  .site-header .brand-lockup--karmyog { margin-left: auto; }
+}
+.site-header.is-compact .header-inner { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+
+/* ===== Hero video: show the bottom of the frame, hero fits the first screen ===== */
+.hero-video { object-position: 50% 100%; }
+@media (min-width: 768px) {
+  .hero-band--photo.has-video { min-height: calc(100svh - 64px); }
+}
+
+/* ===== Chapter photo collage (under the page title) ===== */
+.chapter-gallery {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.9rem;
+  height: clamp(20rem, 42vw, 30rem);
+  margin: clamp(1.4rem, 3vw, 2.2rem) 0 clamp(1.8rem, 4vw, 2.8rem);
+}
+.cg-tile { position: relative; overflow: hidden; display: block; background: #1c0a0e; }
+.cg-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transform-origin: 50% 60%; }
+.cg-tile--a { grid-row: 1 / span 2; border-radius: 50% 50% 6px 6px / 22% 22% 6px 6px; }
+.cg-tile--b { border-radius: 0 40% 0 40%; }
+.cg-tile--c { border-radius: 6px; box-shadow: 10px 10px 0 #52131e; margin: 0 10px 10px 0; }
+.cg-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(16, 4, 6, 0.45)); pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .cg-tile img { animation: cg-zoom 16s ease-in-out infinite alternate; }
+  .cg-tile--b img { animation-delay: -5s; }
+  .cg-tile--c img { animation-delay: -10s; }
+}
+@keyframes cg-zoom { from { transform: scale(1); } to { transform: scale(1.1) translateY(-2%); } }
+@media (max-width: 699px) {
+  .chapter-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 15rem 9rem; height: auto; }
+  .cg-tile--a { grid-column: 1 / -1; grid-row: auto; border-radius: 40% 40% 6px 6px / 30% 30% 6px 6px; }
+}
+
+/* ===== Moving photo strip (between sections) ===== */
+.photo-strip {
+  position: relative;
+  overflow: hidden;
+  margin: clamp(2rem, 5vw, 3.4rem) calc(50% - 50vw);
+  padding: 1rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.ps-track { display: flex; gap: 1rem; width: max-content; }
+.ps-item { flex: 0 0 auto; display: block; width: clamp(12rem, 22vw, 17rem); height: clamp(8.5rem, 15vw, 11.5rem); overflow: hidden; background: #1c0a0e; border-radius: 6px; }
+.ps-item--0 { transform: rotate(-1.4deg); }
+.ps-item--1 { transform: translateY(0.7rem) rotate(1deg); border-radius: 999px 999px 6px 6px / 60% 60% 6px 6px; }
+.ps-item--2 { transform: rotate(0.6deg); border: 2px solid #f3d9b4; }
+.ps-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.ps-item:hover img { transform: scale(1.08); }
+@media (prefers-reduced-motion: no-preference) {
+  .ps-track { animation: ps-run 55s linear infinite; }
+  .photo-strip:hover .ps-track { animation-play-state: paused; }
+}
+@keyframes ps-run { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .photo-strip { overflow-x: auto; } }
+.site-header .nav-desktop { justify-content: flex-start; }
+.site-header .nav-desktop > a:first-child { margin-left: auto; }
+.site-header .nav-desktop > a:last-child { margin-right: auto; }
+.site-header .nav-desktop a { padding: 0 0.48rem; font-size: 0.81rem; }
+.site-header .nav-desktop a::after { left: 0.48rem; right: 0.48rem; }
+.site-header .nav-jai-kisan__label { font-size: 1em; }
+[data-media="puja-gallery"] .cg-tile--a img { object-position: 50% 72%; }
+@media (min-width: 1100px) {
+  .site-header .nav-desktop > a[href="#home"] { display: none; }
+  .site-header .nav-desktop > a[href="#home"] + a { margin-left: auto; }
+  .site-header .header-inner { gap: 0.6rem; }
+  .site-header .nav-desktop a { padding: 0 0.44rem; font-size: 0.79rem; }
+}
