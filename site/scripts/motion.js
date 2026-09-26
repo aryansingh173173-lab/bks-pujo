@@ -62,19 +62,12 @@
     return COUNT_COPY[l] ? l : "en";
   }
 
-  /* ---------- Scroll progress + compact header ---------- */
+  /* ---------- Compact header on scroll ---------- */
   function setupScroll() {
-    var bar = document.createElement("div");
-    bar.className = "scroll-progress";
-    bar.setAttribute("aria-hidden", "true");
-    document.body.appendChild(bar);
     var header = document.querySelector(".site-header");
     var ticking = false;
     function update() {
       ticking = false;
-      var max = document.documentElement.scrollHeight - window.innerHeight;
-      var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-      bar.style.setProperty("--p", p.toFixed(4));
       if (header) header.classList.toggle("is-compact", window.scrollY > 40);
     }
     window.addEventListener("scroll", function () {
