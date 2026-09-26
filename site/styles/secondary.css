@@ -169,3 +169,27 @@ html[data-sec="night"] #ifs-body #ifs-title { color: #f3d9b4; }
 html[data-sec="night"] .eco-pending { background: #1c0a0e; color: #e6cba6; border-left-color: #f3d9b4; }
 html[data-sec="night"] .eco-stage .eco-kicker,
 html[data-sec="night"] .eco-kicker { color: #f3d9b4; }
+
+/* Hero background video (2025 pavilion walkthrough), under the same dark shade */
+.hero-band--photo.has-video { background: #100406; }
+.hero-video,
+.hero-video-shade { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.hero-video { object-fit: cover; object-position: 50% 45%; }
+.hero-video-shade {
+  background:
+    linear-gradient(95deg, rgba(16, 4, 6, 0.93) 0%, rgba(16, 4, 6, 0.72) 26%, rgba(16, 4, 6, 0.28) 50%, rgba(16, 4, 6, 0.1) 70%),
+    linear-gradient(0deg, rgba(16, 4, 6, 0.7), transparent 38%);
+}
+@media (max-width: 767px) {
+  .hero-band--photo.has-video::before { display: none; }
+  .hero-video, .hero-video-shade { bottom: auto; height: 22.5rem; }
+  .hero-video-shade { background: linear-gradient(180deg, rgba(16, 4, 6, 0.1) 0%, rgba(16, 4, 6, 0.1) 55%, #100406 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video, .hero-video-shade { display: none; }
+  .hero-band--photo.has-video {
+    background:
+      linear-gradient(95deg, rgba(16, 4, 6, 0.93) 0%, rgba(16, 4, 6, 0.74) 24%, rgba(16, 4, 6, 0.26) 46%, transparent 66%),
+      url("../assets/puja-2025/idol-durga-2025.jpg") 52% 38% / cover;
+  }
+}

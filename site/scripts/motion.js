@@ -219,3 +219,16 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
 })();
+
+/* Hero video: mark the hero, and pause it while off-screen or when motion is reduced. */
+(function () {
+  var v = document.querySelector(".hero-video");
+  if (!v) return;
+  var hero = v.closest(".hero-band");
+  if (hero) hero.classList.add("has-video");
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { v.pause(); v.removeAttribute("autoplay"); return; }
+  var tryPlay = function () { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { if (e[0].isIntersecting) tryPlay(); else v.pause(); }, { threshold: 0.05 }).observe(v);
+  } else tryPlay();
+})();
