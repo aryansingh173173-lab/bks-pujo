@@ -105,7 +105,7 @@
         "nav",
         "krlTeams"
       ],
-      "desktop": true,
+      "desktop": false,
       "kind": "external"
     },
     {
