@@ -325,13 +325,18 @@
 
   function mediaHtml(spec) {
     var img = function (src, cls) { return "<img" + (cls ? " class='" + cls + "'" : "") + " src='" + src + "' alt='' loading='lazy' decoding='async'>"; };
+    var open = function (i, hidden) {
+      return " data-lb='" + i + "'" + (hidden ? " aria-hidden='true'" : " role='button' tabindex='0' aria-label='" + lbLabel(i + 1, spec.imgs.length) + "'");
+    };
     if (spec.kind === "gallery") {
-      return "<span class='cg-tile cg-tile--a'>" + img(spec.imgs[0]) + "</span>" +
-        "<span class='cg-tile cg-tile--b'>" + img(spec.imgs[1]) + "</span>" +
-        "<span class='cg-tile cg-tile--c'>" + img(spec.imgs[2]) + "</span>";
+      return "<span class='cg-tile cg-tile--a'" + open(0) + ">" + img(spec.imgs[0]) + "</span>" +
+        "<span class='cg-tile cg-tile--b'" + open(1) + ">" + img(spec.imgs[1]) + "</span>" +
+        "<span class='cg-tile cg-tile--c'" + open(2) + ">" + img(spec.imgs[2]) + "</span>";
     }
-    var row = spec.imgs.map(function (src, i) { return "<span class='ps-item ps-item--" + (i % 3) + "'>" + img(src) + "</span>"; }).join("");
-    return "<div class='ps-track'>" + row + row + "</div>";
+    var row = function (hidden) {
+      return spec.imgs.map(function (src, i) { return "<span class='ps-item ps-item--" + (i % 3) + "'" + open(i, hidden) + ">" + img(src) + "</span>"; }).join("");
+    };
+    return "<div class='ps-track'>" + row(false) + row(true) + "</div>";
   }
 
   function ensureMedia() {
@@ -345,11 +350,106 @@
       el = document.createElement("div");
       el.className = spec.kind === "gallery" ? "chapter-gallery" : "photo-strip";
       el.setAttribute("data-media", spec.key);
-      el.setAttribute("aria-hidden", "true");
       el.innerHTML = mediaHtml(spec);
       ref.parentNode.insertBefore(el, spec.after ? ref.nextSibling : ref);
     });
   }
+
+
+  /* ---------- Photo viewer: click any chapter photo to open it large ---------- */
+  var LB_COPY = {
+    en: { open: "Open photo", of: "of", close: "Close", prev: "Previous photo", next: "Next photo" },
+    bn: { open: "ছবি খুলুন", of: "/", close: "বন্ধ করুন", prev: "আগের ছবি", next: "পরের ছবি" },
+    hi: { open: "फ़ोटो खोलें", of: "/", close: "बंद करें", prev: "पिछली फ़ोटो", next: "अगली फ़ोटो" }
+  };
+  function lbText() { return LB_COPY[lang()] || LB_COPY.en; }
+  function lbLabel(n, total) { var t = lbText(); return t.open + " " + n + " " + t.of + " " + total; }
+
+  var lb = null, lbList = [], lbIdx = 0, lbReturn = null;
+  function buildLightbox() {
+    if (lb) return lb;
+    lb = document.createElement("div");
+    lb.className = "lb";
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-modal", "true");
+    lb.hidden = true;
+    lb.innerHTML =
+      "<button type='button' class='lb__close' data-lb-act='close'>&times;</button>" +
+      "<button type='button' class='lb__nav lb__nav--prev' data-lb-act='prev'>&#8249;</button>" +
+      "<figure class='lb__fig'><img class='lb__img' alt=''><figcaption class='lb__count'></figcaption></figure>" +
+      "<button type='button' class='lb__nav lb__nav--next' data-lb-act='next'>&#8250;</button>";
+    document.body.appendChild(lb);
+    lb.addEventListener("click", function (e) {
+      var act = e.target.closest("[data-lb-act]");
+      if (act) { lbAct(act.getAttribute("data-lb-act")); return; }
+      if (!e.target.closest(".lb__img")) closeLightbox();
+    });
+    var x0 = null;
+    lb.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) lbAct(dx < 0 ? "next" : "prev");
+    });
+    return lb;
+  }
+  function lbShow() {
+    var t = lbText();
+    lb.querySelector(".lb__img").src = lbList[lbIdx];
+    lb.querySelector(".lb__count").textContent = (lbIdx + 1) + " " + t.of + " " + lbList.length;
+    lb.querySelector(".lb__close").setAttribute("aria-label", t.close);
+    lb.querySelector(".lb__nav--prev").setAttribute("aria-label", t.prev);
+    lb.querySelector(".lb__nav--next").setAttribute("aria-label", t.next);
+    var multi = lbList.length > 1;
+    lb.querySelectorAll(".lb__nav").forEach(function (b) { b.hidden = !multi; });
+    [lbIdx - 1, lbIdx + 1].forEach(function (i) { var im = new Image(); im.src = lbList[(i + lbList.length) % lbList.length]; });
+  }
+  function lbAct(act) {
+    if (act === "close") return closeLightbox();
+    lbIdx = (lbIdx + (act === "next" ? 1 : -1) + lbList.length) % lbList.length;
+    lbShow();
+  }
+  function openLightbox(list, idx, from) {
+    buildLightbox();
+    lbList = list; lbIdx = idx; lbReturn = from;
+    lbShow();
+    lb.hidden = false;
+    document.documentElement.classList.add("lb-open");
+    requestAnimationFrame(function () { lb.classList.add("is-on"); });
+    lb.querySelector(".lb__close").focus();
+  }
+  function closeLightbox() {
+    if (!lb || lb.hidden) return;
+    lb.classList.remove("is-on");
+    lb.hidden = true;
+    document.documentElement.classList.remove("lb-open");
+    if (lbReturn && lbReturn.focus) lbReturn.focus();
+  }
+  function lbFromTarget(target) {
+    var item = target.closest && target.closest("[data-lb]");
+    if (!item) return false;
+    var box = item.closest("[data-media]");
+    var spec = box && MEDIA.filter(function (m) { return m.key === box.getAttribute("data-media"); })[0];
+    if (!spec) return false;
+    openLightbox(spec.imgs, +item.getAttribute("data-lb"), item);
+    return true;
+  }
+  document.addEventListener("click", function (e) { if (lbFromTarget(e.target)) e.preventDefault(); });
+  document.addEventListener("keydown", function (e) {
+    if (lb && !lb.hidden) {
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowRight") lbAct("next");
+      else if (e.key === "ArrowLeft") lbAct("prev");
+      else if (e.key === "Tab") {
+        var f = [].slice.call(lb.querySelectorAll("button:not([hidden])"));
+        var i = f.indexOf(document.activeElement);
+        e.preventDefault();
+        f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+      }
+      return;
+    }
+    if ((e.key === "Enter" || e.key === " ") && lbFromTarget(e.target)) e.preventDefault();
+  });
 
 
   /* ---------- Integrated Farming: interactive farm wheel ---------- */
