@@ -112,11 +112,11 @@
       "<p class='card-foot'><a class='btn btn-secondary' href='https://www.bkswbengal.org' rel='noopener noreferrer'>" +
       escapeHtml(d.bannerLink) + "</a></p>" +
       "<div class='leader-strip'>" +
-      "<article><img src='assets/dr-krishan-bir-chaudhary.jpg' width='110' height='110' alt='" +
+      "<article><img loading='lazy' decoding='async' src='assets/dr-krishan-bir-chaudhary.jpg' width='110' height='110' alt='" +
       escapeHtml(d.leader1Title) + "'><div><p class='kicker'>" + escapeHtml(d.leader1Eyebrow) +
       "</p><h3>" + escapeHtml(d.leader1Title) + "</h3><p>" + escapeHtml(d.leader1Text) +
       "</p></div></article>" +
-      "<article><img src='assets/mahacharya-sourabh-j-sarkar.jpg' width='110' height='110' alt='" +
+      "<article><img loading='lazy' decoding='async' src='assets/mahacharya-sourabh-j-sarkar.jpg' width='110' height='110' alt='" +
       escapeHtml(d.leader2Title) + "'><div><p class='kicker'>" +
       escapeHtml(d.leader2Eyebrow) + "</p><h3>" + escapeHtml(d.leader2Title) + "</h3><p>" +
       escapeHtml(d.leader2Text) + "</p></div></article></div></section>" +
@@ -165,7 +165,7 @@
       "<section class='campaign-section' id='record'>" +
       "<p class='kicker'>" + escapeHtml(d.recEyebrow) + "</p><h2>" + escapeHtml(d.recTitle) + "</h2>" +
       "<p>" + escapeHtml(d.recLead) + "</p>" +
-      "<figure class='record-figure'><img src='assets/puja-2025/aarti-procession-2025.jpg' width='1600' height='1067' alt='Evening aarti procession through the bamboo pavilion at the 2025 Durga Puja Mahotsav, IIT Kharagpur Research Park'>" +
+      "<figure class='record-figure'><img loading='lazy' decoding='async' src='assets/puja-2025/aarti-procession-2025.jpg' width='1600' height='1067' alt='Evening aarti procession through the bamboo pavilion at the 2025 Durga Puja Mahotsav, IIT Kharagpur Research Park'>" +
       "<figcaption class='slot-caption'>" + escapeHtml(d.recFig1) + "</figcaption></figure>" +
       "<div class='record-stats'>" +
       "<div><strong>1,00,000+</strong><span>" + escapeHtml(d.recStat1) + "</span></div>" +
@@ -175,7 +175,7 @@
       "<p class='muted'>" + escapeHtml(d.recSource) + "</p>" +
       "<div class='record-split'><ul class='record-facts'><li>" + (d.recFact1 || "") + "</li><li>" +
       (d.recFact2 || "") + "</li><li>" + (d.recFact3 || "") + "</li><li>" + (d.recFact4 || "") +
-      "</li></ul><figure class='record-portrait'><img src='assets/puja-2025/conch-aarti-2025.jpg' width='1400' height='2100' alt='Priest sounding the conch during evening aarti at the 2025 Durga Puja Mahotsav'></figure></div>" +
+      "</li></ul><figure class='record-portrait'><img loading='lazy' decoding='async' src='assets/puja-2025/conch-aarti-2025.jpg' width='1400' height='2100' alt='Priest sounding the conch during evening aarti at the 2025 Durga Puja Mahotsav'></figure></div>" +
       "<h3>" + escapeHtml(d.recExpoTitle) + "</h3><p>" + escapeHtml(d.recExpoLead) + "</p>" +
       "<div class='record-startups'><article><h3>Revoltaero Systems</h3><p>" + escapeHtml(d.recSu1) +
       "</p></article><article><h3>Innovodigm</h3><p>" + escapeHtml(d.recSu2) +

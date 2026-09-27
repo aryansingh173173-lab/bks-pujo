@@ -571,14 +571,14 @@
 
     function photoFigure(src, alt, cap, extraClass) {
       if (!src) return "";
-      return "<figure class='nrb-photo " + (extraClass || "") + "'><img src='" + escapeHtml(src) +
+      return "<figure class='nrb-photo " + (extraClass || "") + "'><img loading='lazy' decoding='async' src='" + escapeHtml(src) +
         "' alt='" + escapeHtml(alt) + "' width='1600' height='1067'>" +
         (cap ? "<figcaption>" + escapeHtml(cap) + "</figcaption>" : "") + "</figure>";
     }
 
     function prepFigure(src, alt, cap, w, h, extraClass) {
       if (!src) return "";
-      return "<figure class='prep-photo " + (extraClass || "") + "'><img src='" + escapeHtml(src) +
+      return "<figure class='prep-photo " + (extraClass || "") + "'><img loading='lazy' decoding='async' src='" + escapeHtml(src) +
         "' alt='" + escapeHtml(alt) + "' width='" + escapeHtml(String(w || "")) +
         "' height='" + escapeHtml(String(h || "")) + "'>" +
         (cap ? "<figcaption>" + escapeHtml(cap) + "</figcaption>" : "") + "</figure>";
@@ -633,7 +633,7 @@
       "<div class='nrb-split'><div><p class='kicker'>" + escapeHtml(about.eyebrow) + "</p><h2>" +
       escapeHtml(about.title) + "</h2><p>" + escapeHtml(about.lede) + "</p>" +
       "<div class='nrb-who'><p>" + escapeHtml(about.mandate) + "</p></div></div>" +
-      (photos.aboutSrc ? "<figure class='nrb-photo nrb-photo--portrait'><img src='" +
+      (photos.aboutSrc ? "<figure class='nrb-photo nrb-photo--portrait'><img loading='lazy' decoding='async' src='" +
         escapeHtml(photos.aboutSrc) + "' alt='" + escapeHtml(photos.aboutAlt) +
         "' width='640' height='800'></figure>" : "") +
       "</div></section>" +
@@ -954,7 +954,7 @@
       "<p class='native-draft' data-ui='draft-note'></p>" +
 
       "<figure class='ifs-hero-photo'>" +
-      "<img src='assets/puja-2025/aarti-procession-2025.jpg' width='1600' height='1067' alt='Evening aarti in the bamboo pavilion, Durga Puja Mahotsav 2025, IIT Kharagpur Research Park'>" +
+      "<img loading='lazy' decoding='async' src='assets/puja-2025/aarti-procession-2025.jpg' width='1600' height='1067' alt='Evening aarti in the bamboo pavilion, Durga Puja Mahotsav 2025, IIT Kharagpur Research Park'>" +
       "<figcaption>" + escapeHtml(page.photoCap || page.pillars.intro) + "</figcaption></figure>" +
 
       "<section class='campaign-section'><h2>" + escapeHtml(page.what.h2) + "</h2>" +

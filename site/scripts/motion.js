@@ -217,15 +217,47 @@
   else boot();
 })();
 
-/* Hero video: mark the hero, and pause it while off-screen or when motion is reduced. */
+/* Hero video: loads only after the page itself has finished loading, so the text
+   and photos come first. Phones and slow or data-saving connections get the 720p
+   file; large screens get full 1080p. Paused while off-screen; skipped entirely
+   when motion is reduced (the poster photo stays). */
 (function () {
   var v = document.querySelector(".hero-video");
   if (!v) return;
   var hero = v.closest(".hero-band");
   if (hero) hero.classList.add("has-video");
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { v.pause(); v.removeAttribute("autoplay"); return; }
-  var tryPlay = function () { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  var conn = navigator.connection || {};
+  var slow = conn.saveData || /(^|-)2g|3g/.test(conn.effectiveType || "");
+  var small = Math.max(window.innerWidth, window.innerHeight) < 1100 || window.innerWidth < 800;
+  var base = v.getAttribute(slow || small ? "data-src-sd" : "data-src-hd");
+  var ext = v.canPlayType('video/webm; codecs="vp9"') ? ".webm" : ".mp4";
+  var visible = true;
+  var loaded = false;
+
+  var tryPlay = function () {
+    if (!loaded || !visible) return;
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+  };
+  var start = function () {
+    if (loaded) return;
+    loaded = true;
+    v.preload = "auto";
+    v.autoplay = visible;
+    v.addEventListener("canplay", tryPlay);
+    v.src = base + ext + "?v=" + (v.getAttribute("data-v") || "1");
+    v.load();
+  };
   if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (e) { if (e[0].isIntersecting) tryPlay(); else v.pause(); }, { threshold: 0.05 }).observe(v);
-  } else tryPlay();
+    new IntersectionObserver(function (e) {
+      visible = e[0].isIntersecting;
+      v.autoplay = visible;
+      if (visible) tryPlay(); else v.pause();
+    }, { threshold: 0.05 }).observe(v);
+  }
+  var later = function () { setTimeout(start, 300); };
+  if (document.readyState === "complete") later();
+  else window.addEventListener("load", later, { once: true });
 })();
