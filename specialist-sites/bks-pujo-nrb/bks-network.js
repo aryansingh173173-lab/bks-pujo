@@ -105,9 +105,9 @@
     },
     {
       id: "teams",
-      url: "https://krl-teams-apgto6nel-ram-badrinathans-projects.vercel.app/",
+      url: "https://krl-teams-redesign.vercel.app/",
       host: "KRL Teams · vercel.app",
-      img: "https://krl-teams-apgto6nel-ram-badrinathans-projects.vercel.app/images/editorial/farm-network.jpg",
+      img: "https://krl-teams-redesign.vercel.app/images/gold/bengal-sunset.png",
       copy: {
         en: {
           name: "KRL Teams",

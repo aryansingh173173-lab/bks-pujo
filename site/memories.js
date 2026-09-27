@@ -467,18 +467,7 @@
 
   function injectNav(pack) {
     var label = pack.nav;
-    var desktop = document.getElementById("nav-desktop");
-    if (desktop) {
-      var deskLink = desktop.querySelector("a[href='#memories']");
-      if (!deskLink) {
-        deskLink = document.createElement("a");
-        deskLink.href = "#memories";
-        deskLink.setAttribute("data-nav-kind", "section");
-        desktop.appendChild(deskLink);
-      }
-      deskLink.textContent = pack.navStories || label;
-      deskLink.title = label;
-    }
+    // Stories live on the Participate page now, so the top bar has no separate link.
     if (document.querySelector("#nav-drawer-list a[href='#memories']")) {
       document.querySelector("#nav-drawer-list a[href='#memories']").textContent = label;
       return;

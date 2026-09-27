@@ -9,21 +9,11 @@
       ],
       "items": [
         "puja",
+        "ifs",
         "programme",
         "theme",
         "awards",
         "record",
-        "memories"
-      ]
-    },
-    {
-      "id": "initiative",
-      "labelPath": [
-        "navGroups",
-        "theInitiative"
-      ],
-      "items": [
-        "ifs",
         "demo",
         "mission"
       ]
@@ -36,6 +26,7 @@
       ],
       "items": [
         "participate",
+        "memories",
         "fund",
         "nominate",
         "sponsor",
@@ -50,7 +41,6 @@
         "about"
       ],
       "items": [
-        "krishak",
         "community",
         "visit",
         "contact"
@@ -100,7 +90,7 @@
     },
     {
       "id": "krl-teams",
-      "href": "https://krl-teams-apgto6nel-ram-badrinathans-projects.vercel.app/#/",
+      "href": "https://krl-teams-redesign.vercel.app/",
       "labelPath": [
         "nav",
         "krlTeams"
@@ -125,7 +115,7 @@
         "nav",
         "integratedFarming"
       ],
-      "desktop": true,
+      "desktop": false,
       "kind": "page"
     },
     {
@@ -139,23 +129,13 @@
       "kind": "page"
     },
     {
-      "id": "krishak",
-      "href": "#krishak",
-      "labelPath": [
-        "nav",
-        "krishakSamaj"
-      ],
-      "desktop": true,
-      "kind": "page"
-    },
-    {
       "id": "memories",
       "href": "#memories",
       "labelPath": [
         "nav",
         "memories"
       ],
-      "desktop": true,
+      "desktop": false,
       "homeSection": true,
       "kind": "section"
     },

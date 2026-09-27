@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="ifs.css?v=w1">
   <link rel="stylesheet" href="styles/sunflare.css?v=w1">
   <link rel="stylesheet" href="styles/palette.css?v=w1">
-  <link rel="stylesheet" href="styles/secondary.css?v=lb1">
+  <link rel="stylesheet" href="styles/secondary.css?v=m1">
 </head>
 <body>
   <a class="skip" href="#main" data-ui="skip">Skip to content</a>
@@ -47,19 +47,14 @@
     <div id="live" class="live" aria-live="polite"></div>
     <div class="header-inner">
       <div class="brand-row">
-        <a class="brand-lockup brand-lockup--bks" href="#home" aria-label="Bharatiya Krishak Samaj Pujo">
-          <span class="seal">
-            <img src="assets/bks-seal-96.png" width="52" height="52" alt="">
-          </span>
-          <span class="wordmark" data-ui="site">Bharatiya Krishak Samaj Pujo</span>
+        <a class="brand-logo" href="#home" aria-label="KarmYog for the 21st Century and Bharatiya Krishak Samaj: home">
+          <picture>
+            <source srcset="assets/logo/logo-header.webp?v=1" type="image/webp">
+            <img src="assets/logo/logo-header.png?v=1" width="529" height="112" alt="KarmYog for the 21st Century | Bharatiya Krishak Samaj">
+          </picture>
         </a>
-        <span class="brand-divider" aria-hidden="true"></span>
-        <div class="brand-lockup brand-lockup--karmyog">
-          <img class="karmyog-mark" src="assets/karmyog/karmyog-21st-century-256.png" width="44" height="44" alt="">
-          <span class="brand-sub" data-ui="brandSub">Organised by KarmYog for the 21st Century</span>
-        </div>
         <div class="header-tools">
-          <a class="header-cta" href="https://krl-teams-apgto6nel-ram-badrinathans-projects.vercel.app/#/"><span data-en="KRL Teams" data-bn="KRL টিমস" data-hi="KRL टीम्स">KRL Teams</span><span class="header-cta__arrow" aria-hidden="true">↗</span></a>
+          <a class="header-cta" href="https://krl-teams-redesign.vercel.app/"><span data-en="KRL Teams" data-bn="KRL টিমস" data-hi="KRL टीम्स">KRL Teams</span><span class="header-cta__arrow" aria-hidden="true">↗</span></a>
           <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer">
             <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
             <span class="sr-only" data-ui="menu">Menu</span>
@@ -141,7 +136,6 @@
       <section class="journey" id="journey" aria-labelledby="journey-h">
         <div class="wrap-wide" data-journey-map></div>
       </section>
-      <div data-slot="home-memories"></div>
       <div class="wrap-wide" data-slot="home-visit"></div>
       <div class="wrap-wide" data-slot="home-quote"></div>
       <section class="next-stop" data-next-stop="home"></section>
@@ -151,8 +145,8 @@
       <nav class="journey-bar" data-journey-bar="puja"></nav>
       <header class="page-head">
         <p class="kicker" data-en="Cultural context first" data-bn="আগে সাংস্কৃতিক প্রসঙ্গ" data-hi="पहले सांस्कृतिक संदर्भ">Cultural context first</p>
-        <h1 data-en="The Puja" data-bn="পূজা" data-hi="पूजा">The Puja</h1>
-        <p class="lede" data-en="Worship, craft, food, music and neighbourhood." data-bn="আরাধনা, শিল্প, খাবার, সঙ্গীত আর পাড়া।" data-hi="आराधना, शिल्प, भोजन, संगीत और पड़ोस।">Worship, craft, food, music and neighbourhood.</p>
+        <h1 data-en="The Puja &amp; Integrated Farming" data-bn="পুজো ও সমন্বিত চাষ" data-hi="पूजा और समेकित कृषि">The Puja &amp; Integrated Farming</h1>
+        <p class="lede" data-en="Worship, craft, food and music, and the farm growing behind the pandal." data-bn="আরাধনা, শিল্প, খাবার আর সঙ্গীত, আর প্যান্ডেলের পেছনে গড়ে ওঠা খামার।" data-hi="आराधना, शिल्प, भोजन और संगीत, और पंडाल के पीछे बढ़ता खेत।">Worship, craft, food and music, and the farm growing behind the pandal.</p>
       </header>
       <div data-slot="puja-a"></div>
       <aside class="hint" data-hint="puja-stories"></aside>
@@ -190,17 +184,13 @@
       <div data-slot="puja-b"></div>
       <aside class="hint" data-hint="puja-ifs"></aside>
       <div data-slot="puja-c"></div>
+      <section class="chapter-part" id="ifs" aria-label="Integrated Farming">
+        <div id="ifs-body" data-json-root data-ifs-audience="main"></div>
+        <aside class="hint" data-hint="ifs-demo"></aside>
+        <div data-slot="puja-farm"></div>
+        <aside class="hint" data-hint="ifs-seed"></aside>
+      </section>
       <section class="next-stop" data-next-stop="puja"></section>
-    </article>
-
-    <article class="view wrap-wide chapter" data-view="krishak" hidden>
-      <nav class="journey-bar" data-journey-bar="krishak"></nav>
-      <div id="krishak-body" data-json-root></div>
-      <div data-slot="krishak-a"></div>
-      <aside class="hint" data-hint="krishak-league"></aside>
-      <div data-slot="krishak-b"></div>
-      <aside class="hint" data-hint="krishak-site"></aside>
-      <section class="next-stop" data-next-stop="krishak"></section>
     </article>
 
     <article class="view wrap-wide chapter" data-view="league" hidden>
@@ -212,15 +202,6 @@
       <section class="next-stop" data-next-stop="league"></section>
     </article>
 
-    <article class="view wrap-wide chapter" data-view="ifs" hidden>
-      <nav class="journey-bar" data-journey-bar="ifs"></nav>
-      <div id="ifs-body" data-json-root data-ifs-audience="main"></div>
-      <aside class="hint" data-hint="ifs-demo"></aside>
-      <div data-slot="ifs-a"></div>
-      <aside class="hint" data-hint="ifs-seed"></aside>
-      <section class="next-stop" data-next-stop="ifs"></section>
-    </article>
-
     <article class="view wrap-wide" data-view="mission" hidden>
       <div id="mission-body" data-json-root></div>
       <section class="next-stop" data-next-stop="mission"></section>
@@ -229,6 +210,7 @@
     <article class="view wrap-wide chapter" data-view="participate" hidden>
       <nav class="journey-bar" data-journey-bar="participate"></nav>
       <div id="participate-body" data-json-root></div>
+      <div data-slot="participate-stories"></div>
       <div data-slot="participate-a"></div>
       <aside class="hint" data-hint="participate-nominate"></aside>
       <div data-slot="participate-b"></div>
@@ -346,13 +328,13 @@
       </nav>
     </div>
   </footer>
-  <script src="scripts/offline-data.js?v=e1"></script>
+  <script src="scripts/offline-data.js?v=m1"></script>
   <script src="scripts/campaign.js?v=w1" defer></script>
-  <script src="scripts/app.js?v=t1" defer></script>
-  <script src="memories.js?v=w1" defer></script>
+  <script src="scripts/app.js?v=m2" defer></script>
+  <script src="memories.js?v=m1" defer></script>
   <script src="ifs.js?v=w1" defer></script>
-  <script src="scripts/journey.js?v=lb1" defer></script>
+  <script src="scripts/journey.js?v=m1" defer></script>
   <script src="scripts/motion.js?v=t1" defer></script>
-  <script src="scripts/bks-network.js?v=t1" data-inject="false" defer></script>
+  <script src="scripts/bks-network.js?v=m1" data-inject="false" defer></script>
 </body>
 </html>

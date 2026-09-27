@@ -16,26 +16,22 @@
     "Paschim Bardhaman", "Paschim Medinipur", "Purba Bardhaman",
     "Purba Medinipur", "Purulia", "South 24 Parganas", "Uttar Dinajpur"
   ];
-  const HOME_SECTIONS = ["nrb", "sambhavana", "about", "demo", "model", "fund", "sponsor", "village", "faq", "theme", "awards", "record", "memories", "nominate", "visit", "press", "ifs-tease", "prep", "story-arc", "story-bridge", "initiative", "doors"];
   /* The campaign and NRB renderers write every section into #staging. Each one is
      then moved into a [data-slot] on the page it belongs to, so the homepage stays
      short and each chapter page carries its own depth. Order inside a slot follows
      this list. */
   const RELOCATE = [
-    ["#memories", "home-memories"],
+    ["#memories", "participate-stories"],
     ["#visit", "home-visit"],
     [".quote-band", "home-quote"],
-    ["#about", "krishak-a"],
-    ["#banner-bks", "krishak-a"],
-    ["#sambhavana", "krishak-b"],
     ["#awards", "league-a"],
     ["#nominate", "league-b"],
     ["#theme", "puja-a"],
     ["#prep", "puja-a"],
     ["#record", "puja-b"],
     ["#press", "puja-c"],
-    ["#demo", "ifs-a"],
-    ["#model", "ifs-a"],
+    ["#demo", "puja-farm"],
+    ["#model", "puja-farm"],
     ["#nrb", "participate-a"],
     ["#fund", "participate-a"],
     ["#sponsor", "participate-b"],
@@ -43,13 +39,26 @@
     ["#village", "participate-c"],
     ["#faq", "participate-c"]
   ];
-  const SECTION_VIEW = { doors: "participate", "ifs-tease": "ifs" };
+  const SECTION_VIEW = { doors: "participate", "ifs-tease": "puja", ifs: "puja", krishak: "home" };
   RELOCATE.forEach(([sel, slot]) => {
     if (sel.charAt(0) === "#") SECTION_VIEW[sel.slice(1)] = slot.split("-")[0];
   });
   const PAGE_LABELS = {
     league: { en: "Krishi Ratna League", bn: "কৃষিরত্ন লিগ", hi: "कृषि रत्न लीग" }
   };
+  /* The Puja and Integrated Farming share one page, as do Participate and the
+     stories. These names replace the single-topic labels in the menu. */
+  const MERGED_LABELS = {
+    puja: { en: "Puja &amp; Farming", bn: "পুজো ও চাষ", hi: "पूजा और खेती" },
+    participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" }
+  };
+  const MERGED_H1 = {
+    participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" }
+  };
+  function mergedLabel(map, id) {
+    const entry = map[id];
+    return entry ? (entry[state.lang] || entry.en) : "";
+  }
   const state = {
     lang: "en",
     heroId: "H1",
@@ -83,7 +92,8 @@
     const el = document.getElementById(page);
     const view = el && el.closest("[data-view]");
     if (view) return view.dataset.view;
-    return HOME_SECTIONS.indexOf(page) !== -1 ? "home" : page;
+    // Anything else (a retired page such as #krishak, or a typo) lands on the homepage.
+    return "home";
   }
 
   function clearRelocated() {
@@ -271,7 +281,7 @@
     (spec.items || []).forEach((item) => { byId[item.id] = item; });
 
     function itemLink(item, withKind) {
-      const label = getByPath(ui, item.labelPath) || item.id;
+      const label = mergedLabel(MERGED_LABELS, item.id) || getByPath(ui, item.labelPath) || item.id;
       const external = /^https?:\/\//i.test(item.href || "");
       const kind = external
         ? "external"
@@ -358,7 +368,7 @@
       });
       html += "</div>";
       (spec.groups || []).forEach((group) => {
-        const label = getByPath(ui, group.labelPath) || group.id;
+        const label = mergedLabel(MERGED_LABELS, group.id) || getByPath(ui, group.labelPath) || group.id;
         html += "<p class='nav-group-label' id='nav-g-" + group.id + "'>" + label + "</p>";
         html += "<div class='nav-group' role='group' aria-labelledby='nav-g-" + group.id + "'>";
         (group.items || []).forEach((id) => {
@@ -399,7 +409,7 @@
     const parts = ["<a href='#home'>" + homeLabel + "</a>"];
     const group = (spec.groups || []).find((g) => (g.items || []).indexOf(page) !== -1);
     if (group) {
-      const gLabel = getByPath(ui, group.labelPath) || group.id;
+      const gLabel = mergedLabel(MERGED_LABELS, group.id) || getByPath(ui, group.labelPath) || group.id;
       const firstPage = (group.items || []).map((id) => byId[id]).find((i) => i && !i.homeSection);
       if (firstPage && firstPage.id !== page) {
         parts.push("<a href='" + firstPage.href + "'>" + gLabel + "</a>");
@@ -408,7 +418,9 @@
       }
     }
     const local = PAGE_LABELS[page];
-    const label = item ? (getByPath(ui, item.labelPath) || page) : local ? (local[state.lang] || local.en) : page;
+    const label = item ? (mergedLabel(MERGED_LABELS, page) || getByPath(ui, item.labelPath) || page) : local ? (local[state.lang] || local.en) : page;
+    // A page that heads its own group (Puja & Farming) needs no second crumb.
+    if (parts.length > 1 && parts[parts.length - 1] === "<span>" + label + "</span>") parts.pop();
     parts.push("<span aria-current='page'>" + label + "</span>");
     el.hidden = false;
     el.innerHTML = parts.join(sep);
@@ -1037,7 +1049,7 @@
       return "<div class='field'><label for='field-" + field.id + "'>" + field.label + "</label><input id='field-" + field.id + "' name='" + field.id + "' type='text'" + auto + req + "><p class='field-error' id='err-" + field.id + "' hidden></p></div>";
     }).join("");
     rootEl.innerHTML =
-      "<header class='page-head'><p class='kicker'>" + page.kicker + "</p><h1>" + page.h1 + "</h1><p class='lede'>" + page.lede + "</p></header>" +
+      "<header class='page-head'><p class='kicker'>" + page.kicker + "</p><h1>" + (mergedLabel(MERGED_H1, "participate") || page.h1) + "</h1><p class='lede'>" + page.lede + "</p></header>" +
       "<hr class='rule'>" +
       "<p class='legend'>" + page.privacy + "</p>" +
       "<section class='doors-inline' aria-labelledby='participate-doors'>" +
@@ -1277,11 +1289,11 @@
     const page = pageFromHash();
     const pageTitles = {
       home: null,
-      puja: "The Puja",
+      puja: "The Puja & Integrated Farming",
       league: "Krishi Ratna League",
-      ifs: "Integrated Farming",
-      participate: "Participate",
-      krishak: "Bharatiya Krishak Samaj",
+      ifs: "The Puja & Integrated Farming",
+      participate: "Participate & Stories",
+      memories: "Participate & Stories",
       mission: "The Mission",
       programme: "Programme",
       contact: "Contact",

@@ -1,34 +1,28 @@
 (function () {
   "use strict";
 
-  /* The five-stop journey: the homepage map, the stop bar at the top of each
+  /* The three-stop journey: the homepage map, the stop bar at the top of each
      chapter page, mid-page hints, and the "next stop" push at the end of every
      page. The route is fixed so nobody reaches a dead end:
-     home → BKS → Krishi Ratna League → Puja → Integrated Farming → Participate → visit. */
+     home → Krishi Ratna League → Puja & Integrated Farming → Participate & Stories → visit. */
 
-  var ORDER = ["krishak", "league", "puja", "ifs", "participate"];
+  var ORDER = ["league", "puja", "participate"];
 
   var STOPS = {
-    krishak: { href: "#krishak", img: "assets/puja-2026/photo_2026-08-19_11-15-12.jpg", shape: "arch" },
     league: { href: "#league", img: "assets/stories/2026/protyabortan-banner.jpg", shape: "notch" },
     puja: { href: "#puja", img: "assets/puja-2025/aarti-procession-2025.jpg", shape: "circle" },
-    ifs: { href: "#ifs", img: "assets/integrated-farming/ifs-reference.jpg", shape: "leaf" },
     participate: { href: "#participate", img: "assets/stories/2026/khuti-puja-4.jpg", shape: "block" }
   };
 
   var NEXT = {
-    home: "krishak",
-    krishak: "league",
+    home: "league",
     league: "puja",
-    puja: "ifs",
-    ifs: "participate",
+    puja: "participate",
     mission: "participate",
     participate: "visit"
   };
 
   var HINTS = {
-    "krishak-league": { href: "#league", icon: "star" },
-    "krishak-site": { href: "https://bkswbengal.org/", icon: "out", external: true },
     "league-site": { href: "https://krl-site.vercel.app/", icon: "out", external: true },
     "puja-stories": { href: "#memories", icon: "play" },
     "puja-ifs": { href: "#ifs", icon: "leaf" },
@@ -40,7 +34,7 @@
   var COPY = {
     en: {
       mapKicker: "Your path",
-      mapTitle: "Five stops. One Puja.",
+      mapTitle: "Three stops. One Puja.",
       mapLede: "Start anywhere. Every stop ends by pointing you to the next, so you never hit a dead end.",
       stop: "Stop",
       of: "of",
@@ -48,32 +42,26 @@
       jump: "Or jump to",
       barLabel: "Your path through the Puja",
       stops: {
-        krishak: { short: "BKS Bengal", title: "Bharatiya Krishak Samaj", line: "The farmers’ movement behind this Pujo, its West Bengal chapter, and why the Puja names the farmer.", cta: "Explore BKS Bengal" },
         league: { short: "Krishi Ratna League", title: "Krishi Ratna League", line: "Seven awards for the farmers Bengal does not photograph. Nominate a farmer, or yourself.", cta: "Explore the League" },
-        puja: { short: "The Puja", title: "The Puja", line: "Worship, craft, dhak and homecoming. What the days mean, what we built in 2025, and how 2026 is being prepared.", cta: "Explore the Puja" },
-        ifs: { short: "Integrated Farming", title: "Integrated Farming", line: "Crop, animals, water and market on one holding. See the loop, then the live farm in the East Kolkata Wetlands.", cta: "Explore Integrated Farming" },
-        participate: { short: "Participate", title: "Participate", line: "Seed a village farm, sponsor, volunteer, or simply come to the pandal. Five doors in.", cta: "Find your door" }
+        puja: { short: "Puja & Farming", title: "The Puja & Integrated Farming", line: "Worship, craft, dhak and homecoming, and the farm behind the pandal: crop, animals, water and market on one holding.", cta: "Explore the Puja & Farming" },
+        participate: { short: "Participate & Stories", title: "Participate & Stories", line: "Seed a village farm, sponsor or volunteer, and see the Puja in photographs from 2025 and the 2026 ground.", cta: "Find your door" }
       },
       next: {
-        home: { title: "Start with the people behind it.", body: "Bharatiya Krishak Samaj is the farmers’ movement that holds this Puja. Meet it first." },
-        krishak: { title: "Now meet the farmers it honours.", body: "The Krishi Ratna League puts unnamed farmers on the Puja stage." },
+        home: { title: "Start with the farmers it honours.", body: "The Krishi Ratna League puts unnamed farmers on the Puja stage." },
         league: { title: "See the gathering where they are honoured.", body: "Worship, craft and homecoming. The Puja is the stage." },
-        puja: { title: "Behind the pandal, a farm is growing.", body: "Integrated Farming is the livelihood this Puja is seeding." },
-        ifs: { title: "One farm needs one patron.", body: "Seed a village farm, sponsor, volunteer or nominate. Choose your door." },
+        puja: { title: "One farm needs one patron.", body: "Seed a village farm, sponsor, volunteer or nominate, and watch the stories from the ground. Choose your door." },
         mission: { title: "A big goal starts with one door.", body: "Seed a village farm, sponsor, volunteer or nominate a farmer." },
         participate: { title: "You have seen the whole story. Now come.", body: "The pandal is open to everyone, free, on all days of the Puja.", cta: "Plan your visit", alt: "Watch the stories" }
       },
       league: {
-        kicker: "Stop 02 · Recognition",
+        kicker: "Stop 01 · Recognition",
         h1: "Krishi Ratna League",
         lede: "Bharatiya Krishak Samaj Awards 2026. Seven categories, decided from nominations sent by farmers, families and communities across West Bengal. Winners are honoured on stage at the pandal during the Puja."
       },
       hints: {
-        "krishak-league": { label: "Did you know", text: "BKS honours the farmers Bengal does not photograph, on stage during the Puja.", link: "See the Krishi Ratna League" },
-        "krishak-site": { label: "Official website", text: "For the organisation itself, visit the official BKS West Bengal website.", link: "Visit bkswbengal.org" },
         "league-site": { label: "Full league", text: "The Krishi Ratna League Bengal also has its own website.", link: "Open the League site" },
         "puja-stories": { label: "In photographs", text: "Photographs from the 2026 ground and the 2025 Mahotsav play as stories.", link: "Open the stories" },
-        "puja-ifs": { label: "Keep going", text: "The theme is sustainable agriculture. See how one farm loops crop, animals, water and market.", link: "Integrated Farming" },
+        "puja-ifs": { label: "Keep going", text: "The theme is sustainable agriculture. Scroll on to see how one farm loops crop, animals, water and market.", link: "Integrated Farming" },
         "ifs-demo": { label: "On the ground", text: "This model is being built as a working farm at the Puja venue in the East Kolkata Wetlands.", link: "See the live demo" },
         "ifs-seed": { label: "The seed", text: "₹1 lakh is the proposed seed for one village farm. Nothing is collected on this website.", link: "How support works" },
         "participate-nominate": { label: "Know a farmer?", text: "Know a farmer who deserves the stage? Nominations have no entry fee.", link: "Nominate in the League" }
@@ -81,7 +69,7 @@
     },
     bn: {
       mapKicker: "আপনার পথ",
-      mapTitle: "পাঁচটি ধাপ। একটি পুজো।",
+      mapTitle: "তিনটি ধাপ। একটি পুজো।",
       mapLede: "যেকোনো জায়গা থেকে শুরু করুন। প্রতিটি ধাপের শেষে পরের ধাপের পথ দেখানো আছে।",
       stop: "ধাপ",
       of: "/",
@@ -89,29 +77,23 @@
       jump: "অথবা সরাসরি যান",
       barLabel: "পুজোর মধ্যে দিয়ে আপনার পথ",
       stops: {
-        krishak: { short: "BKS বাংলা", title: "ভারতীয় কৃষক সমাজ", line: "এই পুজোর পেছনের কৃষক আন্দোলন, তার পশ্চিমবঙ্গ শাখা, আর কেন পুজো কৃষকের নাম নেয়।", cta: "BKS বাংলা দেখুন" },
         league: { short: "কৃষিরত্ন লিগ", title: "কৃষিরত্ন লিগ", line: "বাংলা যে কৃষকদের ছবি তোলে না, তাঁদের জন্য সাতটি পুরস্কার। একজন কৃষককে মনোনীত করুন, বা নিজেকে।", cta: "লিগ দেখুন" },
-        puja: { short: "পুজো", title: "পুজো", line: "আরাধনা, কারুকাজ, ঢাক আর ঘরে ফেরা। দিনগুলোর অর্থ, ২০২৫-এ যা গড়েছি, আর ২০২৬-এর প্রস্তুতি।", cta: "পুজো দেখুন" },
-        ifs: { short: "সমন্বিত চাষ", title: "সমন্বিত চাষ", line: "এক জমিতে ফসল, পশু, জল আর বাজার। চক্রটা দেখুন, তারপর পূর্ব কলকাতা জলাভূমির জীবন্ত খামার।", cta: "সমন্বিত চাষ দেখুন" },
-        participate: { short: "অংশ নিন", title: "অংশ নিন", line: "একটি গ্রামের খামারের বীজ দিন, পৃষ্ঠপোষক হন, স্বেচ্ছাসেবক হন, বা শুধু প্যান্ডেলে আসুন। পাঁচটি দরজা।", cta: "আপনার দরজা খুঁজুন" }
+        puja: { short: "পুজো ও চাষ", title: "পুজো ও সমন্বিত চাষ", line: "আরাধনা, কারুকাজ, ঢাক আর ঘরে ফেরা, আর প্যান্ডেলের পেছনের খামার: এক জমিতে ফসল, পশু, জল আর বাজার।", cta: "পুজো ও চাষ দেখুন" },
+        participate: { short: "অংশ নিন ও গল্প", title: "অংশ নিন ও গল্প", line: "একটি গ্রামের খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, আর ২০২৫ ও ২০২৬-এর মাঠের ছবিতে পুজো দেখুন।", cta: "আপনার দরজা খুঁজুন" }
       },
       next: {
-        home: { title: "যাঁরা এর পেছনে, তাঁদের দিয়ে শুরু করুন।", body: "ভারতীয় কৃষক সমাজ এই পুজোর কৃষক আন্দোলন। আগে তাঁদের চিনুন।" },
-        krishak: { title: "এবার চিনুন যে কৃষকদের সম্মান জানানো হয়।", body: "কৃষিরত্ন লিগ অচেনা কৃষকদের পুজোর মঞ্চে তোলে।" },
+        home: { title: "যে কৃষকদের সম্মান জানানো হয়, তাঁদের দিয়ে শুরু করুন।", body: "কৃষিরত্ন লিগ অচেনা কৃষকদের পুজোর মঞ্চে তোলে।" },
         league: { title: "দেখুন যে জমায়েতে তাঁরা সম্মানিত হন।", body: "আরাধনা, কারুকাজ, ঘরে ফেরা। পুজোই সেই মঞ্চ।" },
-        puja: { title: "প্যান্ডেলের পেছনে একটি খামার গড়ে উঠছে।", body: "সমন্বিত চাষ সেই জীবিকা, যার বীজ এই পুজো বুনছে।" },
-        ifs: { title: "একটি খামারের জন্য একজন পৃষ্ঠপোষক।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক হন, স্বেচ্ছাসেবক হন বা মনোনয়ন দিন। আপনার দরজা বেছে নিন।" },
+        puja: { title: "একটি খামারের জন্য একজন পৃষ্ঠপোষক।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, মনোনয়ন দিন, আর মাঠের গল্পগুলো দেখুন। আপনার দরজা বেছে নিন।" },
         mission: { title: "বড় লক্ষ্যের শুরু একটি দরজা দিয়ে।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক হন, স্বেচ্ছাসেবক হন বা একজন কৃষককে মনোনীত করুন।" },
         participate: { title: "পুরো গল্পটা দেখলেন। এবার আসুন।", body: "পুজোর সব দিন প্যান্ডেল সবার জন্য খোলা, বিনামূল্যে।", cta: "আসার পরিকল্পনা করুন", alt: "গল্পগুলো দেখুন" }
       },
       league: {
-        kicker: "ধাপ ০২ · স্বীকৃতি",
+        kicker: "ধাপ ০১ · স্বীকৃতি",
         h1: "কৃষিরত্ন লিগ",
         lede: "ভারতীয় কৃষক সমাজ পুরস্কার ২০২৬। পশ্চিমবঙ্গ জুড়ে কৃষক, পরিবার ও সম্প্রদায়ের পাঠানো মনোনয়ন থেকে সাতটি বিভাগ। বিজয়ীরা পুজোর সময় প্যান্ডেলের মঞ্চে সম্মানিত হন।"
       },
       hints: {
-        "krishak-league": { label: "জানেন কি", text: "বাংলা যে কৃষকদের ছবি তোলে না, BKS পুজোর মঞ্চে তাঁদের সম্মান জানায়।", link: "কৃষিরত্ন লিগ দেখুন" },
-        "krishak-site": { label: "অফিশিয়াল ওয়েবসাইট", text: "সংগঠনের নিজের কথা জানতে BKS পশ্চিমবঙ্গের অফিশিয়াল ওয়েবসাইটে যান।", link: "bkswbengal.org-এ যান" },
         "league-site": { label: "পুরো লিগ", text: "কৃষিরত্ন লিগ বাংলার নিজস্ব ওয়েবসাইটও আছে।", link: "লিগের সাইট খুলুন" },
         "puja-stories": { label: "ছবিতে", text: "২০২৬-এর মাঠ আর ২০২৫ মহোৎসবের ছবি গল্পের মতো চলে।", link: "গল্পগুলো খুলুন" },
         "puja-ifs": { label: "এগিয়ে চলুন", text: "থিম টেকসই কৃষি। দেখুন কীভাবে একটি খামারে ফসল, পশু, জল আর বাজার এক চক্রে বাঁধা।", link: "সমন্বিত চাষ" },
@@ -122,7 +104,7 @@
     },
     hi: {
       mapKicker: "आपका रास्ता",
-      mapTitle: "पाँच पड़ाव। एक पूजा।",
+      mapTitle: "तीन पड़ाव। एक पूजा।",
       mapLede: "कहीं से भी शुरू करें। हर पड़ाव के अंत में अगले पड़ाव का रास्ता है।",
       stop: "पड़ाव",
       of: "/",
@@ -130,29 +112,23 @@
       jump: "या सीधे जाएँ",
       barLabel: "पूजा में आपका रास्ता",
       stops: {
-        krishak: { short: "BKS बंगाल", title: "भारतीय कृषक समाज", line: "इस पूजा के पीछे का किसान आंदोलन, उसकी पश्चिम बंगाल शाखा, और पूजा किसान का नाम क्यों लेती है।", cta: "BKS बंगाल देखें" },
         league: { short: "कृषि रत्न लीग", title: "कृषि रत्न लीग", line: "उन किसानों के लिए सात पुरस्कार जिनकी तस्वीर बंगाल नहीं खींचता। किसी किसान को नामित करें, या स्वयं को।", cta: "लीग देखें" },
-        puja: { short: "पूजा", title: "पूजा", line: "आराधना, शिल्प, ढाक और घर वापसी। दिनों का अर्थ, 2025 में हमने क्या बनाया, और 2026 की तैयारी।", cta: "पूजा देखें" },
-        ifs: { short: "समेकित कृषि", title: "समेकित कृषि", line: "एक ज़मीन पर फसल, पशु, जल और बाज़ार। चक्र देखें, फिर पूर्वी कोलकाता आर्द्रभूमि का जीवित खेत।", cta: "समेकित कृषि देखें" },
-        participate: { short: "भाग लें", title: "भाग लें", line: "किसी गाँव के खेत को बीज दें, प्रायोजक बनें, स्वयंसेवक बनें, या बस पंडाल आएँ। पाँच द्वार।", cta: "अपना द्वार चुनें" }
+        puja: { short: "पूजा और खेती", title: "पूजा और समेकित कृषि", line: "आराधना, शिल्प, ढाक और घर वापसी, और पंडाल के पीछे का खेत: एक ज़मीन पर फसल, पशु, जल और बाज़ार।", cta: "पूजा और खेती देखें" },
+        participate: { short: "भाग लें और कहानियाँ", title: "भाग लें और कहानियाँ", line: "किसी गाँव के खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, और 2025 व 2026 की ज़मीन की तस्वीरों में पूजा देखें।", cta: "अपना द्वार चुनें" }
       },
       next: {
-        home: { title: "जो इसके पीछे हैं, उनसे शुरू करें।", body: "भारतीय कृषक समाज इस पूजा का किसान आंदोलन है। पहले उन्हें जानें।" },
-        krishak: { title: "अब उन किसानों से मिलें जिनका सम्मान होता है।", body: "कृषि रत्न लीग अनजान किसानों को पूजा के मंच पर लाती है।" },
+        home: { title: "उन किसानों से शुरू करें जिनका सम्मान होता है।", body: "कृषि रत्न लीग अनजान किसानों को पूजा के मंच पर लाती है।" },
         league: { title: "वह जमावड़ा देखें जहाँ उनका सम्मान होता है।", body: "आराधना, शिल्प, घर वापसी। पूजा ही मंच है।" },
-        puja: { title: "पंडाल के पीछे एक खेत बढ़ रहा है।", body: "समेकित कृषि वह आजीविका है जिसका बीज यह पूजा बो रही है।" },
-        ifs: { title: "एक खेत को एक संरक्षक चाहिए।", body: "खेत को बीज दें, प्रायोजक बनें, स्वयंसेवक बनें या नामांकन करें। अपना द्वार चुनें।" },
+        puja: { title: "एक खेत को एक संरक्षक चाहिए।", body: "खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, नामांकन करें, और ज़मीन की कहानियाँ देखें। अपना द्वार चुनें।" },
         mission: { title: "बड़ा लक्ष्य एक द्वार से शुरू होता है।", body: "खेत को बीज दें, प्रायोजक बनें, स्वयंसेवक बनें या किसी किसान को नामित करें।" },
         participate: { title: "पूरी कहानी देख ली। अब आइए।", body: "पूजा के सभी दिनों में पंडाल सबके लिए खुला है, निःशुल्क।", cta: "आने की योजना बनाएँ", alt: "कहानियाँ देखें" }
       },
       league: {
-        kicker: "पड़ाव 02 · सम्मान",
+        kicker: "पड़ाव 01 · सम्मान",
         h1: "कृषि रत्न लीग",
         lede: "भारतीय कृषक समाज पुरस्कार 2026। पश्चिम बंगाल भर के किसानों, परिवारों और समुदायों के भेजे नामांकनों से सात श्रेणियाँ। विजेताओं का पूजा के दौरान पंडाल के मंच पर सम्मान होता है।"
       },
       hints: {
-        "krishak-league": { label: "क्या आप जानते हैं", text: "जिन किसानों की तस्वीर बंगाल नहीं खींचता, BKS पूजा के मंच पर उनका सम्मान करता है।", link: "कृषि रत्न लीग देखें" },
-        "krishak-site": { label: "आधिकारिक वेबसाइट", text: "संगठन के बारे में और जानने के लिए BKS पश्चिम बंगाल की आधिकारिक वेबसाइट देखें।", link: "bkswbengal.org पर जाएँ" },
         "league-site": { label: "पूरी लीग", text: "कृषि रत्न लीग बंगाल की अपनी वेबसाइट भी है।", link: "लीग की साइट खोलें" },
         "puja-stories": { label: "तस्वीरों में", text: "2026 की ज़मीन और 2025 महोत्सव की तस्वीरें कहानियों की तरह चलती हैं।", link: "कहानियाँ खोलें" },
         "puja-ifs": { label: "आगे बढ़ें", text: "विषय टिकाऊ कृषि है। देखें कैसे एक खेत में फसल, पशु, जल और बाज़ार एक चक्र में जुड़ते हैं।", link: "समेकित कृषि" },
@@ -226,7 +202,7 @@
       var current = bar.getAttribute("data-journey-bar");
       var idx = ORDER.indexOf(current);
       bar.setAttribute("aria-label", c.barLabel);
-      var html = "<span class='journey-bar__count'>" + esc(c.stop) + " <b>" + num(idx) + "</b> " + esc(c.of) + " 05</span><ol class='journey-bar__list'>";
+      var html = "<span class='journey-bar__count'>" + esc(c.stop) + " <b>" + num(idx) + "</b> " + esc(c.of) + " " + num(ORDER.length - 1) + "</span><ol class='journey-bar__list'>";
       ORDER.forEach(function (id, i) {
         var state = i < idx ? " is-done" : i === idx ? " is-current" : "";
         html +=
@@ -247,7 +223,7 @@
       var stop = STOPS[to];
       var href = isVisit ? "#visit" : stop.href;
       var cta = isVisit ? copy.cta : c.stops[to].cta;
-      var kicker = isVisit ? c.nextKicker : c.nextKicker + " · " + num(idx) + " " + c.of + " 05";
+      var kicker = isVisit ? c.nextKicker : c.nextKicker + " · " + num(idx) + " " + c.of + " " + num(ORDER.length - 1);
       var img = isVisit ? "assets/stories/2026/khuti-puja-1.jpg" : stop.img;
 
       var track = "<ol class='next-stop__track' aria-label='" + esc(c.barLabel) + "'>";
@@ -315,7 +291,7 @@
       imgs: [S + "site-before-3.jpg", M + "museum-04.jpg", S + "invitation-page-2.jpg"] },
     { key: "ifs-strip", kind: "strip", after: "#ifs-body .bks-ifs__wrap > .bks-ifs__block:nth-of-type(3)",
       imgs: [M + "museum-01.jpg", S + "site-work-bamboo.jpg", M + "museum-02.jpg", M + "museum-06.jpg", S + "khuti-puja-2.jpg", M + "museum-09.jpg", M + "grand-courtyard.jpg", M + "museum-12.jpg"] },
-    { key: "ifs-strip-2", kind: "strip", before: "[data-view='ifs'] > [data-hint='ifs-demo']",
+    { key: "ifs-strip-2", kind: "strip", before: "#ifs > [data-hint='ifs-demo']",
       imgs: [S + "site-before-1.jpg", M + "museum-07.jpg", S + "site-before-2.jpg", M + "museum-10.jpg", S + "site-work-bamboo.jpg", M + "museum-05.jpg"] },
     { key: "participate-gallery", kind: "gallery", after: "#participate-body > .page-head",
       imgs: [S + "khuti-puja-1.jpg", S + "khuti-puja-4.jpg", S + "environment-day-2026.jpg"] },
