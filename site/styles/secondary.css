@@ -518,3 +518,36 @@ html.lb-open, html.lb-open body { overflow: hidden; }
 }
 /* Integrated Farming now continues the Puja page. */
 .chapter-part#ifs { scroll-margin-top: 80px; margin-top: clamp(2rem, 5vw, 3.5rem); }
+
+/* ===== Invitation, right under the hero ===== */
+.invite { padding: clamp(2.4rem, 6vw, 4.5rem) 0; background: #100406; position: relative; overflow: hidden; }
+.invite::before {
+  content: ""; position: absolute; inset: auto -10% -40% auto; width: 60vw; height: 60vw; max-width: 46rem; max-height: 46rem;
+  background: radial-gradient(closest-side, rgba(82, 19, 30, 0.55), transparent); pointer-events: none;
+}
+.invite__inner { position: relative; display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr); gap: clamp(1.6rem, 4vw, 3.5rem); align-items: center; }
+.invite h2 { margin: 0 0 0.8rem; color: #f3d9b4; font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 1.02; }
+.invite__lede { margin: 0 0 1.4rem; color: #e6c9a6; max-width: 30rem; }
+.invite__actions { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; margin: 0; }
+.invite__zoom {
+  min-height: 44px; padding: 0 1.1rem; border-radius: 999px; cursor: pointer;
+  background: transparent; color: #f3d9b4; border: 1.5px solid rgba(243, 217, 180, 0.55);
+  font: 700 0.9rem/1 var(--font-display, inherit); transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.invite__zoom:hover { background: #f3d9b4; color: #52131e; border-color: #f3d9b4; }
+.invite__zoom:focus-visible { outline: 2px solid #f3d9b4; outline-offset: 3px; }
+.invite__card { margin: 0; }
+.invite__frame {
+  display: block; overflow: hidden; border-radius: 8px; border: 2px solid #f3d9b4;
+  box-shadow: 14px 14px 0 #52131e, 0 30px 60px -30px rgba(0, 0, 0, 0.9);
+  background: #1c0a0e; aspect-ratio: 16 / 9;
+  transition: transform 0.4s cubic-bezier(.2,.7,.2,1), box-shadow 0.4s ease;
+}
+.invite__frame img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.invite__frame:hover { transform: translate(-3px, -3px); box-shadow: 18px 18px 0 #52131e, 0 36px 70px -30px rgba(0, 0, 0, 0.95); }
+.invite__frame:hover img { transform: scale(1.03); }
+@media (max-width: 860px) {
+  .invite__inner { grid-template-columns: 1fr; }
+  .invite__card { order: -1; }
+  .invite__frame { box-shadow: 8px 8px 0 #52131e; }
+}

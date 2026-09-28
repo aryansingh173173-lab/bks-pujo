@@ -283,6 +283,7 @@
   var S = "assets/stories/2026/";
   var MEM = "assets/memories-2025/";
   var MEDIA = [
+    { key: "invitation", kind: "static", imgs: ["assets/invitation/protyabortan-2026.jpg?v=1"] },
     { key: "puja-gallery", kind: "gallery", after: "[data-view='puja'] > .page-head",
       imgs: [M + "pavilion-exterior.jpg", "assets/puja-2025/aarti-procession-2025.jpg", "assets/puja-2025/conch-aarti-2025.jpg"] },
     { key: "puja-strip", kind: "strip", before: "[data-view='puja'] > .glance",
@@ -317,6 +318,7 @@
 
   function ensureMedia() {
     MEDIA.forEach(function (spec) {
+      if (spec.kind === "static") return;
       var ref = document.querySelector(spec.after || spec.before);
       if (!ref) return;
       var el = document.querySelector("[data-media='" + spec.key + "']");
@@ -410,7 +412,15 @@
     openLightbox(spec.imgs, +item.getAttribute("data-lb"), item);
     return true;
   }
-  document.addEventListener("click", function (e) { if (lbFromTarget(e.target)) e.preventDefault(); });
+  document.addEventListener("click", function (e) {
+    var opener = e.target.closest && e.target.closest("[data-lb-open]");
+    if (opener) {
+      var item = document.querySelector("[data-media='" + opener.getAttribute("data-lb-open") + "'] [data-lb]");
+      if (item && lbFromTarget(item)) { lbReturn = opener; e.preventDefault(); }
+      return;
+    }
+    if (lbFromTarget(e.target)) e.preventDefault();
+  });
   document.addEventListener("keydown", function (e) {
     if (lb && !lb.hidden) {
       if (e.key === "Escape") closeLightbox();
