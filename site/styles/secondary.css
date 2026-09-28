@@ -551,3 +551,40 @@ html.lb-open, html.lb-open body { overflow: hidden; }
   .invite__card { order: -1; }
   .invite__frame { box-shadow: 8px 8px 0 #52131e; }
 }
+
+/* ===== Homepage hero: the Protyabortan film shown whole, words underneath =====
+   The film carries its own title and logos, so nothing is laid over it. */
+.hero-band.hero-band--poster {
+  display: flex; flex-direction: column;
+  min-height: 0; padding: 0 0 clamp(1.6rem, 4vw, 2.6rem);
+  background: #100406;
+}
+.hero-band--poster::before, .hero-band--poster::after,
+.hero-band--poster .hero-aura, .hero-band--poster .hero-embers { display: none !important; }
+.hero-band--poster .hero-media { position: relative; width: 100%; background: #100406; line-height: 0; }
+.hero-band--poster .hero-media .hero-video {
+  position: relative; inset: auto; display: block;
+  width: 100%; height: auto; aspect-ratio: 16 / 9;
+  max-height: calc(100svh - 64px);
+  object-fit: cover; object-position: 50% 50%;
+}
+.hero-band--poster .hero-media .hero-video-shade {
+  position: absolute; inset: auto 0 0 0; height: 16%; width: 100%;
+  background: linear-gradient(180deg, transparent, rgba(16, 4, 6, 0.85) 80%, #100406);
+}
+.hero-band--poster .hero-grid { padding-top: clamp(1.4rem, 3.5vw, 2.4rem); }
+.hero-band--poster .hero-credit { display: none; }
+@media (max-width: 767px) {
+  .hero-band--poster .hero-media .hero-video, .hero-band--poster .hero-media .hero-video-shade { bottom: 0; }
+  .hero-band--poster .hero-media .hero-video { height: auto; }
+  .hero-band--poster .hero-media .hero-video-shade { height: 18%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* No film: the poster frame stays in its place. */
+  .hero-band--poster .hero-media .hero-video { display: block; }
+  .hero-band--poster .hero-media .hero-video-shade { display: block; }
+  .hero-band.hero-band--poster.has-video { background: #100406; }
+}
+/* The old photo hero reserved a first grid row for the picture on phones. */
+.hero-band.hero-band--poster .hero-grid { grid-template-rows: none; min-height: 0; }
+.hero-band.hero-band--poster .hero-copy { grid-row: auto; }
